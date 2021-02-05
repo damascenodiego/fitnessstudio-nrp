@@ -4,7 +4,6 @@ import org.eclipse.emf.henshin.interpreter.Engine;
 import org.eclipse.emf.henshin.interpreter.impl.ChangeImpl;
 import org.eclipse.emf.henshin.interpreter.impl.EngineImpl;
 
-
 public class EngineFactory {
 
 	public static Engine createEngine() {

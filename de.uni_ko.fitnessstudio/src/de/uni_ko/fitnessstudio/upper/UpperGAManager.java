@@ -19,8 +19,8 @@ import de.uni_ko.fitnessstudio.util.ModelIO;
 
 public class UpperGAManager {
 
-	private String prefix = "output_rules";
-			//+ new SimpleDateFormat("HH_mm_ss").format(Calendar.getInstance().getTime()).toString();
+	private String prefix = "output_rules\\"
+			+ new SimpleDateFormat("HH_mm_ss").format(Calendar.getInstance().getTime()).toString();
 
 	private EObject inputModel;
 	private EPackage metaModel;

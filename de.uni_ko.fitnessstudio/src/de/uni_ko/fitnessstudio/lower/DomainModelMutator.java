@@ -11,11 +11,8 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.henshin.interpreter.EGraph;
 import org.eclipse.emf.henshin.interpreter.Engine;
 import org.eclipse.emf.henshin.interpreter.RuleApplication;
-import org.eclipse.emf.henshin.interpreter.UnitApplication;
 import org.eclipse.emf.henshin.interpreter.impl.EGraphImpl;
-import org.eclipse.emf.henshin.interpreter.impl.EngineImpl;
 import org.eclipse.emf.henshin.interpreter.impl.RuleApplicationImpl;
-import org.eclipse.emf.henshin.interpreter.impl.UnitApplicationImpl;
 import org.eclipse.emf.henshin.model.Module;
 import org.eclipse.emf.henshin.model.Rule;
 import org.eclipse.emf.henshin.model.Unit;
@@ -23,7 +20,6 @@ import org.eclipse.emf.henshin.model.resource.HenshinResourceSet;
 
 import de.uni_ko.fitnessstudio.util.EngineFactory;
 
-@SuppressWarnings("all")
 public class DomainModelMutator {
 	static boolean initialized = false;
 	static Set<Rule> defaultRules;
@@ -50,12 +46,8 @@ public class DomainModelMutator {
 				app.execute(null);
 			}
 		}
-		
 		graph.clear();
 		DomainModel result = new DomainModel(mutated, domainModel.getMutator(), domainModel.getCrossover(), domainModel.getFitness());
-		
-		// alternative way to do rule application
-		
 		return result;
 	}
 
