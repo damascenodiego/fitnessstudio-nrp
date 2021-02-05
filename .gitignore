@@ -10,6 +10,9 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
+# Meta data Eclipse workspace
+.metadata/
+
 # Package Files #
 *.jar
 *.war
