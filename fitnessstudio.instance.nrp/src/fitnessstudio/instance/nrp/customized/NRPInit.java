@@ -45,15 +45,9 @@ public class NRPInit implements DomainModelInit {
 		GAPopulation<DomainModel> result = new GAPopulation<DomainModel>();
 
 		//List<Integer> chosen = new ArrayList<>(populationSize);
-		for (int i = 0; i < populationSize; i++) {/*
-			Integer n;
-			do {
-				n = ThreadLocalRandom.current().nextInt(0, ((NRP) inputModel).getAvailableArtifacts().size());
-			} while (chosen.contains(n));
-			
-			chosen.add(n);*/
-			//result.addChromosome(createInitialSingletonSolution(i));
-			result.addChromosome(createRandomSolution());
+		for (int i = 0; i < populationSize; i++) {
+			result.addChromosome(createInitialSingletonSolution(i));
+			//result.addChromosome(createRandomSolution());
 		} 
 		
 		return result;

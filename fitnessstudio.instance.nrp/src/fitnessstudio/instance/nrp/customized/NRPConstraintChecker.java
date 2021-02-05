@@ -19,8 +19,8 @@ import fitnessstudio.instance.nrp.fitness.MinimiseCost;
 
 
 public class NRPConstraintChecker implements ConstraintChecker {
-	public boolean satisfiesMutationConstraints(Collection<Rule> content) {
-		
+	
+	public boolean satisfiesMutationConstraints(Collection<Rule> content) {	
 		for (Rule rule : content) {
 			if (!satisfiesMutationConstraints(rule))
 				return false;
@@ -60,22 +60,16 @@ public class NRPConstraintChecker implements ConstraintChecker {
 			return true;
 		}
 		
-		int deletionEdgeViolation = creationOrDeletionEdgeViolatesConstraints(nodesLhs2Rhs);
-		int creationEdgeViolation = creationOrDeletionEdgeViolatesConstraints(nodesRhs2Lhs);
-		if (deletionEdgeViolation == -1 || creationEdgeViolation == -1) {
-			return true;
-		}
-		
-		if (deletionEdgeViolation == 0 && creationEdgeViolation == 0) {
+		boolean deletionEdgeViolation = creationOrDeletionEdgeViolatesConstraints(nodesLhs2Rhs);
+		boolean creationEdgeViolation = creationOrDeletionEdgeViolatesConstraints(nodesRhs2Lhs);
+		if (deletionEdgeViolation || creationEdgeViolation) {
 			return true;
 		}
 		
 		return false;
 	}
 
-	private static int creationOrDeletionEdgeViolatesConstraints(Map<Node, Node> nodeMap) {
-		int creationOrDeletion = 0;
-		
+	private static boolean creationOrDeletionEdgeViolatesConstraints(Map<Node, Node> nodeMap) {
 		for (Node x1 : nodeMap.keySet()) {		// lhs source node	
 			for (Edge e : x1.getOutgoing()) {	// lhs edge	(x1 -> x2)
 				Node x2 = e.getTarget();		// lhs target node
@@ -87,15 +81,13 @@ public class NRPConstraintChecker implements ConstraintChecker {
 				if (/*y1 != null && y2 != null && */y1.getOutgoing(e.getType(), y2) == null) {
 					
 					if (e.getType() != NRPPackage.eINSTANCE.getSolution_SelectedArtifacts() && e.getType() != NRPPackage.eINSTANCE.getSoftwareArtifact_Solutions())
-						return -1;
-					else
-						creationOrDeletion = 1;
+						return true;
 						
 				}
 			}
 		}
 		
-		return creationOrDeletion;
+		return false;
 	}
 	public boolean satisfiesWellformednessConstraint(EObject nrp) {
 		return new MinimiseCost().computeFitness((NRP) nrp) < 9999999;//1600;

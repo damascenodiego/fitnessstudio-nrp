@@ -28,9 +28,10 @@ public class NRPCrossover implements DomainModelCrossover {
 		//	maximum: size - 1
 		int pivot = ThreadLocalRandom.current().nextInt(0, p1.getAvailableArtifacts().size());
 		
-		result.add(new DomainModel(createChild(p1, p2, pivot), parent1.getMutator(), parent1.getCrossover(), parent1.getFitness()));
-		result.add(new DomainModel(createChild(p2, p1, pivot), parent1.getMutator(), parent1.getCrossover(), parent1.getFitness()));
-		//result.add(new DomainModel(child2, parent1.getMutator(), parent1.getCrossover(), parent1.getFitness()));
+		//result.add(new DomainModel(createChild(p1, p2, pivot), parent1.getMutator(), parent1.getCrossover(), parent1.getFitness()));
+		//result.add(new DomainModel(createChild(p2, p1, pivot), parent1.getMutator(), parent1.getCrossover(), parent1.getFitness()));
+		result.add(new DomainModel(p1, parent1.getMutator(), parent1.getCrossover(), parent1.getFitness()));
+		result.add(new DomainModel(p2, parent2.getMutator(), parent2.getCrossover(), parent2.getFitness()));
 		
 		return result;
 	}
