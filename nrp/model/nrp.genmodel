@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/nrp/src-gen" creationIcons="false" editDirectory="/nrp.edit/src-gen"
+    editorDirectory="/nrp.editor/src-gen" modelPluginID="nrp" modelName="NRP" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>nrp.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="NRP" basePackage="nrp.model" disposableProviderFactory="true"
+      ecorePackage="nrp.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="nrp.ecore#//CostType">
+      <genEnumLiterals ecoreEnumLiteral="nrp.ecore#//CostType/MONEY"/>
+      <genEnumLiterals ecoreEnumLiteral="nrp.ecore#//CostType/TIME"/>
+      <genEnumLiterals ecoreEnumLiteral="nrp.ecore#//CostType/MANPOWER"/>
+      <genEnumLiterals ecoreEnumLiteral="nrp.ecore#//CostType/RESOURCES"/>
+    </genEnums>
+    <genClasses ecoreClass="nrp.ecore#//NRP">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nrp.ecore#//NRP/customers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nrp.ecore#//NRP/availableArtifacts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nrp.ecore#//NRP/requirements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nrp.ecore#//NRP/solutions"/>
+    </genClasses>
+    <genClasses ecoreClass="nrp.ecore#//Customer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nrp.ecore#//Customer/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nrp.ecore#//Customer/importance"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nrp.ecore#//Customer/assigns"/>
+    </genClasses>
+    <genClasses ecoreClass="nrp.ecore#//Cost">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nrp.ecore#//Cost/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nrp.ecore#//Cost/amount"/>
+    </genClasses>
+    <genClasses ecoreClass="nrp.ecore#//SoftwareArtifact">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nrp.ecore#//SoftwareArtifact/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nrp.ecore#//SoftwareArtifact/requires"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nrp.ecore#//SoftwareArtifact/costs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nrp.ecore#//SoftwareArtifact/contributesTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nrp.ecore#//SoftwareArtifact/solutions"/>
+    </genClasses>
+    <genClasses ecoreClass="nrp.ecore#//Requirement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nrp.ecore#//Requirement/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nrp.ecore#//Requirement/valuations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nrp.ecore#//Requirement/realisations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nrp.ecore#//Requirement/combines"/>
+    </genClasses>
+    <genClasses ecoreClass="nrp.ecore#//RequirementRealisation">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference nrp.ecore#//RequirementRealisation/requirement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nrp.ecore#//RequirementRealisation/percentage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nrp.ecore#//RequirementRealisation/dependsOn"/>
+    </genClasses>
+    <genClasses ecoreClass="nrp.ecore#//Solution">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nrp.ecore#//Solution/selectedArtifacts"/>
+    </genClasses>
+    <genClasses ecoreClass="nrp.ecore#//Valuation">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference nrp.ecore#//Valuation/requirement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nrp.ecore#//Valuation/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nrp.ecore#//Valuation/assignedBy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference nrp.ecore#//Valuation/contributesTo"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
