@@ -28,10 +28,10 @@ public class UpperTierRunner {
 	private static String OUTPUT_PREFIX = "output_rules\\" + INPUT_MODEL_ID + "\\"
 			+ new SimpleDateFormat("HH_mm_ss").format(Calendar.getInstance().getTime()).toString() + "\\";
 
-	private static int UPPER_TIER_ITERATIONS = 20;
-	private static int UPPER_TIER_POPULATION_SIZE = 10;
-	private static int LOWER_TIER_ITERATIONS = 20;
-	private static int LOWER_TIER_POPULATION_SIZE = 63;
+	private static int UPPER_TIER_ITERATIONS = 10;
+	private static int UPPER_TIER_POPULATION_SIZE = 100;
+	private static int LOWER_TIER_ITERATIONS = 10;
+	private static int LOWER_TIER_POPULATION_SIZE = 10;
 	private static int RUNS = 10;
 	
 	private static GAConfiguration configurationUpper = new GAConfiguration(UPPER_TIER_ITERATIONS, UPPER_TIER_POPULATION_SIZE, true);

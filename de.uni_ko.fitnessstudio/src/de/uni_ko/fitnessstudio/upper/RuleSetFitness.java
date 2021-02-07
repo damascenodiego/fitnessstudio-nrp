@@ -37,7 +37,7 @@ public class RuleSetFitness implements Fitness<RuleSet, Double> {
 			DomainModelMutator mutator = new DomainModelMutator(chromosome.getContent());
 			return getResultWithTimeout(mutator);
 		} else {
-			return 10000.0;
+			return -10000.0;
 		}
 	}
 

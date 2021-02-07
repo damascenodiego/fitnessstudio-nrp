@@ -57,7 +57,10 @@ public class NRPInit implements DomainModelInit {
 	// create with adding 
 	private  DomainModel createInitialSingletonSolution(int i) {
 		NRP fresh = (NRP) EcoreUtil.copy(inputModel);
-		fresh.getSolutions().get(0).getSelectedArtifacts().add(fresh.getAvailableArtifacts().get(i % fresh.getAvailableArtifacts().size()));
+		SoftwareArtifact initial_artifact = fresh.getAvailableArtifacts().get(i % fresh.getAvailableArtifacts().size());
+		
+		initial_artifact.getSolutions().add(fresh.getSolutions().get(0));
+		fresh.getSolutions().get(0).getSelectedArtifacts().add(initial_artifact);
 		
 		return new DomainModel(fresh, mutator, crossover, fitness);
 	}

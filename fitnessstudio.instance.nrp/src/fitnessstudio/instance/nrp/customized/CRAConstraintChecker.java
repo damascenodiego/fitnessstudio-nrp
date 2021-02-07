@@ -54,13 +54,35 @@ public class CRAConstraintChecker implements ConstraintChecker {
 		if (!deletionNodes.isEmpty() || !creationNodes.isEmpty()) {
 			return true;
 		}
-
+		
+		// Require edge creation
+		//if (!edgeDeleted(preservedNodesLhs2Rhs))
+			//return true;
+		
+		
+		// May not create or delete node other than SelectedArtifacts/Solutions
+		
 		if (createOrDeleteEdgesViolateConstraints(deletionNodes, preservedNodesLhs2Rhs))
 			return true;
 
 		if (createOrDeleteEdgesViolateConstraints(creationNodes, preservedNodesRhs2Lhs))
 			return true;
 
+		return false;
+	}
+	
+	private static boolean edgeDeleted(Map<Node, Node> graph2graph) {
+		for (Node x1 : graph2graph.keySet()) {
+			for (Edge e : x1.getOutgoing()) {
+				Node x2 = e.getTarget();
+				Node y1 = graph2graph.get(x1);
+				Node y2 = graph2graph.get(x2);
+				if (y1 != null && y2 != null && y1.getOutgoing(e.getType(), y2) == null)
+					return true;
+						
+			}
+		}
+		
 		return false;
 	}
 
@@ -70,14 +92,19 @@ public class CRAConstraintChecker implements ConstraintChecker {
 		// <<preserve>>, but the edge itself, e, has no
 		// counterpart between the source and target node counterparts,
 		// y1 and y2
+		//boolean edgeCreationOrDeletion = false;
+		
 		for (Node x1 : graph2graph.keySet()) {
 			for (Edge e : x1.getOutgoing()) {
 				Node x2 = e.getTarget();
 				Node y1 = graph2graph.get(x1);
 				Node y2 = graph2graph.get(x2);
 				if (y1 != null && y2 != null && y1.getOutgoing(e.getType(), y2) == null)
-					if (e.getType() != NRPPackage.eINSTANCE.getSolution_SelectedArtifacts())
+					if (e.getType() != NRPPackage.eINSTANCE.getSolution_SelectedArtifacts() && e.getType() != NRPPackage.eINSTANCE.getSoftwareArtifact_Solutions())
 						return true;
+					//else
+						//edgeCreationOrDeletion = true;
+						
 			}
 		}
 		

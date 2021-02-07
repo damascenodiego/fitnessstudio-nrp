@@ -13,17 +13,11 @@
             class="nrp.model.nrp.NRPPackage"
             genModel="model/nrp.genmodel"/>
    </extension>
-   <extension
-         id="customide"
-         point="org.eclipse.core.runtime.products">
-      <product
-            application="org.eclipse.ui.ide.workbench"
-            name="Custom IDE">
-         <property
-               name="appName"
-               value="Custom IDE">
-         </property>
-      </product>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated nrp2 -->
+      <package
+            uri="http://nrp.model/nrp"
+            class="nrp.model.nrp2.nrp.NrpPackage"/>
    </extension>
 
 </plugin>
