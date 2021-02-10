@@ -1,8 +1,10 @@
 package de.uni_ko.fitnessstudio.upper;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.eclipse.emf.common.util.URI;
@@ -14,6 +16,7 @@ import org.eclipse.emf.henshin.interpreter.Engine;
 import org.eclipse.emf.henshin.interpreter.RuleApplication;
 import org.eclipse.emf.henshin.interpreter.impl.EGraphImpl;
 import org.eclipse.emf.henshin.interpreter.impl.RuleApplicationImpl;
+import org.eclipse.emf.henshin.model.Edge;
 import org.eclipse.emf.henshin.model.Module;
 import org.eclipse.emf.henshin.model.Rule;
 import org.eclipse.emf.henshin.model.Unit;
@@ -26,6 +29,18 @@ public class RuleSetMutator {
 
 	private static List<Rule> mutationRules;
 	private static boolean initialized = false;
+	private static Map<String, Double> rulesWeight = Map.of(
+			"createPreserveEdgesWithNode", 0.2,
+			"createPreserveEdge", 0.2,
+			"createCrOrDelNodeWithContainmentEdge", 0.0,
+			"createCrOrDelEdge", 1.0,
+			"createPreserveNodeWithIncomingEdge", 0.2,
+			"createPreserveNodeWithOutgoingEdge", 0.2,
+			"addNAC", 0.2,
+			"addNAC2", 0.2,
+			"CreateMultiRuleWithMappedPreserveNode", 0.2
+		);
+	
 //	private static 
 	public static RuleSet mutate(RuleSet myRuleSet, EPackage metaModel) {
 		Engine engine = EngineFactory.createEngine();
@@ -51,7 +66,9 @@ public class RuleSetMutator {
 				graph.addTree(metaModel);
 				graph.addTree(domainRule);
 				for (Rule mutationRule : mutationRules) {
-					if (Math.random() > 0.8) {
+					Double ruleWeight = rulesWeight.get(mutationRule.getName());
+		
+					if (ruleWeight != null && Math.random() < ruleWeight) {
 						// int apps = (int) (2*Math.random());
 						// for (int i = 0; i < apps; i++) {
 						RuleApplication app = new RuleApplicationImpl(engine, graph, mutationRule, null);
@@ -65,7 +82,6 @@ public class RuleSetMutator {
 						}
 						// System.out.println(done);
 						// identifyDangling(graph);
-
 					}
 				}
 				graph.clear();

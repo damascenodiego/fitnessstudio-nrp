@@ -70,7 +70,9 @@ public class NRPInit implements DomainModelInit {
 		
 		for (int i = 0; i < fresh.getAvailableArtifacts().size(); i++) {
 			if (Math.random() > 0.5) {
-				fresh.getSolutions().get(0).getSelectedArtifacts().add(fresh.getAvailableArtifacts().get(i));
+				SoftwareArtifact artifact = fresh.getAvailableArtifacts().get(i);
+				artifact.getSolutions().add(fresh.getSolutions().get(0));
+				fresh.getSolutions().get(0).getSelectedArtifacts().add(artifact);
 			}
 		}
 		
