@@ -15,6 +15,7 @@ import nrp.model.nrp.*;
 import de.uni_ko.fitnessstudio.upper.UpperGAManager;
 import de.uni_ko.fitnessstudio.util.GAConfiguration;
 import de.uni_ko.fitnessstudio.util.ModelIO;
+import fitnessstudio.instance.nrp.customized.CRAConstraintChecker;
 import fitnessstudio.instance.nrp.customized.NRPConstraintChecker;
 import fitnessstudio.instance.nrp.customized.NRPCrossover;
 import fitnessstudio.instance.nrp.customized.NRPFitness;
@@ -28,9 +29,9 @@ public class UpperTierRunner {
 			+ new SimpleDateFormat("HH_mm_ss").format(Calendar.getInstance().getTime()).toString() + "\\";
 
 	private static int UPPER_TIER_ITERATIONS = 20;
-	private static int UPPER_TIER_POPULATION_SIZE = 40;
-	private static int LOWER_TIER_ITERATIONS = 10;
-	private static int LOWER_TIER_POPULATION_SIZE = 10;
+	private static int UPPER_TIER_POPULATION_SIZE = 64;
+	private static int LOWER_TIER_ITERATIONS = 12;
+	private static int LOWER_TIER_POPULATION_SIZE = 8;
 	private static int RUNS = 4;
 	
 	private static GAConfiguration configurationUpper = new GAConfiguration(UPPER_TIER_ITERATIONS, UPPER_TIER_POPULATION_SIZE, true);
@@ -50,13 +51,13 @@ public class UpperTierRunner {
 			EPackage metaModel = NRPPackage.eINSTANCE;
 			NRPFitness domainModelFitness = new NRPFitness();
 			NRPCrossover domainModelCrossover = new NRPCrossover();
-			NRPConstraintChecker mutationConstraintChecker = new NRPConstraintChecker();
+			CRAConstraintChecker mutationConstraintChecker = new CRAConstraintChecker();
 			EObject inputModel = ModelIO.loadModel(INPUT_MODEL);
 
 			NRPInit init = new NRPInit(inputModel, null, domainModelCrossover, domainModelFitness);
 			
 			UpperGAManager manager = new UpperGAManager(domainModelFitness, init, mutationConstraintChecker, metaModel,
-					configurationUpper, configurationLower, inputModel, 60);
+					configurationUpper, configurationLower, inputModel, 120);
 			manager.setPrefix(OUTPUT_PREFIX + "\\"+i);
 			double result = manager.runGA();
 
