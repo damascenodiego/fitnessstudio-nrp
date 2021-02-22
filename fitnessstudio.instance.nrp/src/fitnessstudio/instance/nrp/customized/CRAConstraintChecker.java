@@ -112,7 +112,7 @@ public class CRAConstraintChecker implements ConstraintChecker {
 	}
 
 	public boolean satisfiesWellformednessConstraint(EObject model) {
-		return new MinimiseCost().computeFitness((NRP) model) < 9999999;
+		return true; //new MinimiseCost().computeFitness((NRP) model) < 600;
 	}
-
+	
 }

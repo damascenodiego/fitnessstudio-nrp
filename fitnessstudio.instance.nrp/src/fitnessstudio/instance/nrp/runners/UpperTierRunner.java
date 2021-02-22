@@ -29,8 +29,8 @@ public class UpperTierRunner {
 			+ new SimpleDateFormat("HH_mm_ss").format(Calendar.getInstance().getTime()).toString() + "\\";
 
 	private static int UPPER_TIER_ITERATIONS = 20;
-	private static int UPPER_TIER_POPULATION_SIZE = 64;
-	private static int LOWER_TIER_ITERATIONS = 12;
+	private static int UPPER_TIER_POPULATION_SIZE = 60;
+	private static int LOWER_TIER_ITERATIONS = 10;
 	private static int LOWER_TIER_POPULATION_SIZE = 8;
 	private static int RUNS = 4;
 	
@@ -57,7 +57,7 @@ public class UpperTierRunner {
 			NRPInit init = new NRPInit(inputModel, null, domainModelCrossover, domainModelFitness);
 			
 			UpperGAManager manager = new UpperGAManager(domainModelFitness, init, mutationConstraintChecker, metaModel,
-					configurationUpper, configurationLower, inputModel, 120);
+					configurationUpper, configurationLower, inputModel, 60);
 			manager.setPrefix(OUTPUT_PREFIX + "\\"+i);
 			double result = manager.runGA();
 

@@ -34,10 +34,7 @@ public class MaximiseSatisfactionReimplemented {
    * max(0.6, 0.8)=0.8.
    */
   
-  public double computeFitness(DomainModel model) {
-
-    NRP nextRelease = (NRP) model.getContent();
-
+  public double computeFitness(NRP nextRelease) {
     Double satisfaction =
         nextRelease.getCustomers().stream()
             .mapToDouble(

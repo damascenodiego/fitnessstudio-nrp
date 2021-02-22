@@ -89,9 +89,9 @@ public class NRPConstraintChecker implements ConstraintChecker {
 		
 		return false;
 	}
+	
 	public boolean satisfiesWellformednessConstraint(EObject nrp) {
-		return new MinimiseCost().computeFitness((NRP) nrp) < 9999999;//1600;
-		//return true; //SatisfactionCalculator.calculateSatisfaction((NRP) model) < 400; //CRAIndexCalculator.isCorrect((ClassModel) model);
+		return true; //return new MinimiseCost().computeFitness((NRP) nrp) < 9999999;//1600;
 	}
 
 }
