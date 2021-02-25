@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_CagzIGVxEeu34bjnYn4GOQ">
+  <imports href="../../../nrp/model/nrp.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_IXfH4mVxEeu34bjnYn4GOQ" name="addSaWithHierarchy">
+    <lhs xmi:id="_IXfH42VxEeu34bjnYn4GOQ" name="Lhs">
+      <nodes xmi:id="_IXfH5GVxEeu34bjnYn4GOQ" name="sol">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_IXfH5WVxEeu34bjnYn4GOQ" name="sa">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_IXfH5mVxEeu34bjnYn4GOQ" name="Rhs">
+      <nodes xmi:id="_IXfH52VxEeu34bjnYn4GOQ" name="sol" outgoing="_IXfH6WVxEeu34bjnYn4GOQ">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_IXfH6GVxEeu34bjnYn4GOQ" name="sa" incoming="_IXfH6WVxEeu34bjnYn4GOQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <edges xmi:id="_IXfH6WVxEeu34bjnYn4GOQ" source="_IXfH52VxEeu34bjnYn4GOQ" target="_IXfH6GVxEeu34bjnYn4GOQ">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_IXfH6mVxEeu34bjnYn4GOQ" origin="_IXfH5GVxEeu34bjnYn4GOQ" image="_IXfH52VxEeu34bjnYn4GOQ"/>
+    <mappings xmi:id="_IXfH62VxEeu34bjnYn4GOQ" origin="_IXfH5WVxEeu34bjnYn4GOQ" image="_IXfH6GVxEeu34bjnYn4GOQ"/>
+    <multiRules xmi:id="_IXfH7GVxEeu34bjnYn4GOQ">
+      <lhs xmi:id="_IXfH7WVxEeu34bjnYn4GOQ" name="Lhs">
+        <nodes xmi:id="_IXfH7mVxEeu34bjnYn4GOQ" name="sol">
+          <type href="http://nrp.model/nrp#//Solution"/>
+        </nodes>
+        <nodes xmi:id="_IXfH72VxEeu34bjnYn4GOQ" name="sa" outgoing="_IXfH8WVxEeu34bjnYn4GOQ">
+          <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+        </nodes>
+        <nodes xmi:id="_IXfH8GVxEeu34bjnYn4GOQ" name="dep" incoming="_IXfH8WVxEeu34bjnYn4GOQ">
+          <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+        </nodes>
+        <edges xmi:id="_IXfH8WVxEeu34bjnYn4GOQ" source="_IXfH72VxEeu34bjnYn4GOQ" target="_IXfH8GVxEeu34bjnYn4GOQ">
+          <type href="http://nrp.model/nrp#//SoftwareArtifact/requires"/>
+        </edges>
+      </lhs>
+      <rhs xmi:id="_IXfH8mVxEeu34bjnYn4GOQ" name="Rhs">
+        <nodes xmi:id="_IXfH82VxEeu34bjnYn4GOQ" name="sol" outgoing="_IXfH9mVxEeu34bjnYn4GOQ _IXfH-GVxEeu34bjnYn4GOQ">
+          <type href="http://nrp.model/nrp#//Solution"/>
+        </nodes>
+        <nodes xmi:id="_IXfH9GVxEeu34bjnYn4GOQ" name="sa" incoming="_IXfH9mVxEeu34bjnYn4GOQ" outgoing="_IXfH92VxEeu34bjnYn4GOQ">
+          <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+        </nodes>
+        <nodes xmi:id="_IXfH9WVxEeu34bjnYn4GOQ" name="dep" incoming="_IXfH92VxEeu34bjnYn4GOQ _IXfH-GVxEeu34bjnYn4GOQ">
+          <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+        </nodes>
+        <edges xmi:id="_IXfH9mVxEeu34bjnYn4GOQ" source="_IXfH82VxEeu34bjnYn4GOQ" target="_IXfH9GVxEeu34bjnYn4GOQ">
+          <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+        </edges>
+        <edges xmi:id="_IXfH92VxEeu34bjnYn4GOQ" source="_IXfH9GVxEeu34bjnYn4GOQ" target="_IXfH9WVxEeu34bjnYn4GOQ">
+          <type href="http://nrp.model/nrp#//SoftwareArtifact/requires"/>
+        </edges>
+        <edges xmi:id="_IXfH-GVxEeu34bjnYn4GOQ" source="_IXfH82VxEeu34bjnYn4GOQ" target="_IXfH9WVxEeu34bjnYn4GOQ">
+          <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+        </edges>
+      </rhs>
+      <mappings xmi:id="_IXfH-WVxEeu34bjnYn4GOQ" origin="_IXfH7mVxEeu34bjnYn4GOQ" image="_IXfH82VxEeu34bjnYn4GOQ"/>
+      <mappings xmi:id="_IXfH-mVxEeu34bjnYn4GOQ" origin="_IXfH72VxEeu34bjnYn4GOQ" image="_IXfH9GVxEeu34bjnYn4GOQ"/>
+      <mappings xmi:id="_IXfH-2VxEeu34bjnYn4GOQ" origin="_IXfH8GVxEeu34bjnYn4GOQ" image="_IXfH9WVxEeu34bjnYn4GOQ"/>
+      <multiMappings xmi:id="_IXfH_GVxEeu34bjnYn4GOQ" origin="_IXfH52VxEeu34bjnYn4GOQ" image="_IXfH82VxEeu34bjnYn4GOQ"/>
+      <multiMappings xmi:id="_IXfH_WVxEeu34bjnYn4GOQ" origin="_IXfH6GVxEeu34bjnYn4GOQ" image="_IXfH9GVxEeu34bjnYn4GOQ"/>
+      <multiMappings xmi:id="_IXfH_mVxEeu34bjnYn4GOQ" origin="_IXfH5GVxEeu34bjnYn4GOQ" image="_IXfH7mVxEeu34bjnYn4GOQ"/>
+      <multiMappings xmi:id="_IXfH_2VxEeu34bjnYn4GOQ" origin="_IXfH5WVxEeu34bjnYn4GOQ" image="_IXfH72VxEeu34bjnYn4GOQ"/>
+    </multiRules>
+  </units>
+</henshin:Module>

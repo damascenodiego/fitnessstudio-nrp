@@ -10,5 +10,6 @@ Export-Package: com.lagodiuk,
 Require-Bundle: org.eclipse.emf.ecore,
  org.eclipse.emf.ecore.xmi,
  org.eclipse.emf.henshin.model,
- org.eclipse.emf.henshin.interpreter
+ org.eclipse.emf.henshin.interpreter,
+ org.eclipse.emf.henshin.trace;bundle-version="1.7.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
