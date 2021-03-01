@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.emf.henshin.model.HenshinPackage;
 import org.eclipse.emf.henshin.model.Rule;
+import org.eclipse.emf.henshin.model.Unit;
 import org.eclipse.emf.henshin.model.resource.HenshinResourceSet;
 
 import com.lagodiuk.Chromosome;
@@ -24,13 +25,15 @@ import com.lagodiuk.Chromosome;
  *
  */
 public class RuleSet implements Chromosome<RuleSet> {
-	Set<Rule> content;
+	Set<Unit> fixedRules;
+	Set<Rule> genRules;
 	ConstraintChecker checker;
 	EPackage metaModel;
 
-	public RuleSet(Set<Rule> content, EPackage metaModel, ConstraintChecker checker) {
+	public RuleSet(Set<Rule> genRules, Set<Unit> fixedRules, EPackage metaModel, ConstraintChecker checker) {
 		super();
-		this.content = content;
+		this.genRules = genRules;
+		this.fixedRules = fixedRules;
 		this.metaModel = metaModel;
 		this.checker = checker;
 	}
@@ -38,9 +41,9 @@ public class RuleSet implements Chromosome<RuleSet> {
 	public RuleSet(Rule rule, EPackage metaModel, ConstraintChecker checker) {
 		super();
 		this.metaModel = metaModel;
-		this.content = new HashSet<Rule>();
+		this.genRules = new HashSet<Rule>();
 		this.checker = checker;
-		content.add(rule);
+		genRules.add(rule);
 	}
 
 
@@ -67,13 +70,24 @@ public class RuleSet implements Chromosome<RuleSet> {
 	    m.put("xmi", new XMIResourceFactoryImpl());
 	}
 
-	public Set<Rule> getContent() {
-		return content;
+	public Set<Unit> getAllRules() {
+		Set<Unit> allRules = new HashSet<>(getGenRules());
+		allRules.addAll(fixedRules);
+		
+		return allRules;
+	}
+	
+	public Set<Unit> getFixedRules() {
+		return fixedRules;
+	}
+	
+	public Set<Rule> getGenRules() {
+		return genRules;
 	}
 	
 	@Override
 	public String toString() {
-		return content.toString();
+		return genRules.toString();
 	}
 
 	@Override
@@ -90,8 +104,12 @@ public class RuleSet implements Chromosome<RuleSet> {
 		this.checker = checker;
 	}
 
-	public void setContent(Set<Rule> content) {
-		this.content = content;
+	public void setFixedRules(Set<Unit> fixedRules) {
+		this.fixedRules = fixedRules;
+	}
+	
+	public void setGenRules(Set<Rule> genRules) {
+		this.genRules = genRules;
 	}
 
 	public EPackage getMetaModel() {

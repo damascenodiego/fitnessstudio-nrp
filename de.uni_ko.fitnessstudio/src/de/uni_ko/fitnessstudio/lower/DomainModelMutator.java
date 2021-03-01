@@ -11,8 +11,10 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.henshin.interpreter.EGraph;
 import org.eclipse.emf.henshin.interpreter.Engine;
 import org.eclipse.emf.henshin.interpreter.RuleApplication;
+import org.eclipse.emf.henshin.interpreter.UnitApplication;
 import org.eclipse.emf.henshin.interpreter.impl.EGraphImpl;
 import org.eclipse.emf.henshin.interpreter.impl.RuleApplicationImpl;
+import org.eclipse.emf.henshin.interpreter.impl.UnitApplicationImpl;
 import org.eclipse.emf.henshin.model.Module;
 import org.eclipse.emf.henshin.model.Rule;
 import org.eclipse.emf.henshin.model.Unit;
@@ -24,28 +26,44 @@ public class DomainModelMutator {
 	static boolean initialized = false;
 	static Set<Rule> defaultRules;
 
-	Set<Rule> rules;
+	Set<Rule> genRules;
+	Set<Unit> fixedRules;
 	Engine engine = EngineFactory.createEngine();
 
 	public DomainModelMutator() {
 		initDefaultRules();
-		this.rules = defaultRules;
+		this.genRules = defaultRules;
+		this.fixedRules = new HashSet<>();
 	}
 
-	public DomainModelMutator(Set<Rule> rules) {
-		this.rules = rules;
+	public DomainModelMutator(Set<Rule> genRules) {
+		this.genRules = genRules;
+		this.fixedRules = new HashSet<>();
+	}
+	
+	public DomainModelMutator(Set<Rule> genRules, Set<Unit> fixedRules) {
+		this.genRules = genRules;
+		this.fixedRules = fixedRules;
 	}
 
 	public DomainModel mutate(DomainModel domainModel) {
 		EObject mutated = (EObject) EcoreUtil.copy(domainModel.getContent());
 		EGraph graph = new EGraphImpl(mutated);
-
-		for (Rule rule : rules) {
+		
+		for (Rule rule : genRules) {
 			if (Math.random() > 0.4) {
 				RuleApplication app = new RuleApplicationImpl(engine, graph, rule, null);
 				app.execute(null);
 			}
 		}
+		
+		for (Unit unit : fixedRules) {
+			if (Math.random() > 0.4) {
+				UnitApplication app = new UnitApplicationImpl(engine, graph, unit, null);
+				app.execute(null);
+			}
+		}
+		
 		graph.clear();
 		DomainModel result = new DomainModel(mutated, domainModel.getMutator(), domainModel.getCrossover(), domainModel.getFitness());
 		return result;
@@ -71,6 +89,6 @@ public class DomainModelMutator {
 
 	@Override
 	public String toString() {
-		return super.toString() + ", " + rules.size() + " rules: " + rules;
+		return super.toString() + ", " + genRules.size() + " rules: " + genRules;
 	}
 }

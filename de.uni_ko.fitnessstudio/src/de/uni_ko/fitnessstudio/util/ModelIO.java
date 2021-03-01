@@ -13,6 +13,7 @@ import org.eclipse.emf.henshin.model.HenshinFactory;
 import org.eclipse.emf.henshin.model.HenshinPackage;
 import org.eclipse.emf.henshin.model.Module;
 import org.eclipse.emf.henshin.model.Rule;
+import org.eclipse.emf.henshin.model.Unit;
 import org.eclipse.emf.henshin.model.resource.HenshinResourceSet;
 
 public class ModelIO {
@@ -36,7 +37,7 @@ public class ModelIO {
 		m.put("henshin", new XMIResourceFactoryImpl());
 	}
 
-	public static void saveProducedRuleSet(Set<Rule> content, int iteration, double cra, String prefix) {
+	public static void saveProducedRuleSet(Set<Unit> content, int iteration, double cra, String prefix) {
 		Module module = HenshinFactory.eINSTANCE.createModule();
 		module.getUnits().addAll(content);
 		HenshinResourceSet rs = new HenshinResourceSet();

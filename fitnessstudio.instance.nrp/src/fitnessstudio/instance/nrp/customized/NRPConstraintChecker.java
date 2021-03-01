@@ -12,15 +12,14 @@ import org.eclipse.emf.henshin.model.Mapping;
 import org.eclipse.emf.henshin.model.Node;
 import org.eclipse.emf.henshin.model.Rule;
 
-import nrp.model.nrp.*;
 import de.uni_ko.fitnessstudio.upper.ConstraintChecker;
 import fitnessstudio.instance.nrp.fitness.MinimiseCost;
-
-
+import nrp.model.nrp.NRP;
+import nrp.model.nrp.NRPPackage;
 
 public class NRPConstraintChecker implements ConstraintChecker {
-	
-	public boolean satisfiesMutationConstraints(Collection<Rule> content) {	
+
+	public boolean satisfiesMutationConstraints(Collection<Rule> content) {
 		for (Rule rule : content) {
 			if (!satisfiesMutationConstraints(rule))
 				return false;
@@ -39,59 +38,81 @@ public class NRPConstraintChecker implements ConstraintChecker {
 		return true;
 	}
 
-	// All classes are fixed
-	// All references except selectedArtifacts (and solutions software artifact is in) are fixed
 	private static boolean creationOrDeletionViolatesConstraints(Rule rule) {
 		Set<Node> deletionNodes = new HashSet<Node>(rule.getLhs().getNodes());
 		Set<Node> creationNodes = new HashSet<Node>(rule.getRhs().getNodes());
-		Map<Node, Node> nodesLhs2Rhs = new HashMap<Node, Node>();
-		Map<Node, Node> nodesRhs2Lhs = new HashMap<Node, Node>();
-		
+		Map<Node, Node> preservedNodesLhs2Rhs = new HashMap<Node, Node>();
+		Map<Node, Node> preservedNodesRhs2Lhs = new HashMap<Node, Node>();
 		for (Mapping m : rule.getMappings()) {
 			deletionNodes.remove(m.getOrigin());
 			creationNodes.remove(m.getImage());
-			
-			nodesLhs2Rhs.put(m.getOrigin(), m.getImage());
-			nodesRhs2Lhs.put(m.getImage(), m.getOrigin());
+			preservedNodesLhs2Rhs.put(m.getOrigin(), m.getImage());
+			preservedNodesRhs2Lhs.put(m.getImage(), m.getOrigin());
 		}
-		
-		// A node is deleted or created, which is not allowed
+
+		// May not create or delete nodes
 		if (!deletionNodes.isEmpty() || !creationNodes.isEmpty()) {
 			return true;
 		}
 		
-		boolean deletionEdgeViolation = creationOrDeletionEdgeViolatesConstraints(nodesLhs2Rhs);
-		boolean creationEdgeViolation = creationOrDeletionEdgeViolatesConstraints(nodesRhs2Lhs);
-		if (deletionEdgeViolation || creationEdgeViolation) {
-			return true;
-		}
+		// Require edge creation
+		//if (!edgeDeleted(preservedNodesLhs2Rhs))
+			//return true;
 		
+		
+		// May not create or delete node other than SelectedArtifacts/Solutions
+		
+		if (createOrDeleteEdgesViolateConstraints(deletionNodes, preservedNodesLhs2Rhs))
+			return true;
+
+		if (createOrDeleteEdgesViolateConstraints(creationNodes, preservedNodesRhs2Lhs))
+			return true;
+
 		return false;
 	}
-
-	private static boolean creationOrDeletionEdgeViolatesConstraints(Map<Node, Node> nodeMap) {
-		for (Node x1 : nodeMap.keySet()) {		// lhs source node	
-			for (Edge e : x1.getOutgoing()) {	// lhs edge	(x1 -> x2)
-				Node x2 = e.getTarget();		// lhs target node
-				Node y1 = nodeMap.get(x1);		// rhs source node (mapped)
-				Node y2 = nodeMap.get(x2);		// rhs target node (mapped)
-				
-				// If rhs has no edge from source to target node
-				// and lhs edge is not of type selectedartifacts/artifact_solutions
-				if (/*y1 != null && y2 != null && */y1.getOutgoing(e.getType(), y2) == null) {
-					
-					if (e.getType() != NRPPackage.eINSTANCE.getSolution_SelectedArtifacts() && e.getType() != NRPPackage.eINSTANCE.getSoftwareArtifact_Solutions())
-						return true;
+	
+	private static boolean edgeDeleted(Map<Node, Node> graph2graph) {
+		for (Node x1 : graph2graph.keySet()) {
+			for (Edge e : x1.getOutgoing()) {
+				Node x2 = e.getTarget();
+				Node y1 = graph2graph.get(x1);
+				Node y2 = graph2graph.get(x2);
+				if (y1 != null && y2 != null && y1.getOutgoing(e.getType(), y2) == null)
+					return true;
 						
-				}
 			}
 		}
 		
 		return false;
 	}
-	
-	public boolean satisfiesWellformednessConstraint(EObject nrp) {
-		return true; //return new MinimiseCost().computeFitness((NRP) nrp) < 9999999;//1600;
+
+	private static boolean createOrDeleteEdgesViolateConstraints(Set<Node> nodes, Map<Node, Node> graph2graph) {
+		// An edge is <<delete>> or <<create>>:
+		// If its source and target nodes, x1 and x2, are
+		// <<preserve>>, but the edge itself, e, has no
+		// counterpart between the source and target node counterparts,
+		// y1 and y2
+		//boolean edgeCreationOrDeletion = false;
+		
+		for (Node x1 : graph2graph.keySet()) {
+			for (Edge e : x1.getOutgoing()) {
+				Node x2 = e.getTarget();
+				Node y1 = graph2graph.get(x1);
+				Node y2 = graph2graph.get(x2);
+				if (y1 != null && y2 != null && y1.getOutgoing(e.getType(), y2) == null)
+					if (e.getType() != NRPPackage.eINSTANCE.getSolution_SelectedArtifacts() && e.getType() != NRPPackage.eINSTANCE.getSoftwareArtifact_Solutions())
+						return true;
+					//else
+						//edgeCreationOrDeletion = true;
+						
+			}
+		}
+		
+		return false;
 	}
 
+	public boolean satisfiesWellformednessConstraint(EObject model) {
+		return true; //new MinimiseCost().computeFitness((NRP) model) < 600;
+	}
+	
 }

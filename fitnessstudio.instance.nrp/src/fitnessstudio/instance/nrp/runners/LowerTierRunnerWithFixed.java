@@ -27,7 +27,7 @@ import de.uni_ko.fitnessstudio.lower.DomainModelMutator;
 import de.uni_ko.fitnessstudio.lower.LowerGAManager;
 import de.uni_ko.fitnessstudio.util.GAConfiguration;
 import de.uni_ko.fitnessstudio.util.ModelIO;
-import fitnessstudio.instance.nrp.customized.CRAConstraintChecker;
+import fitnessstudio.instance.nrp.customized.NRPConstraintChecker;
 import fitnessstudio.instance.nrp.customized.NRPConstraintChecker;
 import fitnessstudio.instance.nrp.customized.NRPFitness;
 import fitnessstudio.instance.nrp.customized.NRPInit;
@@ -58,7 +58,7 @@ public class LowerTierRunnerWithFixed {
 			DomainModelMutator mutator = new DomainModelMutator(getFixedMutationRules());
 			NRPFitness fitness = new NRPFitness();
 			NRPInit init = new NRPInit(inputModel, mutator);
-			CRAConstraintChecker constraintChecker = new CRAConstraintChecker();
+			NRPConstraintChecker constraintChecker = new NRPConstraintChecker();
 			
 			LowerGAManager gaManager = new LowerGAManager(mutator, fitness, init, configuration, constraintChecker);
 			double result = gaManager.runGA();

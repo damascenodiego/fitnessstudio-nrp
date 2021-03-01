@@ -62,7 +62,7 @@ public class UpperGAManager {
 		ga.getPopulation().trim(0);
 		ga.clearCache();
 		time = System.currentTimeMillis();
-		if (best == null || !constraintChecker.satisfiesMutationConstraints(best.getContent()))
+		if (best == null || !constraintChecker.satisfiesMutationConstraints(best.getGenRules()))
 			return -10000.0;
 		else
 			return fitnessVal;
@@ -88,7 +88,7 @@ public class UpperGAManager {
 
 				// Listener prints best achieved solution
 				System.out.println(String.format("%s\t%s\t%s\t%s", iteration, bestFit, best, time));
-				ModelIO.saveProducedRuleSet(best.getContent(), iteration, bestFit, prefix);
+				ModelIO.saveProducedRuleSet(best.getAllRules(), iteration, bestFit, prefix);
 				time = System.currentTimeMillis();
 			}
 		});

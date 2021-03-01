@@ -33,7 +33,7 @@ public class RuleSetMutator {
 			"createPreserveEdgesWithNode", 0.2,
 			"createPreserveEdge", 0.2,
 			"createCrOrDelNodeWithContainmentEdge", 0.0,
-			"createCrOrDelEdge", 1.0,
+			"createCrOrDelEdge", 0.9,
 			"createPreserveNodeWithIncomingEdge", 0.2,
 			"createPreserveNodeWithOutgoingEdge", 0.2,
 			"addNAC", 0.2,
@@ -48,12 +48,12 @@ public class RuleSetMutator {
 		initMutationRules();
 		RuleSet domainRules = copyRuleSet(myRuleSet);
 
-		for (Rule domainRule : new HashSet<Rule>(domainRules.getContent())) {
+		for (Rule domainRule : new HashSet<Rule>(domainRules.getGenRules())) {
 			double fate = Math.random();
-			if (fate < 0.33 && myRuleSet.getContent().size() > 2) {
-				domainRules.getContent().remove(domainRule);
+			if (fate < 0.33 && myRuleSet.getGenRules().size() > 2) {
+				domainRules.getGenRules().remove(domainRule);
 			} else if (fate > 0.8) {
-				domainRules.getContent().add(EcoreUtil.copy(domainRule));
+				domainRules.getGenRules().add(EcoreUtil.copy(domainRule));
 			}
 		}
 
@@ -61,7 +61,7 @@ public class RuleSetMutator {
 		// if (Math.random() > 0.5)
 		// graph.addTree(r);
 
-		for (Rule domainRule : domainRules.getContent()) {
+		for (Rule domainRule : domainRules.getGenRules()) {
 				EGraph graph = new EGraphImpl();
 				graph.addTree(metaModel);
 				graph.addTree(domainRule);
@@ -112,8 +112,8 @@ public class RuleSetMutator {
 
 	private static RuleSet copyRuleSet(RuleSet myRuleSet) {
 		Set<Rule> rules = new HashSet<Rule>();
-		myRuleSet.getContent().stream().forEach(r -> rules.add(EcoreUtil.copy(r)));
-		return new RuleSet(rules, myRuleSet.getMetaModel(), myRuleSet.getConstraintChecker());
+		myRuleSet.getGenRules().stream().forEach(r -> rules.add(EcoreUtil.copy(r)));
+		return new RuleSet(rules, myRuleSet.getFixedRules(), myRuleSet.getMetaModel(), myRuleSet.getConstraintChecker());
 	}
 
 	public static void initMutationRules() {

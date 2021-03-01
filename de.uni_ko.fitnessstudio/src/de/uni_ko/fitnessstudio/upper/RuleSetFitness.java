@@ -33,8 +33,8 @@ public class RuleSetFitness implements Fitness<RuleSet, Double> {
 
 	@Override
 	public Double calculate(RuleSet chromosome) {
-		if (chromosome.getConstraintChecker().satisfiesMutationConstraints(chromosome.getContent())) {
-			DomainModelMutator mutator = new DomainModelMutator(chromosome.getContent());
+		if (chromosome.getConstraintChecker().satisfiesMutationConstraints(chromosome.getGenRules())) {
+			DomainModelMutator mutator = new DomainModelMutator(chromosome.getGenRules(), chromosome.getFixedRules());
 			return getResultWithTimeout(mutator);
 		} else {
 			return -10000.0;

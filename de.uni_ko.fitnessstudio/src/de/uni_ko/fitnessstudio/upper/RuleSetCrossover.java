@@ -17,7 +17,7 @@ public class RuleSetCrossover {
 		Set<Rule> set2 = new HashSet<Rule>();
 		
 		int counter = 0;
-		for (Rule r1 : one.getContent()) {
+		for (Rule r1 : one.getGenRules()) {
 			if (counter % 2 == 0)
 				set1.add(EcoreUtil.copy(r1));
 			else
@@ -26,7 +26,7 @@ public class RuleSetCrossover {
 		}
 		
 		counter = 0;
-		for (Rule r1 : two.getContent()) {
+		for (Rule r1 : two.getGenRules()) {
 			if (counter % 2 == 0)
 				set1.add(EcoreUtil.copy(r1));
 			else
@@ -34,8 +34,8 @@ public class RuleSetCrossover {
 			counter++;
 		}
 		
-		result.add(new RuleSet(set1, one.getMetaModel(), one.getConstraintChecker()));
-		result.add(new RuleSet(set2, one.getMetaModel(), one.getConstraintChecker()));
+		result.add(new RuleSet(set1, one.getFixedRules(), one.getMetaModel(), one.getConstraintChecker()));
+		result.add(new RuleSet(set2, one.getFixedRules(), one.getMetaModel(), one.getConstraintChecker()));
 		
 		return result;
 	}

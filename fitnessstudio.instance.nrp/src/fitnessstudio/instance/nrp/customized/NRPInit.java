@@ -46,8 +46,8 @@ public class NRPInit implements DomainModelInit {
 
 		//List<Integer> chosen = new ArrayList<>(populationSize);
 		for (int i = 0; i < populationSize; i++) {
-			result.addChromosome(createInitialSingletonSolution(i));
-			//result.addChromosome(createRandomSolution());
+			//result.addChromosome(createInitialSingletonSolution(i));
+			result.addChromosome(createRandomSolution());
 		} 
 		
 		return result;
