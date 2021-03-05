@@ -9,6 +9,7 @@ import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -34,14 +35,14 @@ import fitnessstudio.instance.nrp.customized.NRPInit;
 
 @SuppressWarnings("all")
 public class LowerTierRunnerWithFixed {
-	private static String INPUT_MODEL_ID = "NRP2";
+	private static String INPUT_MODEL_ID = "NRP3";
 	private static String INPUT_MODEL = "input\\" + INPUT_MODEL_ID+".xmi";
 	private static String MUTATION_RULES_DIRECTORY = "transformation\\fixed";
 	private static String OUTPUT_PREFIX = "output_models\\" +INPUT_MODEL_ID + "\\" + new SimpleDateFormat("HH_mm_ss").format(Calendar.getInstance().getTime()).toString() + "\\";
 
 	private static int RUNS = 30;
 	private static int ITERATIONS = 60;
-	private static int POPULATION_SIZE = 63;
+	private static int POPULATION_SIZE = 40;
 	
 	private static GAConfiguration configuration = new GAConfiguration(ITERATIONS, POPULATION_SIZE, true);
 
@@ -55,7 +56,7 @@ public class LowerTierRunnerWithFixed {
 			long start = System.currentTimeMillis();
 
 			EObject inputModel = ModelIO.loadModel(INPUT_MODEL);
-			DomainModelMutator mutator = new DomainModelMutator(getFixedMutationRules());
+			DomainModelMutator mutator = new DomainModelMutator(getGenRules(), getFixedRules());//getFixedMutationRules());
 			NRPFitness fitness = new NRPFitness();
 			NRPInit init = new NRPInit(inputModel, mutator);
 			NRPConstraintChecker constraintChecker = new NRPConstraintChecker();
@@ -118,5 +119,46 @@ public class LowerTierRunnerWithFixed {
 		}
 		return mutationRules;
 	}
+	
+	private static Set<Unit> getFixedRules() {
+		HenshinResourceSet resSet = new HenshinResourceSet();
+		Resource resource = resSet.getResource(URI.createURI("..\\de.uni_ko.fitnessstudio\\transformation\\genetic\\mutation.henshin"), true);
+		Module module = (Module) resource.getContents().get(0);
+		
+		Set<Unit> fixedRules = new HashSet<Unit>(module.getUnits());
+		
+		// Remove all SubUnits from fixedRules
+		for (Unit unit : module.getUnits()) {
+			List<Unit> subUnits = unit.getSubUnits(true);
+			fixedRules.removeAll(subUnits);
+		}
+		
+		return fixedRules;
+	}
+	
+	public static Set<Rule> getGenRules() {
+		ModelIO.registerPackage();
+
+		Path fixedRulesDirectory = Paths.get(MUTATION_RULES_DIRECTORY);
+		Path firstHenshinFile = null;
+		try {
+			firstHenshinFile = Files.list(fixedRulesDirectory).filter(x -> x.toString().endsWith(".henshin"))
+					.collect(Collectors.toList()).get(0);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		HenshinResourceSet resSet = new HenshinResourceSet();
+		Resource res1 = resSet.getResource(URI.createURI(firstHenshinFile.toString()), true);
+		System.out.println(firstHenshinFile.toString());
+		Module mod1 = (Module) res1.getContents().get(0);
+		Set<Rule> mutationRules = new HashSet<Rule>();
+		for (Unit u : mod1.getUnits()) {
+			if (u instanceof Rule)
+				mutationRules.add(((Rule) u));
+		}
+		return mutationRules;
+	}
+	
 
 }
