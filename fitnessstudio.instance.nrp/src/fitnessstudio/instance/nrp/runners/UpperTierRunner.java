@@ -28,11 +28,11 @@ public class UpperTierRunner {
 	private static String OUTPUT_PREFIX = "output_rules\\" + INPUT_MODEL_ID + "\\"
 			+ new SimpleDateFormat("HH_mm_ss").format(Calendar.getInstance().getTime()).toString() + "\\";
 
-	private static int UPPER_TIER_ITERATIONS = 20;
+	private static int UPPER_TIER_ITERATIONS = 15;
 	private static int UPPER_TIER_POPULATION_SIZE = 60;
-	private static int LOWER_TIER_ITERATIONS = 10;
-	private static int LOWER_TIER_POPULATION_SIZE = 12;
-	private static int RUNS = 4;
+	private static int LOWER_TIER_ITERATIONS = 15;
+	private static int LOWER_TIER_POPULATION_SIZE = 10;
+	private static int RUNS = 10;
 	
 	private static GAConfiguration configurationUpper = new GAConfiguration(UPPER_TIER_ITERATIONS, UPPER_TIER_POPULATION_SIZE, true);
 	private static GAConfiguration configurationLower = new GAConfiguration(LOWER_TIER_ITERATIONS, LOWER_TIER_POPULATION_SIZE, false);
@@ -57,7 +57,7 @@ public class UpperTierRunner {
 			NRPInit init = new NRPInit(inputModel, null, domainModelCrossover, domainModelFitness);
 			
 			UpperGAManager manager = new UpperGAManager(domainModelFitness, init, mutationConstraintChecker, metaModel,
-					configurationUpper, configurationLower, inputModel, 90);
+					configurationUpper, configurationLower, inputModel, 180);
 			manager.setPrefix(OUTPUT_PREFIX + "\\"+i);
 			double result = manager.runGA();
 
