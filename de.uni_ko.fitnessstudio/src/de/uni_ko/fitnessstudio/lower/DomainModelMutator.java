@@ -1,6 +1,7 @@
 package de.uni_ko.fitnessstudio.lower;
 
 import java.util.HashSet;
+import java.util.Random;
 import java.util.Set;
 
 import org.eclipse.emf.common.util.URI;
@@ -29,6 +30,7 @@ public class DomainModelMutator {
 	Set<Rule> genRules;
 	Set<Unit> fixedRules;
 	Engine engine = EngineFactory.createEngine();
+	Random random = new Random();
 
 	public DomainModelMutator() {
 		initDefaultRules();
@@ -50,19 +52,20 @@ public class DomainModelMutator {
 		EObject mutated = (EObject) EcoreUtil.copy(domainModel.getContent());
 		EGraph graph = new EGraphImpl(mutated);
 		
-		for (Rule rule : genRules) {
-			if (Math.random() > 0.4) {
-				RuleApplication app = new RuleApplicationImpl(engine, graph, rule, null);
-				app.execute(null);
-			}
-		}
-		
 		for (Unit unit : fixedRules) {
 			if (Math.random() > 0.4) {
 				UnitApplication app = new UnitApplicationImpl(engine, graph, unit, null);
 				app.execute(null);
 			}
 		}
+	
+		for (Rule rule : genRules) {
+			if (Math.random() > 0.4) {
+				RuleApplication ruleApp = new RuleApplicationImpl(engine, graph, rule, null);
+				ruleApp.execute(null);
+			}
+		}
+		
 		
 		graph.clear();
 		DomainModel result = new DomainModel(mutated, domainModel.getMutator(), domainModel.getCrossover(), domainModel.getFitness());
