@@ -9,8 +9,6 @@ import java.util.Calendar;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
-
-//import architectureCRA.ArchitectureCRAPackage;
 import nrp.model.nrp.*;
 import de.uni_ko.fitnessstudio.upper.UpperGAManager;
 import de.uni_ko.fitnessstudio.util.GAConfiguration;

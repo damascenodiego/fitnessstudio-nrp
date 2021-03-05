@@ -41,7 +41,7 @@ public class RuleSetInit {
 		initInitializationRules();
 
 		int ruleSetSize = 4;
-		Set<Unit> fixedRules = getFixedRules();
+		Set<Unit> fixedRules = new HashSet<>();
 		
 		GAPopulation<RuleSet> result = new GAPopulation<RuleSet>();
 		for (int i = 0; i < populationSize; i++) {
@@ -55,22 +55,6 @@ public class RuleSetInit {
 		}
 		System.out.println("INITIALIZED POPULATION");
 		return result;
-	}
-
-	private static Set<Unit> getFixedRules() {
-		HenshinResourceSet resSet = new HenshinResourceSet();
-		Resource resource = resSet.getResource(URI.createURI("..\\de.uni_ko.fitnessstudio\\transformation\\genetic\\mutation.henshin"), true);
-		Module module = (Module) resource.getContents().get(0);
-		
-		Set<Unit> fixedRules = new HashSet<Unit>(module.getUnits());
-		
-		// Remove all SubUnits from fixedRules
-		for (Unit unit : module.getUnits()) {
-			List<Unit> subUnits = unit.getSubUnits(true);
-			fixedRules.removeAll(subUnits);
-		}
-		
-		return fixedRules;
 	}
 
 	private static void applyFirstRule(Rule initialRule, EPackage metaModel) {

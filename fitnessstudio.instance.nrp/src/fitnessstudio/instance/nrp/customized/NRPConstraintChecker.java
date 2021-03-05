@@ -13,8 +13,6 @@ import org.eclipse.emf.henshin.model.Node;
 import org.eclipse.emf.henshin.model.Rule;
 
 import de.uni_ko.fitnessstudio.upper.ConstraintChecker;
-import fitnessstudio.instance.nrp.fitness.MinimiseCost;
-import nrp.model.nrp.NRP;
 import nrp.model.nrp.NRPPackage;
 
 public class NRPConstraintChecker implements ConstraintChecker {
@@ -55,34 +53,15 @@ public class NRPConstraintChecker implements ConstraintChecker {
 			return true;
 		}
 		
-		// Require edge creation
-		//if (!edgeDeleted(preservedNodesLhs2Rhs))
-			//return true;
-		
-		
-		// May not create or delete node other than SelectedArtifacts/Solutions
-		
+
+		// May not delete node other than SelectedArtifacts/Solutions
 		if (createOrDeleteEdgesViolateConstraints(deletionNodes, preservedNodesLhs2Rhs))
 			return true;
 
+		// May not create node other than SelectedArtifacts/Solutions
 		if (createOrDeleteEdgesViolateConstraints(creationNodes, preservedNodesRhs2Lhs))
 			return true;
 
-		return false;
-	}
-	
-	private static boolean edgeDeleted(Map<Node, Node> graph2graph) {
-		for (Node x1 : graph2graph.keySet()) {
-			for (Edge e : x1.getOutgoing()) {
-				Node x2 = e.getTarget();
-				Node y1 = graph2graph.get(x1);
-				Node y2 = graph2graph.get(x2);
-				if (y1 != null && y2 != null && y1.getOutgoing(e.getType(), y2) == null)
-					return true;
-						
-			}
-		}
-		
 		return false;
 	}
 
@@ -92,7 +71,6 @@ public class NRPConstraintChecker implements ConstraintChecker {
 		// <<preserve>>, but the edge itself, e, has no
 		// counterpart between the source and target node counterparts,
 		// y1 and y2
-		//boolean edgeCreationOrDeletion = false;
 		
 		for (Node x1 : graph2graph.keySet()) {
 			for (Edge e : x1.getOutgoing()) {
@@ -102,9 +80,6 @@ public class NRPConstraintChecker implements ConstraintChecker {
 				if (y1 != null && y2 != null && y1.getOutgoing(e.getType(), y2) == null)
 					if (e.getType() != NRPPackage.eINSTANCE.getSolution_SelectedArtifacts() && e.getType() != NRPPackage.eINSTANCE.getSoftwareArtifact_Solutions())
 						return true;
-					//else
-						//edgeCreationOrDeletion = true;
-						
 			}
 		}
 		
@@ -112,7 +87,7 @@ public class NRPConstraintChecker implements ConstraintChecker {
 	}
 
 	public boolean satisfiesWellformednessConstraint(EObject model) {
-		return true; //new MinimiseCost().computeFitness((NRP) model) < 600;
+		return true;
 	}
 	
 }

@@ -1,9 +1,5 @@
 package fitnessstudio.instance.nrp.customized;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ThreadLocalRandom;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
@@ -44,25 +40,12 @@ public class NRPInit implements DomainModelInit {
 	public GAPopulation<DomainModel> createPopulation(int populationSize) {
 		GAPopulation<DomainModel> result = new GAPopulation<DomainModel>();
 
-		//List<Integer> chosen = new ArrayList<>(populationSize);
 		for (int i = 0; i < populationSize; i++) {
-			//result.addChromosome(createInitialSingletonSolution(i));
 			result.addChromosome(createRandomSolution());
 		} 
 		
 		return result;
 		
-	}
-
-	// create with adding 
-	private  DomainModel createInitialSingletonSolution(int i) {
-		NRP fresh = (NRP) EcoreUtil.copy(inputModel);
-		SoftwareArtifact initial_artifact = fresh.getAvailableArtifacts().get(i % fresh.getAvailableArtifacts().size());
-		
-		initial_artifact.getSolutions().add(fresh.getSolutions().get(0));
-		fresh.getSolutions().get(0).getSelectedArtifacts().add(initial_artifact);
-		
-		return new DomainModel(fresh, mutator, crossover, fitness);
 	}
 	
 	private DomainModel createRandomSolution() {

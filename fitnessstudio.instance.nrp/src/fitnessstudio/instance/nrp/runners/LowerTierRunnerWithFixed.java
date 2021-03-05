@@ -21,7 +21,6 @@ import org.eclipse.emf.henshin.model.Rule;
 import org.eclipse.emf.henshin.model.Unit;
 import org.eclipse.emf.henshin.model.resource.HenshinResourceSet;
 
-//import architectureCRA.ArchitectureCRAPackage;
 import nrp.model.nrp.*;
 import de.uni_ko.fitnessstudio.lower.DomainModel;
 import de.uni_ko.fitnessstudio.lower.DomainModelMutator;

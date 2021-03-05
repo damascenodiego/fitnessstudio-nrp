@@ -24,8 +24,6 @@ import nrp.model.nrp.NRP;
 			Double satisfaction = calculateSatisfaction(nextRelease) / MAX_SATISFACTION;
 			
 			return satisfaction - cost;
-			
-			//return new MaximiseSatisfactionReimplemented().computeFitness(chromosome);
 		}
 		
 		private Double calculateCost(NRP nextRelease) {
