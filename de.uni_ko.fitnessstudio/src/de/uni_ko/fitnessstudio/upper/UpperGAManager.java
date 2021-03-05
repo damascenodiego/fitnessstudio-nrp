@@ -88,7 +88,7 @@ public class UpperGAManager {
 
 				// Listener prints best achieved solution
 				System.out.println(String.format("%s\t%s\t%s\t%s", iteration, bestFit, best, time));
-				ModelIO.saveProducedRuleSet(best.getAllRules(), iteration, bestFit, prefix);
+				ModelIO.saveProducedRuleSet(best.getGenRules(), iteration, bestFit, prefix);
 				time = System.currentTimeMillis();
 			}
 		});
