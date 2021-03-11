@@ -33,8 +33,6 @@ import de.uni_ko.fitnessstudio.util.ModelIO;
 import fitnessstudio.instance.nrp.customized.NRPConstraintChecker;
 import fitnessstudio.instance.nrp.customized.NRPCrossover;
 import fitnessstudio.instance.nrp.customized.NRPConstraintChecker;
-import fitnessstudio.instance.nrp.customized.NRPFitness;
-import fitnessstudio.instance.nrp.customized.NRPInit;
 import fitnessstudio.instance.nrp.customized.NRPProblem;
 
 @SuppressWarnings("all")

@@ -72,9 +72,12 @@ public class NRPCrossover implements DomainModelCrossover<NRPSolution> {
 		
 		int n = 0;
 		for (SoftwareArtifact artifact : child.getAvailableArtifacts()) {
+			artifact.getSolutions().clear();
+			
 			if (n < pivot) {
 				for (SoftwareArtifact p1_artifact : parent1.getSolutions().get(0).getSelectedArtifacts()) {
 					if (artifact.getName().equals(p1_artifact.getName())) {
+						artifact.getSolutions().add(child.getSolutions().get(0));
 						child.getSolutions().get(0).getSelectedArtifacts().add(artifact);
 						break;
 					}
@@ -82,6 +85,7 @@ public class NRPCrossover implements DomainModelCrossover<NRPSolution> {
 			} else {
 				for (SoftwareArtifact p2_artifact : parent2.getSolutions().get(0).getSelectedArtifacts()) {
 					if (artifact.getName().equals(p2_artifact.getName())) {
+						artifact.getSolutions().add(child.getSolutions().get(0));
 						child.getSolutions().get(0).getSelectedArtifacts().add(artifact);
 						break;
 					}
