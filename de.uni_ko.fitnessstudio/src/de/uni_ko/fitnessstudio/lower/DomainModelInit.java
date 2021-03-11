@@ -6,7 +6,7 @@ public interface DomainModelInit {
 
 	public GAPopulation<DomainModel> createPopulation(int populationSize);
 
-	public void setMutator(DomainModelMutator mutator);
+	public void setMutator(DomainModelMutation mutator);
 
 	
 }

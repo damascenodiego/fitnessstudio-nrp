@@ -9,17 +9,17 @@ import com.lagodiuk.GAPopulation;
 import nrp.model.nrp.*;
 import de.uni_ko.fitnessstudio.lower.DomainModel;
 import de.uni_ko.fitnessstudio.lower.DomainModelInit;
-import de.uni_ko.fitnessstudio.lower.DomainModelMutator;
+import de.uni_ko.fitnessstudio.lower.DomainModelMutation;
 
 public class NRPInit implements DomainModelInit {
 
 	EObject inputModel;
-	DomainModelMutator mutator;
+	DomainModelMutation mutator;
 	NRPCrossover crossover;
 	NRPFitness fitness;
 	
 
-	public NRPInit(EObject inputModel, DomainModelMutator mutator) {
+	public NRPInit(EObject inputModel, DomainModelMutation mutator) {
 		super();
 		this.inputModel = inputModel;
 		this.mutator = mutator;
@@ -27,7 +27,7 @@ public class NRPInit implements DomainModelInit {
 		this.fitness = new NRPFitness();
 	}
 	
-	public NRPInit(EObject inputModel, DomainModelMutator mutator, NRPCrossover crossover,
+	public NRPInit(EObject inputModel, DomainModelMutation mutator, NRPCrossover crossover,
 			NRPFitness fitness) {
 		super();
 		this.inputModel = inputModel;
@@ -63,7 +63,7 @@ public class NRPInit implements DomainModelInit {
 	}
 
 	@Override
-	public void setMutator(DomainModelMutator mutator) {
+	public void setMutator(DomainModelMutation mutator) {
 		this.mutator = mutator;
 	}
 

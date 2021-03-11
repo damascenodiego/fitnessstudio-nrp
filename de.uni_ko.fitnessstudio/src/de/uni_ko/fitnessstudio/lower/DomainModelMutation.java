@@ -20,58 +20,72 @@ import org.eclipse.emf.henshin.model.Module;
 import org.eclipse.emf.henshin.model.Rule;
 import org.eclipse.emf.henshin.model.Unit;
 import org.eclipse.emf.henshin.model.resource.HenshinResourceSet;
+import org.uma.jmetal.operator.mutation.MutationOperator;
+import org.uma.jmetal.util.checking.Check;
 
 import de.uni_ko.fitnessstudio.util.EngineFactory;
 
-public class DomainModelMutator {
+@SuppressWarnings("serial")
+public class DomainModelMutation<S> implements MutationOperator<DomainModelSolution<S>> {
 	static boolean initialized = false;
 	static Set<Rule> defaultRules;
-
+	
+	Engine engine = EngineFactory.createEngine();
 	Set<Rule> genRules;
 	Set<Unit> fixedRules;
-	Engine engine = EngineFactory.createEngine();
-	Random random = new Random();
-
-	public DomainModelMutator() {
+	
+	private double mutationProbability;
+	
+	/** Constructor */
+	/*public NRPMutator(double probability) {
 		initDefaultRules();
 		this.genRules = defaultRules;
 		this.fixedRules = new HashSet<>();
-	}
-
-	public DomainModelMutator(Set<Rule> genRules) {
+		
+		this.mutationProbability = probability;
+	}*/
+	
+	/** Constructor */
+	public DomainModelMutation(Set<Rule> genRules, double probability) {
 		this.genRules = genRules;
 		this.fixedRules = new HashSet<>();
+		
+		this.mutationProbability = probability;
 	}
 	
-	public DomainModelMutator(Set<Rule> genRules, Set<Unit> fixedRules) {
+	/** Constructor */
+	public DomainModelMutation(Set<Rule> genRules, Set<Unit> fixedRules, double probability) {
 		this.genRules = genRules;
 		this.fixedRules = fixedRules;
+		
+		this.mutationProbability = probability;
 	}
-
-	public DomainModel mutate(DomainModel domainModel) {
-		EObject mutated = (EObject) EcoreUtil.copy(domainModel.getContent());
-		EGraph graph = new EGraphImpl(mutated);
+	
+	@Override
+	public DomainModelSolution<S> execute(DomainModelSolution<S> solution) {
+		Check.isNotNull(solution);
+		
+		EGraph graph = new EGraphImpl((EObject) solution.getVariable(0));
 		
 		for (Unit unit : fixedRules) {
-			if (Math.random() > 0.4) {
+			if (Math.random() < mutationProbability) {
 				UnitApplication app = new UnitApplicationImpl(engine, graph, unit, null);
 				app.execute(null);
 			}
 		}
 	
 		for (Rule rule : genRules) {
-			if (Math.random() > 0.4) {
+			if (Math.random() < mutationProbability) {
 				RuleApplication ruleApp = new RuleApplicationImpl(engine, graph, rule, null);
 				ruleApp.execute(null);
 			}
 		}
-		
-		
-		graph.clear();
-		DomainModel result = new DomainModel(mutated, domainModel.getMutator(), domainModel.getCrossover(), domainModel.getFitness());
-		return result;
-	}
 
+		graph.clear();
+		
+		return solution;
+	}
+	/*
 	private void initDefaultRules() {
 		if (initialized)
 			return;
@@ -79,7 +93,7 @@ public class DomainModelMutator {
 		loadDefaultRules(resourceSet);
 		initialized = true;
 	}
-
+	
 	public void loadDefaultRules(ResourceSet resSet) {
 		Resource resource = resSet.getResource(URI.createURI("transformation\\example.henshin"), true);
 		Module module = (Module) resource.getContents().get(0);
@@ -88,10 +102,12 @@ public class DomainModelMutator {
 			if (u instanceof Rule)
 				defaultRules.add(((Rule) u));
 		}
-	}
+	}*/
 
 	@Override
-	public String toString() {
-		return super.toString() + ", " + genRules.size() + " rules: " + genRules;
+	public double getMutationProbability() {
+		return mutationProbability;
 	}
+
+
 }

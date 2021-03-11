@@ -14,7 +14,7 @@ import com.lagodiuk.Chromosome;
 public class DomainModel implements Chromosome<DomainModel> {
 
 	EObject content;
-	DomainModelMutator mutator;
+	DomainModelMutation mutator;
 	DomainModelCrossover crossover;
 	DomainModelFitness fitness;
 
@@ -22,11 +22,11 @@ public class DomainModel implements Chromosome<DomainModel> {
 			DomainModelFitness fitness) {
 		super();
 		this.content = content;
-		this.mutator = new DomainModelMutator();
+		this.mutator = new DomainModelMutation();
 		this.crossover = crossover;
 		this.fitness = fitness;
 	}
-	public DomainModel(EObject content, DomainModelMutator mutator, DomainModelCrossover crossover,
+	public DomainModel(EObject content, DomainModelMutation mutator, DomainModelCrossover crossover,
 			DomainModelFitness fitness) {
 		super();
 		this.content = content;
@@ -57,7 +57,7 @@ public class DomainModel implements Chromosome<DomainModel> {
 //		return "CRA " +CRAIndexCalculator.calculateCRAIndex(content) + ", #Classes = " + content.getClasses().size() + ", #Feat./Cl. = " +(double) ((10*content.getFeatures().size()  / Math.max(1,  content.getClasses().size()))/10.0);
 	}
 
-	public DomainModelMutator getMutator() {
+	public DomainModelMutation getMutator() {
 		return mutator;
 	}
 	public DomainModelCrossover getCrossover() {

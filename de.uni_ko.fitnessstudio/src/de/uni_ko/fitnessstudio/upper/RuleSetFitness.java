@@ -6,7 +6,7 @@ import com.lagodiuk.Fitness;
 
 import de.uni_ko.fitnessstudio.lower.DomainModelFitness;
 import de.uni_ko.fitnessstudio.lower.DomainModelInit;
-import de.uni_ko.fitnessstudio.lower.DomainModelMutator;
+import de.uni_ko.fitnessstudio.lower.DomainModelMutation;
 import de.uni_ko.fitnessstudio.lower.LowerGAManager;
 import de.uni_ko.fitnessstudio.util.GAConfiguration;
 
@@ -34,14 +34,14 @@ public class RuleSetFitness implements Fitness<RuleSet, Double> {
 	@Override
 	public Double calculate(RuleSet chromosome) {
 		if (chromosome.getConstraintChecker().satisfiesMutationConstraints(chromosome.getGenRules())) {
-			DomainModelMutator mutator = new DomainModelMutator(chromosome.getGenRules());
+			DomainModelMutation mutator = new DomainModelMutation(chromosome.getGenRules());
 			return getResultWithTimeout(mutator);
 		} else {
 			return -10000.0;
 		}
 	}
 
-	private Double getResultWithTimeout(DomainModelMutator mutator) {
+	private Double getResultWithTimeout(DomainModelMutation mutator) {
 
 		LowerGAManager manager = new LowerGAManager(mutator, fitness, init, configurationLower, constraintChecker);
 		return  manager.runGA();

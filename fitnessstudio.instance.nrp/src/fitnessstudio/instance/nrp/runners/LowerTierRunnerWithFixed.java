@@ -23,14 +23,19 @@ import org.eclipse.emf.henshin.model.resource.HenshinResourceSet;
 
 import nrp.model.nrp.*;
 import de.uni_ko.fitnessstudio.lower.DomainModel;
-import de.uni_ko.fitnessstudio.lower.DomainModelMutator;
+import de.uni_ko.fitnessstudio.lower.DomainModelCrossover;
+import de.uni_ko.fitnessstudio.lower.DomainModelMutation;
+import de.uni_ko.fitnessstudio.lower.DomainModelProblem;
 import de.uni_ko.fitnessstudio.lower.LowerGAManager;
+import de.uni_ko.fitnessstudio.lower.LowerNSGAIIManager;
 import de.uni_ko.fitnessstudio.util.GAConfiguration;
 import de.uni_ko.fitnessstudio.util.ModelIO;
 import fitnessstudio.instance.nrp.customized.NRPConstraintChecker;
+import fitnessstudio.instance.nrp.customized.NRPCrossover;
 import fitnessstudio.instance.nrp.customized.NRPConstraintChecker;
 import fitnessstudio.instance.nrp.customized.NRPFitness;
 import fitnessstudio.instance.nrp.customized.NRPInit;
+import fitnessstudio.instance.nrp.customized.NRPProblem;
 
 @SuppressWarnings("all")
 public class LowerTierRunnerWithFixed {
@@ -47,6 +52,15 @@ public class LowerTierRunnerWithFixed {
 
 	public static void main(String[] args) {
 		NRPPackage.eINSTANCE.eClass();
+		System.out.println("============");
+		
+		DomainModelProblem problem = new NRPProblem(1, 2, 0);
+		DomainModelCrossover crossover = new NRPCrossover(1.0);
+		DomainModelMutation mutation = new DomainModelMutation(getGenRules(), 0.4);
+		
+		LowerNSGAIIManager gaManager = new LowerNSGAIIManager(problem, crossover, mutation);
+		gaManager.runNSGAII();
+		/*
 		for (int i = 1; i<=RUNS ; i++) {
 			System.out.println("============");
 			System.out.println("Run "+i);
@@ -55,7 +69,7 @@ public class LowerTierRunnerWithFixed {
 			long start = System.currentTimeMillis();
 
 			EObject inputModel = ModelIO.loadModel(INPUT_MODEL);
-			DomainModelMutator mutator = new DomainModelMutator(getGenRules(), getFixedRules());//getFixedMutationRules());
+			DomainModelMutation mutator = new DomainModelMutation(getGenRules(), getFixedRules());//getFixedMutationRules());
 			NRPFitness fitness = new NRPFitness();
 			NRPInit init = new NRPInit(inputModel, mutator);
 			NRPConstraintChecker constraintChecker = new NRPConstraintChecker();
@@ -77,7 +91,7 @@ public class LowerTierRunnerWithFixed {
 			
 			long time = end - start;
 			createLogEntry(i, result, time);
-		}
+		}*/
 	}
 
 	private static void createLogEntry(int i, double result, long time) {

@@ -9,7 +9,7 @@ import de.uni_ko.fitnessstudio.util.GAConfiguration;
 
 public class LowerGAManager {
 	private DomainModel result = null;
-	private DomainModelMutator mutator;
+	private DomainModelMutation mutator;
 	private DomainModelInit domainModelInit;
 	private DomainModelFitness fitness;
 
@@ -17,7 +17,7 @@ public class LowerGAManager {
 	private GAConfiguration configuration;
 	private GA<DomainModel, Double> ga;
 
-	public LowerGAManager(DomainModelMutator mutator, DomainModelFitness fitness, DomainModelInit init, GAConfiguration configuration, ConstraintChecker constraintChecker) {
+	public LowerGAManager(DomainModelMutation mutator, DomainModelFitness fitness, DomainModelInit init, GAConfiguration configuration, ConstraintChecker constraintChecker) {
 		this.mutator = mutator;
 		this.domainModelInit = init;
 		this.fitness = fitness;
@@ -69,11 +69,11 @@ public class LowerGAManager {
 		});
 	}
 
-	public DomainModelMutator getMutator() {
+	public DomainModelMutation getMutator() {
 		return mutator;
 	}
 
-	public void setMutator(DomainModelMutator mutator) {
+	public void setMutator(DomainModelMutation mutator) {
 		this.mutator = mutator;
 	}
 
