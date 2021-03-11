@@ -3,6 +3,7 @@ package fitnessstudio.instance.nrp.customized;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.uma.jmetal.util.checking.Check;
 import org.uma.jmetal.util.pseudorandom.BoundedRandomGenerator;
 import org.uma.jmetal.util.pseudorandom.JMetalRandom;
 import org.uma.jmetal.util.pseudorandom.RandomGenerator;
@@ -43,19 +44,25 @@ public class NRPCrossover implements DomainModelCrossover<NRPSolution> {
 
 	@Override
 	public List<NRPSolution> execute(List<NRPSolution> parents) {
+		Check.isNotNull(parents);
+	    Check.that(parents.size() == 2, "There must be 2 parents instead of " + parents.size());
+	    
 		List<NRPSolution> offspring = new ArrayList<>(2);
-		offspring.add((NRPSolution) parents.get(0).copy());
-	    offspring.add((NRPSolution) parents.get(1).copy());
+		NRPSolution child1 = (NRPSolution) parents.get(0).copy();
+		NRPSolution child2 = (NRPSolution) parents.get(1).copy();
+		
+		offspring.add(child1);
+	    offspring.add(child2);
 		
 	    if (crossoverRandomGenerator.getRandomValue() > crossoverProbability)
 	    	return offspring;
 	    
 	    int availableArtifacts = parents.get(0).getVariable(0).getAvailableArtifacts().size();
+
+	    // Single Point Crossover
 	    int pivot = pointRandomGenerator.getRandomValue(0, availableArtifacts - 1);
-	    
-	    for (NRPSolution child : offspring) {
-	    	doCrossover(parents.get(0).getVariable(0), parents.get(1).getVariable(0), child.getVariable(0), pivot);
-	    }
+	    doCrossover(parents.get(0).getVariable(0), parents.get(1).getVariable(0), child1.getVariable(0), pivot);
+	    doCrossover(parents.get(1).getVariable(0), parents.get(0).getVariable(0), child2.getVariable(0), pivot);
 	    
 	    return offspring;
 	}
@@ -67,14 +74,16 @@ public class NRPCrossover implements DomainModelCrossover<NRPSolution> {
 		for (SoftwareArtifact artifact : child.getAvailableArtifacts()) {
 			if (n < pivot) {
 				for (SoftwareArtifact p1_artifact : parent1.getSolutions().get(0).getSelectedArtifacts()) {
-					if (artifact.getName() == p1_artifact.getName()) {
+					if (artifact.getName().equals(p1_artifact.getName())) {
 						child.getSolutions().get(0).getSelectedArtifacts().add(artifact);
+						break;
 					}
 				}
 			} else {
 				for (SoftwareArtifact p2_artifact : parent2.getSolutions().get(0).getSelectedArtifacts()) {
-					if (artifact.getName() == p2_artifact.getName()) {
+					if (artifact.getName().equals(p2_artifact.getName())) {
 						child.getSolutions().get(0).getSelectedArtifacts().add(artifact);
+						break;
 					}
 				}
 			}

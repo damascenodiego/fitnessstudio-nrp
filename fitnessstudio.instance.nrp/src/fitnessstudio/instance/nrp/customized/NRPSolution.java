@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.uma.jmetal.solution.Solution;
+import org.uma.jmetal.util.pseudorandom.RandomGenerator;
 
 import de.uni_ko.fitnessstudio.lower.DomainModelSolution;
 import de.uni_ko.fitnessstudio.util.ModelIO;
@@ -21,7 +22,9 @@ public class NRPSolution extends DomainModelSolution<NRP> {
 
 		NRP inputModel = (NRP) ModelIO.loadModel(INPUT_MODEL);
 		
-		for (SoftwareArtifact artifact : inputModel.getAvailableArtifacts()) {
+		for (int i = 0; i < inputModel.getAvailableArtifacts().size(); i++) {
+			SoftwareArtifact artifact = inputModel.getAvailableArtifacts().get(i);
+			artifact.getSolutions().add(inputModel.getSolutions().get(0));
 			inputModel.getSolutions().get(0).getSelectedArtifacts().add(artifact);
 		}
 		
@@ -50,7 +53,6 @@ public class NRPSolution extends DomainModelSolution<NRP> {
 
 	@Override
 	public Solution<NRP> copy() {
-		// TODO Auto-generated method stub
 		return new NRPSolution(this);
 	}
 

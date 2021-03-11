@@ -33,12 +33,4 @@ public abstract class DomainModelProblem<S> implements Problem<DomainModelSoluti
 	public String getName() {
 		return this.getClass().getName();
 	}
-
-	@Override
-	public void evaluate(DomainModelSolution<S> solution) {
-		// TODO change 42 to DomainModelFitness 
-		for (int i = 0; i < numberOfVariables; i++) {
-			solution.setObjective(i, 42);
-		}
-	}
 }

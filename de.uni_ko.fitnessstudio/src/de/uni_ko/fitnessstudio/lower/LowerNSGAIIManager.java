@@ -38,7 +38,7 @@ public class LowerNSGAIIManager<S> {
 	    		new AlgorithmRunner.Executor(algorithm)
 	            	.execute();
 	    
-	    //List<DomainModelSolution<S>> population = algorithm.getResult();
+	    List<DomainModelSolution<S>> population = algorithm.getResult();
 	    long computingTime = algorithmRunner.getComputingTime();
 
 	    JMetalLogger.logger.info("Total execution time: " + computingTime + "ms");

@@ -3,7 +3,7 @@ package fitnessstudio.instance.nrp.customized;
 import de.uni_ko.fitnessstudio.lower.DomainModel;
 import de.uni_ko.fitnessstudio.lower.DomainModelFitness;
 import fitnessstudio.instance.nrp.fitness.MaximiseSatisfaction;
-import fitnessstudio.instance.nrp.fitness.MaximiseSatisfactionReimplemented;
+import fitnessstudio.instance.nrp.fitness.MaximiseSatisfaction;
 import fitnessstudio.instance.nrp.fitness.MinimiseCost;
 import nrp.model.nrp.NRP;
 
@@ -31,6 +31,6 @@ import nrp.model.nrp.NRP;
 		}
 		
 		private Double calculateSatisfaction(NRP nextRelease) {
-			return new MaximiseSatisfactionReimplemented().computeFitness(nextRelease);
+			return new MaximiseSatisfaction().computeFitness(nextRelease);
 		}
 	}
