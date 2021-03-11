@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.uma.jmetal.solution.Solution;
+import org.uma.jmetal.util.pseudorandom.JMetalRandom;
 import org.uma.jmetal.util.pseudorandom.RandomGenerator;
 
 import de.uni_ko.fitnessstudio.lower.DomainModelSolution;
@@ -15,17 +16,22 @@ import nrp.model.nrp.SoftwareArtifact;
 public class NRPSolution extends DomainModelSolution<NRP> {
 	private static String INPUT_MODEL_ID = "NRP3";
 	private static String INPUT_MODEL = "input\\" + INPUT_MODEL_ID+".xmi";
+
+	private RandomGenerator<Double> solutionRandomGenerator;
 	
 	/** Constructor */
 	protected NRPSolution(int numberOfVariables, int numberOfObjectives) {
 		super(numberOfVariables, numberOfObjectives, 0);
 
-		NRP inputModel = (NRP) ModelIO.loadModel(INPUT_MODEL);
+		this.solutionRandomGenerator = () -> JMetalRandom.getInstance().nextDouble();
 		
+		NRP inputModel = (NRP) ModelIO.loadModel(INPUT_MODEL);
 		for (int i = 0; i < inputModel.getAvailableArtifacts().size(); i++) {
-			SoftwareArtifact artifact = inputModel.getAvailableArtifacts().get(i);
-			artifact.getSolutions().add(inputModel.getSolutions().get(0));
-			inputModel.getSolutions().get(0).getSelectedArtifacts().add(artifact);
+			if (solutionRandomGenerator.getRandomValue() > 0.5) {
+				SoftwareArtifact artifact = inputModel.getAvailableArtifacts().get(i);
+				artifact.getSolutions().add(inputModel.getSolutions().get(0));
+				inputModel.getSolutions().get(0).getSelectedArtifacts().add(artifact);
+			}
 		}
 		
 		super.setVariable(0, inputModel);

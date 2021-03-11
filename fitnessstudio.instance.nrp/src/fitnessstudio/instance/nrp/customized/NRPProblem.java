@@ -31,7 +31,7 @@ public class NRPProblem extends DomainModelProblem<NRP> {
 		Check.isNotNull(solution);
 	    Check.that(getNumberOfObjectives() == 2, "There must be 2 objectives instead of " + getNumberOfObjectives());
 		
-		solution.setObjective(0, satisfaction.computeFitness(solution.getVariable(0)));
+		solution.setObjective(0, -satisfaction.computeFitness(solution.getVariable(0)));
 		solution.setObjective(1, cost.computeFitness(solution.getVariable(0)));
 	}
 }
