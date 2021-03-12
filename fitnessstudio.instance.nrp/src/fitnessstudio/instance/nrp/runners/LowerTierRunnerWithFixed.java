@@ -22,11 +22,9 @@ import org.eclipse.emf.henshin.model.Unit;
 import org.eclipse.emf.henshin.model.resource.HenshinResourceSet;
 
 import nrp.model.nrp.*;
-import de.uni_ko.fitnessstudio.lower.DomainModel;
 import de.uni_ko.fitnessstudio.lower.DomainModelCrossover;
 import de.uni_ko.fitnessstudio.lower.DomainModelMutation;
 import de.uni_ko.fitnessstudio.lower.DomainModelProblem;
-import de.uni_ko.fitnessstudio.lower.LowerGAManager;
 import de.uni_ko.fitnessstudio.lower.LowerNSGAIIManager;
 import de.uni_ko.fitnessstudio.util.GAConfiguration;
 import de.uni_ko.fitnessstudio.util.ModelIO;
