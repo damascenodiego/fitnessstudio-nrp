@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_8uFpMH2VEeu6rb_D6j8aPQ">
+  <units xsi:type="henshin:SequentialUnit" xmi:id="_uuII8AHJEeils_QRgrfFmw" name="selectHighestRealisation">
+    <subUnits xsi:type="henshin:Rule" href="..\de.uni_ko.fitnessstudio\transformation\genetic\mutation.henshin#_JCPn4AHIEeils_QRgrfFmw"/>
+    <subUnits xsi:type="henshin:Rule" href="..\de.uni_ko.fitnessstudio\transformation\genetic\mutation.henshin#_GyDSoAHjEeigD_hJbWzwRg"/>
+    <subUnits xsi:type="henshin:LoopUnit" href="..\de.uni_ko.fitnessstudio\transformation\genetic\mutation.henshin#_VkZ-kAHhEeigD_hJbWzwRg"/>
+    <subUnits xsi:type="henshin:Rule" href="..\de.uni_ko.fitnessstudio\transformation\genetic\mutation.henshin#_rHNxEAEjEeilXOOc9hG_FA"/>
+    <subUnits xsi:type="henshin:Rule" href="..\de.uni_ko.fitnessstudio\transformation\genetic\mutation.henshin#_a02b8AHKEeils_QRgrfFmw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_d1pVYX2VEeu6rb_D6j8aPQ" name="rule" description="null, createPreserveEdgesWithNode, createPreserveEdge, createCrOrDelEdge, CreateMultiRuleWithMappedPreserveNode, CreateMultiRuleWithMappedPreserveNode, createCrOrDelEdge, createPreserveNodeWithOutgoingEdge">
+    <lhs xmi:id="_d1pVYn2VEeu6rb_D6j8aPQ" name="Lhs">
+      <nodes xmi:id="_d1pVY32VEeu6rb_D6j8aPQ" incoming="_d1pVaH2VEeu6rb_D6j8aPQ _d1pVaX2VEeu6rb_D6j8aPQ" outgoing="_d1pVZn2VEeu6rb_D6j8aPQ _d1pVZ32VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_d1pVZH2VEeu6rb_D6j8aPQ" incoming="_d1pVZn2VEeu6rb_D6j8aPQ _d1pVZ32VEeu6rb_D6j8aPQ" outgoing="_d1pVaH2VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_d1pVZX2VEeu6rb_D6j8aPQ" outgoing="_d1pVaX2VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//NRP"/>
+      </nodes>
+      <edges xmi:id="_d1pVZn2VEeu6rb_D6j8aPQ" source="_d1pVY32VEeu6rb_D6j8aPQ" target="_d1pVZH2VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+      <edges xmi:id="_d1pVZ32VEeu6rb_D6j8aPQ" source="_d1pVY32VEeu6rb_D6j8aPQ" target="_d1pVZH2VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+      <edges xmi:id="_d1pVaH2VEeu6rb_D6j8aPQ" source="_d1pVZH2VEeu6rb_D6j8aPQ" target="_d1pVY32VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/solutions"/>
+      </edges>
+      <edges xmi:id="_d1pVaX2VEeu6rb_D6j8aPQ" source="_d1pVZX2VEeu6rb_D6j8aPQ" target="_d1pVY32VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//NRP/solutions"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_d1pVan2VEeu6rb_D6j8aPQ" name="Rhs">
+      <nodes xmi:id="_d1pVa32VEeu6rb_D6j8aPQ" incoming="_d1pVcH2VEeu6rb_D6j8aPQ _d1pVcX2VEeu6rb_D6j8aPQ" outgoing="_d1pVbn2VEeu6rb_D6j8aPQ _d1pVb32VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_d1pVbH2VEeu6rb_D6j8aPQ" incoming="_d1pVbn2VEeu6rb_D6j8aPQ _d1pVb32VEeu6rb_D6j8aPQ" outgoing="_d1pVcH2VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_d1pVbX2VEeu6rb_D6j8aPQ" outgoing="_d1pVcX2VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//NRP"/>
+      </nodes>
+      <edges xmi:id="_d1pVbn2VEeu6rb_D6j8aPQ" source="_d1pVa32VEeu6rb_D6j8aPQ" target="_d1pVbH2VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+      <edges xmi:id="_d1pVb32VEeu6rb_D6j8aPQ" source="_d1pVa32VEeu6rb_D6j8aPQ" target="_d1pVbH2VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+      <edges xmi:id="_d1pVcH2VEeu6rb_D6j8aPQ" source="_d1pVbH2VEeu6rb_D6j8aPQ" target="_d1pVa32VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/solutions"/>
+      </edges>
+      <edges xmi:id="_d1pVcX2VEeu6rb_D6j8aPQ" source="_d1pVbX2VEeu6rb_D6j8aPQ" target="_d1pVa32VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//NRP/solutions"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_d1pVcn2VEeu6rb_D6j8aPQ" origin="_d1pVY32VEeu6rb_D6j8aPQ" image="_d1pVa32VEeu6rb_D6j8aPQ"/>
+    <mappings xmi:id="_d1pVc32VEeu6rb_D6j8aPQ" origin="_d1pVZH2VEeu6rb_D6j8aPQ" image="_d1pVbH2VEeu6rb_D6j8aPQ"/>
+    <mappings xmi:id="_d1pVdH2VEeu6rb_D6j8aPQ" origin="_d1pVZX2VEeu6rb_D6j8aPQ" image="_d1pVbX2VEeu6rb_D6j8aPQ"/>
+    <multiRules xmi:id="_d1pVdX2VEeu6rb_D6j8aPQ">
+      <lhs xmi:id="_d1pVdn2VEeu6rb_D6j8aPQ">
+        <nodes xmi:id="_d1pVd32VEeu6rb_D6j8aPQ">
+          <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+        </nodes>
+      </lhs>
+      <rhs xmi:id="_d1pVeH2VEeu6rb_D6j8aPQ">
+        <nodes xmi:id="_d1pVeX2VEeu6rb_D6j8aPQ">
+          <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+        </nodes>
+      </rhs>
+      <mappings xmi:id="_d1pVen2VEeu6rb_D6j8aPQ" origin="_d1pVd32VEeu6rb_D6j8aPQ" image="_d1pVeX2VEeu6rb_D6j8aPQ"/>
+      <multiMappings xmi:id="_d1pVe32VEeu6rb_D6j8aPQ" origin="_d1pVZH2VEeu6rb_D6j8aPQ" image="_d1pVd32VEeu6rb_D6j8aPQ"/>
+      <multiMappings xmi:id="_d1pVfH2VEeu6rb_D6j8aPQ" origin="_d1pVbH2VEeu6rb_D6j8aPQ" image="_d1pVeX2VEeu6rb_D6j8aPQ"/>
+    </multiRules>
+    <multiRules xmi:id="_d1pVfX2VEeu6rb_D6j8aPQ">
+      <lhs xmi:id="_d1pVfn2VEeu6rb_D6j8aPQ">
+        <nodes xmi:id="_d1pVf32VEeu6rb_D6j8aPQ">
+          <type href="http://nrp.model/nrp#//Solution"/>
+        </nodes>
+      </lhs>
+      <rhs xmi:id="_d1pVgH2VEeu6rb_D6j8aPQ">
+        <nodes xmi:id="_d1pVgX2VEeu6rb_D6j8aPQ">
+          <type href="http://nrp.model/nrp#//Solution"/>
+        </nodes>
+      </rhs>
+      <mappings xmi:id="_d1pVgn2VEeu6rb_D6j8aPQ" origin="_d1pVf32VEeu6rb_D6j8aPQ" image="_d1pVgX2VEeu6rb_D6j8aPQ"/>
+      <multiMappings xmi:id="_d1pVg32VEeu6rb_D6j8aPQ" origin="_d1pVY32VEeu6rb_D6j8aPQ" image="_d1pVf32VEeu6rb_D6j8aPQ"/>
+      <multiMappings xmi:id="_d1pVhH2VEeu6rb_D6j8aPQ" origin="_d1pVa32VEeu6rb_D6j8aPQ" image="_d1pVgX2VEeu6rb_D6j8aPQ"/>
+    </multiRules>
+  </units>
+  <units xsi:type="henshin:IndependentUnit" xmi:id="_e7FvQAEfEeilXOOc9hG_FA" name="modifySelectionWithHierarchy">
+    <subUnits xsi:type="henshin:Rule" href="..\de.uni_ko.fitnessstudio\transformation\genetic\mutation.henshin#_jPs_EAEfEeilXOOc9hG_FA"/>
+    <subUnits xsi:type="henshin:Rule" href="..\de.uni_ko.fitnessstudio\transformation\genetic\mutation.henshin#_tCNa8AEfEeilXOOc9hG_FA"/>
+  </units>
+  <units xsi:type="henshin:IndependentUnit" xmi:id="_uNGO0AEhEeilXOOc9hG_FA" name="modifySingleSelection" description="">
+    <subUnits xsi:type="henshin:Rule" href="..\de.uni_ko.fitnessstudio\transformation\genetic\mutation.henshin#_mZu1oAEgEeilXOOc9hG_FA"/>
+    <subUnits xsi:type="henshin:Rule" href="..\de.uni_ko.fitnessstudio\transformation\genetic\mutation.henshin#_-avXkAEgEeilXOOc9hG_FA"/>
+  </units>
+  <units xsi:type="henshin:IndependentUnit" xmi:id="_eUVMkE4TEei8K_I3M29_rQ" name="fixDependencies">
+    <subUnits xsi:type="henshin:Rule" href="..\de.uni_ko.fitnessstudio\transformation\genetic\mutation.henshin#_TzZ2YE4REei8K_I3M29_rQ"/>
+    <subUnits xsi:type="henshin:Rule" href="..\de.uni_ko.fitnessstudio\transformation\genetic\mutation.henshin#_XZJ1EE4REei8K_I3M29_rQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_d1pVhX2VEeu6rb_D6j8aPQ" name="rule" description="null, createPreserveNodeWithOutgoingEdge, createCrOrDelEdge, createPreserveNodeWithOutgoingEdge, createCrOrDelEdge, createPreserveEdgesWithNode, CreateMultiRuleWithMappedPreserveNode">
+    <lhs xmi:id="_d1pVhn2VEeu6rb_D6j8aPQ" name="Lhs">
+      <nodes xmi:id="_d1pVh32VEeu6rb_D6j8aPQ" incoming="_d1pVi32VEeu6rb_D6j8aPQ _d1pVjX2VEeu6rb_D6j8aPQ" outgoing="_d1pVjH2VEeu6rb_D6j8aPQ _d1pVjn2VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_d1pViH2VEeu6rb_D6j8aPQ" incoming="_d1pVjH2VEeu6rb_D6j8aPQ" outgoing="_d1pVi32VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_d1pViX2VEeu6rb_D6j8aPQ" incoming="_d1pVjn2VEeu6rb_D6j8aPQ" outgoing="_d1pVjX2VEeu6rb_D6j8aPQ _d1pVj32VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_d1pVin2VEeu6rb_D6j8aPQ" incoming="_d1pVj32VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//RequirementRealisation"/>
+      </nodes>
+      <edges xmi:id="_d1pVi32VEeu6rb_D6j8aPQ" source="_d1pViH2VEeu6rb_D6j8aPQ" target="_d1pVh32VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/solutions"/>
+      </edges>
+      <edges xmi:id="_d1pVjH2VEeu6rb_D6j8aPQ" source="_d1pVh32VEeu6rb_D6j8aPQ" target="_d1pViH2VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+      <edges xmi:id="_d1pVjX2VEeu6rb_D6j8aPQ" source="_d1pViX2VEeu6rb_D6j8aPQ" target="_d1pVh32VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/solutions"/>
+      </edges>
+      <edges xmi:id="_d1pVjn2VEeu6rb_D6j8aPQ" source="_d1pVh32VEeu6rb_D6j8aPQ" target="_d1pViX2VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+      <edges xmi:id="_d1pVj32VEeu6rb_D6j8aPQ" source="_d1pViX2VEeu6rb_D6j8aPQ" target="_d1pVin2VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/contributesTo"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_d1pVkH2VEeu6rb_D6j8aPQ" name="Rhs">
+      <nodes xmi:id="_d1pVkX2VEeu6rb_D6j8aPQ" incoming="_d1pVlX2VEeu6rb_D6j8aPQ _d1pVln2VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_d1pVkn2VEeu6rb_D6j8aPQ" outgoing="_d1pVlX2VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_d1pVk32VEeu6rb_D6j8aPQ" outgoing="_d1pVln2VEeu6rb_D6j8aPQ _d1pVl32VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_d1pVlH2VEeu6rb_D6j8aPQ" incoming="_d1pVl32VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//RequirementRealisation"/>
+      </nodes>
+      <edges xmi:id="_d1pVlX2VEeu6rb_D6j8aPQ" source="_d1pVkn2VEeu6rb_D6j8aPQ" target="_d1pVkX2VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/solutions"/>
+      </edges>
+      <edges xmi:id="_d1pVln2VEeu6rb_D6j8aPQ" source="_d1pVk32VEeu6rb_D6j8aPQ" target="_d1pVkX2VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/solutions"/>
+      </edges>
+      <edges xmi:id="_d1pVl32VEeu6rb_D6j8aPQ" source="_d1pVk32VEeu6rb_D6j8aPQ" target="_d1pVlH2VEeu6rb_D6j8aPQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/contributesTo"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_d1pVmH2VEeu6rb_D6j8aPQ" origin="_d1pVh32VEeu6rb_D6j8aPQ" image="_d1pVkX2VEeu6rb_D6j8aPQ"/>
+    <mappings xmi:id="_d1pVmX2VEeu6rb_D6j8aPQ" origin="_d1pViH2VEeu6rb_D6j8aPQ" image="_d1pVkn2VEeu6rb_D6j8aPQ"/>
+    <mappings xmi:id="_d1pVmn2VEeu6rb_D6j8aPQ" origin="_d1pViX2VEeu6rb_D6j8aPQ" image="_d1pVk32VEeu6rb_D6j8aPQ"/>
+    <mappings xmi:id="_d1pVm32VEeu6rb_D6j8aPQ" origin="_d1pVin2VEeu6rb_D6j8aPQ" image="_d1pVlH2VEeu6rb_D6j8aPQ"/>
+    <multiRules xmi:id="_d1pVnH2VEeu6rb_D6j8aPQ">
+      <lhs xmi:id="_d1pVnX2VEeu6rb_D6j8aPQ">
+        <nodes xmi:id="_d1pVnn2VEeu6rb_D6j8aPQ">
+          <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+        </nodes>
+      </lhs>
+      <rhs xmi:id="_d1pVn32VEeu6rb_D6j8aPQ">
+        <nodes xmi:id="_d1pVoH2VEeu6rb_D6j8aPQ">
+          <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+        </nodes>
+      </rhs>
+      <mappings xmi:id="_d1pVoX2VEeu6rb_D6j8aPQ" origin="_d1pVnn2VEeu6rb_D6j8aPQ" image="_d1pVoH2VEeu6rb_D6j8aPQ"/>
+      <multiMappings xmi:id="_d1pVon2VEeu6rb_D6j8aPQ" origin="_d1pViH2VEeu6rb_D6j8aPQ" image="_d1pVnn2VEeu6rb_D6j8aPQ"/>
+      <multiMappings xmi:id="_d1pVo32VEeu6rb_D6j8aPQ" origin="_d1pVkn2VEeu6rb_D6j8aPQ" image="_d1pVoH2VEeu6rb_D6j8aPQ"/>
+    </multiRules>
+  </units>
+</henshin:Module>
