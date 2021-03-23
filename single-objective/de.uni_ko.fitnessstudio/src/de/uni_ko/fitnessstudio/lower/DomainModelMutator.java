@@ -52,20 +52,34 @@ public class DomainModelMutator {
 		EObject mutated = (EObject) EcoreUtil.copy(domainModel.getContent());
 		EGraph graph = new EGraphImpl(mutated);
 		
-		for (Unit unit : fixedRules) {
-			if (Math.random() > 0.4) {
-				UnitApplication app = new UnitApplicationImpl(engine, graph, unit, null);
-				app.execute(null);
+		if (fixedRules.isEmpty()) {	 
+			// UpperTierRunner, does not use fixed ruleset
+			
+			for (Rule rule : genRules) {
+				if (Math.random() > 0.4) {
+					RuleApplication ruleApp = new RuleApplicationImpl(engine, graph, rule, null);
+					ruleApp.execute(null);
+				}
+			}
+		} else { 
+			// LowerTierRunner, use fixed ruleset XOR generated ruleset
+			
+			if (Math.random() > 0.5) {
+				for (Unit unit : fixedRules) {
+					if (Math.random() > 0.4) {
+						UnitApplication app = new UnitApplicationImpl(engine, graph, unit, null);
+						app.execute(null);
+					}
+				}
+			} else {
+				for (Rule rule : genRules) {
+					if (Math.random() > 0.4) {
+						RuleApplication ruleApp = new RuleApplicationImpl(engine, graph, rule, null);
+						ruleApp.execute(null);
+					}
+				}
 			}
 		}
-	
-		for (Rule rule : genRules) {
-			if (Math.random() > 0.4) {
-				RuleApplication ruleApp = new RuleApplicationImpl(engine, graph, rule, null);
-				ruleApp.execute(null);
-			}
-		}
-		
 		
 		graph.clear();
 		DomainModel result = new DomainModel(mutated, domainModel.getMutator(), domainModel.getCrossover(), domainModel.getFitness());

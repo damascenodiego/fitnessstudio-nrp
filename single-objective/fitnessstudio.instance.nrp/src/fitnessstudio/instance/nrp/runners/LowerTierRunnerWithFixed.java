@@ -40,7 +40,7 @@ public class LowerTierRunnerWithFixed {
 	private static String OUTPUT_PREFIX = "output_models\\" +INPUT_MODEL_ID + "\\" + new SimpleDateFormat("HH_mm_ss").format(Calendar.getInstance().getTime()).toString() + "\\";
 
 	private static int RUNS = 30;
-	private static int ITERATIONS = 60;
+	private static int ITERATIONS = 120;
 	private static int POPULATION_SIZE = 40;
 	
 	private static GAConfiguration configuration = new GAConfiguration(ITERATIONS, POPULATION_SIZE, true);

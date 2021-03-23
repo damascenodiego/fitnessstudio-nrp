@@ -44,8 +44,25 @@ public class NRPInit implements DomainModelInit {
 			result.addChromosome(createRandomSolution());
 		} 
 		
-		return result;
+		return result;	
+	}
+	
+	private DomainModel createEmptySolution() {
+		NRP fresh = (NRP) EcoreUtil.copy(inputModel);
 		
+		return new DomainModel(fresh, mutator, crossover, fitness);
+	}
+	
+	private DomainModel createCompleteSolution() {
+		NRP fresh = (NRP) EcoreUtil.copy(inputModel);
+		
+		for (int i = 0; i < fresh.getAvailableArtifacts().size(); i++) {
+			SoftwareArtifact artifact = fresh.getAvailableArtifacts().get(i);
+			artifact.getSolutions().add(fresh.getSolutions().get(0));
+			fresh.getSolutions().get(0).getSelectedArtifacts().add(artifact);
+		}
+		
+		return new DomainModel(fresh, mutator, crossover, fitness);
 	}
 	
 	private DomainModel createRandomSolution() {

@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import de.uni_ko.fitnessstudio.lower.DomainModel;
 import nrp.model.nrp.*;
 
 public class MaximiseSatisfactionReimplemented {

@@ -8,7 +8,7 @@ import org.eclipse.xtext.xbase.lib.Functions.Function2;
 import org.eclipse.xtext.xbase.lib.InputOutput;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 
-import de.uni_ko.fitnessstudio.lower.DomainModel;
+import nrp.model.nrp.*;
 
 @SuppressWarnings("all")
 public class MaximiseSatisfaction {
@@ -35,8 +35,8 @@ public class MaximiseSatisfaction {
    * direct realisation for A with a percentage of 0.8 the overall level of fulfillment will be
    * max(0.6, 0.8)=0.8.
    */
- 
-  public double computeFitness(final DomainModel model) {
+  
+  public double computeFitness(final NRP nextRelease) {
     final Function2<Double, EObject, Double> _function =
         (Double result, EObject customer) -> {
           Object _feature = this.getFeature(customer, "importance");
@@ -47,14 +47,11 @@ public class MaximiseSatisfaction {
         };
     Double satisfaction =
         IterableExtensions.<EObject, Double>fold(
-            this.getReferenceFeature(model.getContent(), "customers"),
+            this.getReferenceFeature(nextRelease, "customers"),
             Double.valueOf(0.0d),
             _function);
     //InputOutput.<String>println(("Found satisfaction: " + satisfaction));
-    
-    // We want a positive value, not negative
-    return satisfaction.doubleValue();
-    //return ((-1) * (satisfaction).doubleValue());
+    return (satisfaction).doubleValue();
   }
 
   /**
@@ -200,7 +197,7 @@ public class MaximiseSatisfaction {
               Double.valueOf(0.0d),
               _function_2);
       if (((sumOfWeights).doubleValue() == 0.0d)) {
-        ;//throw new IllegalArgumentException("The sum of valuation values may not be 0.");
+        throw new IllegalArgumentException("The sum of valuation values may not be 0.");
       }
       final Function1<EObject, Double> _function_3 =
           (EObject v) -> {
