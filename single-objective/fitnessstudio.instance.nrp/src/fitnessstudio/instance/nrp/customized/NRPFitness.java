@@ -13,8 +13,8 @@ import nrp.model.nrp.NRP;
  *
  */
 	public class NRPFitness implements DomainModelFitness {
-		private static double MAX_COST = 4506.0; // 15311.0;
-		private static double MAX_SATISFACTION = 26.293290563920287; // 202.67799216253337;
+		private static double MAX_COST = 4506.0; // 15311.0;//
+		private static double MAX_SATISFACTION = 26.293290563920287; // 202.67799216253337;//
 		
 		@Override
 		public Double calculate(DomainModel chromosome) {

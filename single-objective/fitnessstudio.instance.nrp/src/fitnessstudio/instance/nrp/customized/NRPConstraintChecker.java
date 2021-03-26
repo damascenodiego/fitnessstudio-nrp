@@ -54,11 +54,11 @@ public class NRPConstraintChecker implements ConstraintChecker {
 		}
 		
 
-		// May not delete node other than SelectedArtifacts/Solutions
+		// May not delete edges other than SelectedArtifacts/Solutions
 		if (createOrDeleteEdgesViolateConstraints(deletionNodes, preservedNodesLhs2Rhs))
 			return true;
 
-		// May not create node other than SelectedArtifacts/Solutions
+		// May not create edges other than SelectedArtifacts/Solutions
 		if (createOrDeleteEdgesViolateConstraints(creationNodes, preservedNodesRhs2Lhs))
 			return true;
 

@@ -19,7 +19,7 @@ public class NRPCrossover implements DomainModelCrossover {
 
 	public List<DomainModel> crossover(DomainModel parent1, DomainModel parent2) {
 		List<DomainModel> result = new ArrayList<DomainModel>();
-		
+	
 		NRP p1 = (NRP) parent1.getContent();
 		NRP p2 = (NRP) parent2.getContent();
 		
@@ -61,5 +61,4 @@ public class NRPCrossover implements DomainModelCrossover {
 		
 		return child;
 	}
-	
 }

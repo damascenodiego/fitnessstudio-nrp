@@ -27,6 +27,7 @@ public class DomainModelMutator {
 	static boolean initialized = false;
 	static Set<Rule> defaultRules;
 
+	boolean applyFixedRules;
 	Set<Rule> genRules;
 	Set<Unit> fixedRules;
 	Engine engine = EngineFactory.createEngine();
@@ -36,56 +37,58 @@ public class DomainModelMutator {
 		initDefaultRules();
 		this.genRules = defaultRules;
 		this.fixedRules = new HashSet<>();
+		this.applyFixedRules = false;
 	}
 
 	public DomainModelMutator(Set<Rule> genRules) {
 		this.genRules = genRules;
 		this.fixedRules = new HashSet<>();
+		this.applyFixedRules = false;
 	}
 	
 	public DomainModelMutator(Set<Rule> genRules, Set<Unit> fixedRules) {
 		this.genRules = genRules;
 		this.fixedRules = fixedRules;
+		this.applyFixedRules = true;
 	}
 
 	public DomainModel mutate(DomainModel domainModel) {
 		EObject mutated = (EObject) EcoreUtil.copy(domainModel.getContent());
 		EGraph graph = new EGraphImpl(mutated);
 		
-		if (fixedRules.isEmpty()) {	 
-			// UpperTierRunner, does not use fixed ruleset
-			
-			for (Rule rule : genRules) {
-				if (Math.random() > 0.4) {
-					RuleApplication ruleApp = new RuleApplicationImpl(engine, graph, rule, null);
-					ruleApp.execute(null);
-				}
-			}
-		} else { 
-			// LowerTierRunner, use fixed ruleset XOR generated ruleset
-			
-			if (Math.random() > 0.5) {
-				for (Unit unit : fixedRules) {
-					if (Math.random() > 0.4) {
-						UnitApplication app = new UnitApplicationImpl(engine, graph, unit, null);
-						app.execute(null);
-					}
-				}
-			} else {
-				for (Rule rule : genRules) {
-					if (Math.random() > 0.4) {
-						RuleApplication ruleApp = new RuleApplicationImpl(engine, graph, rule, null);
-						ruleApp.execute(null);
-					}
-				}
-			}
-		}
+		if (applyFixedRules)	
+			// LowerTierRunner
+			if (Math.random() > 0.5) 
+				mutateWithFixedRules(graph);
+			else
+				mutateWithGenRules(graph);
+		else					
+			// UpperTierRunner
+			mutateWithGenRules(graph);
 		
 		graph.clear();
 		DomainModel result = new DomainModel(mutated, domainModel.getMutator(), domainModel.getCrossover(), domainModel.getFitness());
 		return result;
 	}
 
+	private void mutateWithFixedRules(EGraph graph) {
+		for (Unit unit : fixedRules) {
+			if (Math.random() > 0.4) {
+				UnitApplication app = new UnitApplicationImpl(engine, graph, unit, null);
+				app.execute(null);
+			}
+		}
+	}
+	
+	private void mutateWithGenRules(EGraph graph) {
+		for (Rule rule : genRules) {
+			if (Math.random() > 0.4) {
+				RuleApplication ruleApp = new RuleApplicationImpl(engine, graph, rule, null);
+				ruleApp.execute(null);
+			}
+		}
+	}
+	
 	private void initDefaultRules() {
 		if (initialized)
 			return;
