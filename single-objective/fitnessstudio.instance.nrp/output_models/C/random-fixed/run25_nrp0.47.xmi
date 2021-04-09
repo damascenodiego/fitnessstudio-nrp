@@ -1,0 +1,1463 @@
+<?xml version="1.0" encoding="ASCII"?>
+<nrp:NRP xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:nrp="http://nrp.model/nrp">
+  <customers name="Daphne Gleason I" importance="2.0" assigns="//@requirements.25/@valuations.1 //@requirements.27/@valuations.1 //@requirements.41/@valuations.0 //@requirements.49/@valuations.1 //@requirements.50/@valuations.0 //@requirements.59/@valuations.0 //@requirements.64/@valuations.0 //@requirements.65/@valuations.2 //@requirements.70/@valuations.1"/>
+  <customers name="Stefanie Sawayn" importance="1.0" assigns="//@requirements.47/@valuations.2 //@requirements.48/@valuations.1"/>
+  <customers name="Reginald Kemmer" importance="4.0" assigns="//@requirements.13/@valuations.1 //@requirements.17/@valuations.0 //@requirements.28/@valuations.0 //@requirements.43/@valuations.0 //@requirements.48/@valuations.1 //@requirements.71/@valuations.1"/>
+  <customers name="Julianne Sanford" importance="5.0" assigns="//@requirements.45/@valuations.0 //@requirements.68/@valuations.0 //@requirements.73/@valuations.0"/>
+  <customers name="Zita Greenholt" importance="1.0" assigns="//@requirements.5/@valuations.0 //@requirements.6/@valuations.1 //@requirements.15/@valuations.2 //@requirements.35/@valuations.1"/>
+  <customers name="Lulu Monahan" importance="1.0" assigns="//@requirements.2/@valuations.1 //@requirements.19/@valuations.0 //@requirements.58/@valuations.1 //@requirements.62/@valuations.1 //@requirements.72/@valuations.0"/>
+  <customers name="Taurean Romaguera V" importance="2.0" assigns="//@requirements.16/@valuations.1 //@requirements.44/@valuations.2 //@requirements.60/@valuations.2"/>
+  <customers name="Gregory Herzog" importance="2.0" assigns="//@requirements.14/@valuations.0 //@requirements.15/@valuations.0 //@requirements.23/@valuations.0 //@requirements.38/@valuations.2 //@requirements.47/@valuations.0"/>
+  <customers name="Opal Thompson" importance="5.0" assigns="//@requirements.12/@valuations.0 //@requirements.22/@valuations.2 //@requirements.26/@valuations.0 //@requirements.30/@valuations.0 //@requirements.40/@valuations.0 //@requirements.70/@valuations.1 //@requirements.73/@valuations.0"/>
+  <customers name="Mr. Tristian Ortiz" importance="2.0" assigns="//@requirements.3/@valuations.0 //@requirements.15/@valuations.2 //@requirements.25/@valuations.0 //@requirements.47/@valuations.2 //@requirements.53/@valuations.1 //@requirements.58/@valuations.0 //@requirements.72/@valuations.2"/>
+  <customers name="Fidel Murazik" importance="3.0" assigns="//@requirements.34/@valuations.1"/>
+  <customers name="Luz Hegmann" importance="1.0" assigns="//@requirements.10/@valuations.1 //@requirements.47/@valuations.1 //@requirements.49/@valuations.0 //@requirements.50/@valuations.2"/>
+  <customers name="Demetris Feest" importance="2.0" assigns="//@requirements.21/@valuations.1 //@requirements.58/@valuations.0 //@requirements.68/@valuations.0"/>
+  <customers name="Minnie Wolf" importance="2.0" assigns="//@requirements.7/@valuations.0 //@requirements.11/@valuations.1 //@requirements.14/@valuations.1 //@requirements.24/@valuations.0 //@requirements.31/@valuations.0 //@requirements.53/@valuations.2 //@requirements.60/@valuations.0 //@requirements.60/@valuations.1 //@requirements.65/@valuations.1"/>
+  <customers name="Arianna McClure" importance="1.0" assigns="//@requirements.13/@valuations.0 //@requirements.13/@valuations.2 //@requirements.54/@valuations.0 //@requirements.54/@valuations.2 //@requirements.71/@valuations.0"/>
+  <customers name="Taylor Wilkinson" importance="3.0" assigns="//@requirements.2/@valuations.0 //@requirements.31/@valuations.1 //@requirements.38/@valuations.0 //@requirements.39/@valuations.1 //@requirements.50/@valuations.2 //@requirements.68/@valuations.1"/>
+  <customers name="Moises Ruecker" importance="1.0" assigns="//@requirements.18/@valuations.0 //@requirements.26/@valuations.0 //@requirements.63/@valuations.1 //@requirements.64/@valuations.1"/>
+  <customers name="Ethelyn Johnston" importance="4.0" assigns="//@requirements.9/@valuations.1 //@requirements.21/@valuations.0 //@requirements.52/@valuations.0 //@requirements.53/@valuations.2 //@requirements.56/@valuations.0"/>
+  <customers name="Cleta Shields" importance="2.0" assigns="//@requirements.20/@valuations.1 //@requirements.34/@valuations.0 //@requirements.55/@valuations.0"/>
+  <customers name="Aryanna Willms III" importance="1.0" assigns="//@requirements.18/@valuations.0 //@requirements.35/@valuations.1 //@requirements.47/@valuations.2 //@requirements.68/@valuations.1 //@requirements.74/@valuations.1"/>
+  <customers name="Alexandria Durgan" importance="4.0" assigns="//@requirements.71/@valuations.1"/>
+  <customers name="Christiana Streich" importance="2.0" assigns="//@requirements.36/@valuations.1 //@requirements.45/@valuations.0 //@requirements.67/@valuations.0 //@requirements.74/@valuations.0"/>
+  <customers name="Ms. Margie MacGyver" importance="3.0" assigns="//@requirements.0/@valuations.0 //@requirements.6/@valuations.1 //@requirements.7/@valuations.0 //@requirements.18/@valuations.0 //@requirements.18/@valuations.2 //@requirements.20/@valuations.0 //@requirements.23/@valuations.0 //@requirements.32/@valuations.0 //@requirements.50/@valuations.1 //@requirements.53/@valuations.1 //@requirements.71/@valuations.2"/>
+  <customers name="Flavio Abbott Sr." importance="3.0" assigns="//@requirements.23/@valuations.0 //@requirements.27/@valuations.0 //@requirements.37/@valuations.0 //@requirements.43/@valuations.1"/>
+  <customers name="Augustine Ritchie" importance="1.0" assigns="//@requirements.14/@valuations.1 //@requirements.26/@valuations.0 //@requirements.34/@valuations.1 //@requirements.52/@valuations.0 //@requirements.61/@valuations.0 //@requirements.62/@valuations.1"/>
+  <customers name="Donald Grimes" importance="1.0" assigns="//@requirements.3/@valuations.0 //@requirements.3/@valuations.1 //@requirements.6/@valuations.1 //@requirements.31/@valuations.0 //@requirements.42/@valuations.0"/>
+  <customers name="Wilber Miller" importance="2.0" assigns="//@requirements.18/@valuations.1 //@requirements.41/@valuations.0 //@requirements.53/@valuations.2 //@requirements.58/@valuations.1"/>
+  <customers name="Mr. Jaylan Pouros" importance="5.0" assigns="//@requirements.9/@valuations.2 //@requirements.32/@valuations.0 //@requirements.48/@valuations.0 //@requirements.51/@valuations.1 //@requirements.54/@valuations.0 //@requirements.54/@valuations.1 //@requirements.72/@valuations.1"/>
+  <customers name="Jailyn Rohan" importance="2.0" assigns="//@requirements.9/@valuations.0 //@requirements.11/@valuations.0 //@requirements.12/@valuations.0 //@requirements.13/@valuations.2 //@requirements.38/@valuations.1 //@requirements.50/@valuations.1 //@requirements.71/@valuations.2"/>
+  <customers name="Obie Satterfield" importance="1.0" assigns="//@requirements.15/@valuations.0 //@requirements.16/@valuations.1 //@requirements.31/@valuations.1 //@requirements.44/@valuations.0 //@requirements.44/@valuations.1 //@requirements.48/@valuations.2 //@requirements.73/@valuations.1"/>
+  <customers name="Karina Huel" importance="2.0" assigns="//@requirements.8/@valuations.0 //@requirements.10/@valuations.0 //@requirements.11/@valuations.1 //@requirements.13/@valuations.2 //@requirements.48/@valuations.0 //@requirements.48/@valuations.1 //@requirements.51/@valuations.2 //@requirements.74/@valuations.1"/>
+  <customers name="Benny Kessler DVM" importance="1.0" assigns="//@requirements.1/@valuations.0 //@requirements.3/@valuations.1 //@requirements.58/@valuations.2 //@requirements.62/@valuations.0 //@requirements.72/@valuations.2"/>
+  <customers name="Jalon Quitzon" importance="2.0" assigns="//@requirements.3/@valuations.0 //@requirements.4/@valuations.1 //@requirements.9/@valuations.1 //@requirements.14/@valuations.0 //@requirements.37/@valuations.1 //@requirements.38/@valuations.1"/>
+  <customers name="Mr. Kariane Buckridge" importance="4.0" assigns="//@requirements.29/@valuations.1 //@requirements.38/@valuations.2 //@requirements.39/@valuations.0 //@requirements.71/@valuations.0 //@requirements.74/@valuations.0"/>
+  <customers name="Annabell Bechtelar" importance="2.0" assigns="//@requirements.2/@valuations.1 //@requirements.16/@valuations.0 //@requirements.17/@valuations.0 //@requirements.29/@valuations.0 //@requirements.44/@valuations.1 //@requirements.53/@valuations.0 //@requirements.65/@valuations.0"/>
+  <customers name="Sophia Will" importance="4.0" assigns="//@requirements.22/@valuations.1 //@requirements.32/@valuations.0 //@requirements.37/@valuations.1 //@requirements.44/@valuations.1 //@requirements.58/@valuations.0 //@requirements.59/@valuations.0 //@requirements.60/@valuations.0"/>
+  <customers name="Ayana Roberts" importance="4.0" assigns="//@requirements.33/@valuations.0 //@requirements.38/@valuations.1 //@requirements.39/@valuations.0 //@requirements.60/@valuations.2 //@requirements.63/@valuations.0"/>
+  <customers name="Alex Runte" importance="4.0" assigns="//@requirements.12/@valuations.0 //@requirements.15/@valuations.1 //@requirements.34/@valuations.1 //@requirements.46/@valuations.0 //@requirements.51/@valuations.1 //@requirements.59/@valuations.0 //@requirements.65/@valuations.1"/>
+  <customers name="Kay Carroll" importance="2.0" assigns="//@requirements.5/@valuations.1 //@requirements.13/@valuations.1 //@requirements.22/@valuations.0 //@requirements.29/@valuations.1 //@requirements.33/@valuations.1 //@requirements.35/@valuations.1 //@requirements.57/@valuations.0 //@requirements.67/@valuations.1"/>
+  <customers name="Valentin Lemke" importance="5.0" assigns="//@requirements.6/@valuations.0 //@requirements.18/@valuations.2 //@requirements.28/@valuations.1 //@requirements.29/@valuations.0 //@requirements.38/@valuations.0 //@requirements.39/@valuations.1 //@requirements.64/@valuations.1 //@requirements.73/@valuations.1"/>
+  <customers name="Kendrick Dickinson" importance="4.0" assigns="//@requirements.7/@valuations.0 //@requirements.15/@valuations.0 //@requirements.16/@valuations.2 //@requirements.18/@valuations.1 //@requirements.31/@valuations.1 //@requirements.37/@valuations.1 //@requirements.39/@valuations.0"/>
+  <customers name="Frankie Champlin" importance="1.0" assigns="//@requirements.4/@valuations.0 //@requirements.25/@valuations.1 //@requirements.38/@valuations.0 //@requirements.73/@valuations.1"/>
+  <customers name="Javier Aufderhar" importance="3.0" assigns="//@requirements.51/@valuations.0 //@requirements.61/@valuations.0 //@requirements.61/@valuations.1"/>
+  <customers name="Jamal Russel" importance="2.0" assigns="//@requirements.1/@valuations.1 //@requirements.4/@valuations.1 //@requirements.8/@valuations.0 //@requirements.11/@valuations.0 //@requirements.58/@valuations.2"/>
+  <customers name="Eunice Wintheiser" importance="2.0" assigns="//@requirements.24/@valuations.0 //@requirements.49/@valuations.1 //@requirements.52/@valuations.0 //@requirements.68/@valuations.1 //@requirements.70/@valuations.0"/>
+  <customers name="Antonio Schmidt" importance="4.0" assigns="//@requirements.1/@valuations.0 //@requirements.35/@valuations.0 //@requirements.36/@valuations.0 //@requirements.47/@valuations.1 //@requirements.48/@valuations.2 //@requirements.54/@valuations.1 //@requirements.56/@valuations.0 //@requirements.60/@valuations.1 //@requirements.67/@valuations.1 //@requirements.69/@valuations.0 //@requirements.74/@valuations.1"/>
+  <customers name="Eileen Ebert Sr." importance="3.0" assigns="//@requirements.21/@valuations.0 //@requirements.60/@valuations.2 //@requirements.65/@valuations.2"/>
+  <customers name="Hosea Prohaska" importance="3.0" assigns="//@requirements.4/@valuations.0 //@requirements.39/@valuations.2 //@requirements.42/@valuations.0 //@requirements.51/@valuations.2 //@requirements.55/@valuations.1 //@requirements.62/@valuations.1 //@requirements.63/@valuations.0 //@requirements.71/@valuations.2"/>
+  <customers name="Vita D'Amore" importance="2.0" assigns="//@requirements.14/@valuations.0 //@requirements.16/@valuations.0 //@requirements.24/@valuations.0 //@requirements.49/@valuations.1 //@requirements.65/@valuations.1 //@requirements.74/@valuations.2"/>
+  <customers name="Clementina Hintz" importance="5.0" assigns="//@requirements.5/@valuations.0 //@requirements.9/@valuations.2 //@requirements.22/@valuations.2 //@requirements.27/@valuations.1 //@requirements.28/@valuations.1 //@requirements.33/@valuations.1 //@requirements.66/@valuations.0 //@requirements.73/@valuations.0"/>
+  <availableArtifacts name="Software artifact Bitchip version 0.57" contributesTo="//@requirements.0/@realisations.0">
+    <costs amount="65.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact It version 4.2" contributesTo="//@requirements.0/@realisations.1">
+    <costs amount="86.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Holdlamis version 9.44" contributesTo="//@requirements.1/@realisations.0">
+    <costs amount="82.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Ronstring version 0.11" contributesTo="//@requirements.1/@realisations.1" solutions="//@solutions.0">
+    <costs amount="51.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Solarbreeze version 1.86" contributesTo="//@requirements.2/@realisations.0">
+    <costs amount="56.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Quo Lux version 7.6" contributesTo="//@requirements.3/@realisations.0">
+    <costs amount="90.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Stringtough version 0.4.5" contributesTo="//@requirements.3/@realisations.1">
+    <costs amount="84.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Otcom version 0.0" contributesTo="//@requirements.4/@realisations.0">
+    <costs amount="55.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Tin version 0.7.5" contributesTo="//@requirements.5/@realisations.0" solutions="//@solutions.0">
+    <costs amount="80.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Y-find version 6.34" contributesTo="//@requirements.5/@realisations.1">
+    <costs amount="96.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Prodder version 0.85" contributesTo="//@requirements.6/@realisations.0">
+    <costs amount="60.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Andalax version 0.4.1" contributesTo="//@requirements.6/@realisations.1" solutions="//@solutions.0">
+    <costs amount="81.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Home Ing version 6.7" contributesTo="//@requirements.6/@realisations.2">
+    <costs amount="89.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Duobam version 0.3.3" contributesTo="//@requirements.7/@realisations.0" solutions="//@solutions.0">
+    <costs amount="97.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Treeflex version 0.3.2" contributesTo="//@requirements.8/@realisations.0">
+    <costs amount="88.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Aerified version 0.48" contributesTo="//@requirements.8/@realisations.1" solutions="//@solutions.0">
+    <costs amount="66.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Solarbreeze version 2.8" contributesTo="//@requirements.9/@realisations.0">
+    <costs amount="80.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Overhold version 3.3" contributesTo="//@requirements.9/@realisations.1">
+    <costs amount="64.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Flowdesk version 6.9" contributesTo="//@requirements.10/@realisations.0" solutions="//@solutions.0">
+    <costs amount="83.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Holdlamis version 1.55" contributesTo="//@requirements.10/@realisations.1">
+    <costs amount="82.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Treeflex version 0.8" contributesTo="//@requirements.10/@realisations.2">
+    <costs amount="86.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Rank version 0.2" contributesTo="//@requirements.11/@realisations.0">
+    <costs amount="83.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bitchip version 8.04" contributesTo="//@requirements.11/@realisations.1">
+    <costs amount="97.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Daltfresh version 1.6.8" contributesTo="//@requirements.11/@realisations.2">
+    <costs amount="89.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Regrant version 4.77" contributesTo="//@requirements.12/@realisations.0">
+    <costs amount="84.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Cardguard version 0.6.8" contributesTo="//@requirements.12/@realisations.1">
+    <costs amount="75.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Cardify version 0.0.3" contributesTo="//@requirements.13/@realisations.0" solutions="//@solutions.0">
+    <costs amount="55.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Y-Solowarm version 8.9" contributesTo="//@requirements.13/@realisations.1">
+    <costs amount="91.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Greenlam version 7.2" contributesTo="//@requirements.13/@realisations.2">
+    <costs amount="71.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Flexidy version 0.36" contributesTo="//@requirements.14/@realisations.0">
+    <costs amount="100.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Lotlux version 0.66" contributesTo="//@requirements.14/@realisations.1">
+    <costs amount="70.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Aerified version 1.7.3" contributesTo="//@requirements.15/@realisations.0" solutions="//@solutions.0">
+    <costs amount="58.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Solarbreeze version 0.7.6" contributesTo="//@requirements.15/@realisations.1">
+    <costs amount="52.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Lotstring version 0.4.6" contributesTo="//@requirements.15/@realisations.2" solutions="//@solutions.0">
+    <costs amount="82.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Opela version 0.90" contributesTo="//@requirements.16/@realisations.0">
+    <costs amount="55.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Ronstring version 7.1.3" contributesTo="//@requirements.16/@realisations.1">
+    <costs amount="56.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bitwolf version 5.1" contributesTo="//@requirements.17/@realisations.0" solutions="//@solutions.0">
+    <costs amount="61.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Tampflex version 6.54" contributesTo="//@requirements.17/@realisations.1">
+    <costs amount="88.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Zontrax version 0.82" contributesTo="//@requirements.17/@realisations.2">
+    <costs amount="88.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Tres-Zap version 0.86" contributesTo="//@requirements.18/@realisations.0" solutions="//@solutions.0">
+    <costs amount="97.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Daltfresh version 2.99" contributesTo="//@requirements.18/@realisations.1">
+    <costs amount="87.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Namfix version 0.81" contributesTo="//@requirements.19/@realisations.0">
+    <costs amount="73.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Rank version 0.05" contributesTo="//@requirements.19/@realisations.1">
+    <costs amount="100.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Keylex version 0.67" contributesTo="//@requirements.20/@realisations.0">
+    <costs amount="56.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Cardguard version 1.6" contributesTo="//@requirements.20/@realisations.1">
+    <costs amount="87.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Tampflex version 0.4.7" contributesTo="//@requirements.21/@realisations.0">
+    <costs amount="87.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Hatity version 2.3.7" contributesTo="//@requirements.21/@realisations.1">
+    <costs amount="76.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Asoka version 0.7.5" contributesTo="//@requirements.21/@realisations.2" solutions="//@solutions.0">
+    <costs amount="99.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Keylex version 0.29" contributesTo="//@requirements.22/@realisations.0">
+    <costs amount="80.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Otcom version 4.6.7" contributesTo="//@requirements.22/@realisations.1" solutions="//@solutions.0">
+    <costs amount="60.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Treeflex version 1.2.8" contributesTo="//@requirements.23/@realisations.0" solutions="//@solutions.0">
+    <costs amount="84.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Latlux version 0.0.1" contributesTo="//@requirements.23/@realisations.1">
+    <costs amount="61.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Duobam version 9.7.4" contributesTo="//@requirements.23/@realisations.2">
+    <costs amount="58.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Y-Solowarm version 1.48" contributesTo="//@requirements.24/@realisations.0">
+    <costs amount="64.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Overhold version 0.19" contributesTo="//@requirements.24/@realisations.1">
+    <costs amount="79.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Voyatouch version 3.2.0" contributesTo="//@requirements.25/@realisations.0">
+    <costs amount="61.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact It version 4.0" contributesTo="//@requirements.25/@realisations.1" solutions="//@solutions.0">
+    <costs amount="73.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Zamit version 0.07" contributesTo="//@requirements.26/@realisations.0">
+    <costs amount="61.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Otcom version 0.6.9" contributesTo="//@requirements.27/@realisations.0" solutions="//@solutions.0">
+    <costs amount="65.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Aerified version 0.66" contributesTo="//@requirements.28/@realisations.0" solutions="//@solutions.0">
+    <costs amount="74.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Toughjoyfax version 0.54" contributesTo="//@requirements.28/@realisations.1">
+    <costs amount="58.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bigtax version 5.4.5" contributesTo="//@requirements.29/@realisations.0">
+    <costs amount="77.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Treeflex version 9.7" contributesTo="//@requirements.29/@realisations.1">
+    <costs amount="51.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Quo Lux version 8.05" contributesTo="//@requirements.29/@realisations.2" solutions="//@solutions.0">
+    <costs amount="77.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Stringtough version 8.75" contributesTo="//@requirements.30/@realisations.0">
+    <costs amount="67.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Stringtough version 0.47" contributesTo="//@requirements.30/@realisations.1" solutions="//@solutions.0">
+    <costs amount="90.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Lotstring version 2.2.5" contributesTo="//@requirements.31/@realisations.0">
+    <costs amount="90.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Cardify version 8.26" contributesTo="//@requirements.31/@realisations.1" solutions="//@solutions.0">
+    <costs amount="50.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Vagram version 0.02" contributesTo="//@requirements.31/@realisations.2">
+    <costs amount="61.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Latlux version 6.0.9" contributesTo="//@requirements.32/@realisations.0" solutions="//@solutions.0">
+    <costs amount="99.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Zoolab version 0.07" contributesTo="//@requirements.33/@realisations.0" solutions="//@solutions.0">
+    <costs amount="75.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Transcof version 1.43" contributesTo="//@requirements.33/@realisations.1">
+    <costs amount="82.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Viva version 9.96" contributesTo="//@requirements.34/@realisations.0" solutions="//@solutions.0">
+    <costs amount="90.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Opela version 0.36" contributesTo="//@requirements.34/@realisations.1">
+    <costs amount="68.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Zontrax version 1.6.2" contributesTo="//@requirements.34/@realisations.2" solutions="//@solutions.0">
+    <costs amount="57.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Sub-Ex version 0.0.4" contributesTo="//@requirements.35/@realisations.0" solutions="//@solutions.0">
+    <costs amount="69.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bitwolf version 0.17" contributesTo="//@requirements.35/@realisations.1">
+    <costs amount="66.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Duobam version 0.58" contributesTo="//@requirements.36/@realisations.0">
+    <costs amount="65.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Tempsoft version 2.75" contributesTo="//@requirements.36/@realisations.1">
+    <costs amount="88.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bigtax version 0.4.2" contributesTo="//@requirements.37/@realisations.0">
+    <costs amount="52.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Treeflex version 7.3" contributesTo="//@requirements.37/@realisations.1">
+    <costs amount="67.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Zaam-Dox version 8.9.2" contributesTo="//@requirements.37/@realisations.2" solutions="//@solutions.0">
+    <costs amount="73.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Latlux version 1.2" contributesTo="//@requirements.38/@realisations.0" solutions="//@solutions.0">
+    <costs amount="81.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Zamit version 5.8" contributesTo="//@requirements.38/@realisations.1">
+    <costs amount="85.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Stringtough version 0.0.0" contributesTo="//@requirements.39/@realisations.0" solutions="//@solutions.0">
+    <costs amount="74.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Vagram version 7.7" contributesTo="//@requirements.40/@realisations.0" solutions="//@solutions.0">
+    <costs amount="79.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bitchip version 1.2.6" contributesTo="//@requirements.40/@realisations.1" solutions="//@solutions.0">
+    <costs amount="89.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Zathin version 0.93" contributesTo="//@requirements.40/@realisations.2" solutions="//@solutions.0">
+    <costs amount="72.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Ventosanzap version 0.57" contributesTo="//@requirements.41/@realisations.0">
+    <costs amount="81.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Job version 0.15" contributesTo="//@requirements.42/@realisations.0">
+    <costs amount="61.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bigtax version 0.72" contributesTo="//@requirements.42/@realisations.1">
+    <costs amount="77.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Veribet version 0.2.4" contributesTo="//@requirements.43/@realisations.0" solutions="//@solutions.0">
+    <costs amount="73.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Tres-Zap version 5.1.3" contributesTo="//@requirements.44/@realisations.0">
+    <costs amount="68.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Opela version 0.87" contributesTo="//@requirements.44/@realisations.1">
+    <costs amount="63.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Matsoft version 7.1.3" contributesTo="//@requirements.44/@realisations.2" solutions="//@solutions.0">
+    <costs amount="91.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Cookley version 3.86" contributesTo="//@requirements.45/@realisations.0" solutions="//@solutions.0">
+    <costs amount="68.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Gembucket version 3.0.1" contributesTo="//@requirements.45/@realisations.1">
+    <costs amount="95.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bitwolf version 0.50" contributesTo="//@requirements.46/@realisations.0">
+    <costs amount="75.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Ronstring version 6.6" contributesTo="//@requirements.47/@realisations.0">
+    <costs amount="50.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Holdlamis version 0.39" contributesTo="//@requirements.47/@realisations.1">
+    <costs amount="65.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Aerified version 9.3" contributesTo="//@requirements.47/@realisations.2">
+    <costs amount="66.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Cardify version 0.7" contributesTo="//@requirements.48/@realisations.0">
+    <costs amount="80.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bamity version 6.9" contributesTo="//@requirements.48/@realisations.1">
+    <costs amount="90.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Vagram version 0.0.4" contributesTo="//@requirements.48/@realisations.2" solutions="//@solutions.0">
+    <costs amount="57.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Flowdesk version 8.2.3" contributesTo="//@requirements.49/@realisations.0" solutions="//@solutions.0">
+    <costs amount="54.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Redhold version 1.6.4" contributesTo="//@requirements.49/@realisations.1">
+    <costs amount="81.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Home Ing version 9.25" contributesTo="//@requirements.50/@realisations.0">
+    <costs amount="60.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Redhold version 8.0" contributesTo="//@requirements.50/@realisations.1" solutions="//@solutions.0">
+    <costs amount="66.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Otcom version 7.76" contributesTo="//@requirements.51/@realisations.0">
+    <costs amount="89.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact It version 0.23" contributesTo="//@requirements.51/@realisations.1" solutions="//@solutions.0">
+    <costs amount="74.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Viva version 0.21" contributesTo="//@requirements.52/@realisations.0" solutions="//@solutions.0">
+    <costs amount="73.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Cardify version 0.4.7" contributesTo="//@requirements.52/@realisations.1" solutions="//@solutions.0">
+    <costs amount="64.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Sonair version 0.09" contributesTo="//@requirements.53/@realisations.0" solutions="//@solutions.0">
+    <costs amount="55.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Alpha version 5.3.3" contributesTo="//@requirements.53/@realisations.1">
+    <costs amount="92.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Voltsillam version 0.54" contributesTo="//@requirements.54/@realisations.0">
+    <costs amount="89.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Holdlamis version 0.5.2" contributesTo="//@requirements.54/@realisations.1">
+    <costs amount="79.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bitchip version 0.6.4" contributesTo="//@requirements.54/@realisations.2" solutions="//@solutions.0">
+    <costs amount="72.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Cardify version 6.20" contributesTo="//@requirements.55/@realisations.0">
+    <costs amount="82.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Flowdesk version 0.1.3" contributesTo="//@requirements.56/@realisations.0">
+    <costs amount="52.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Ronstring version 1.5.3" contributesTo="//@requirements.56/@realisations.1">
+    <costs amount="84.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Namfix version 2.4" contributesTo="//@requirements.57/@realisations.0">
+    <costs amount="64.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Stim version 0.7.0" contributesTo="//@requirements.57/@realisations.1">
+    <costs amount="55.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact It version 2.82" contributesTo="//@requirements.58/@realisations.0" solutions="//@solutions.0">
+    <costs amount="51.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Namfix version 0.8.3" contributesTo="//@requirements.59/@realisations.0">
+    <costs amount="95.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bigtax version 3.4.2" contributesTo="//@requirements.59/@realisations.1">
+    <costs amount="88.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Tampflex version 4.2.8" contributesTo="//@requirements.60/@realisations.0">
+    <costs amount="72.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Matsoft version 2.5" contributesTo="//@requirements.60/@realisations.1">
+    <costs amount="68.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Daltfresh version 7.7" contributesTo="//@requirements.60/@realisations.2" solutions="//@solutions.0">
+    <costs amount="100.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bitwolf version 0.0.3" contributesTo="//@requirements.61/@realisations.0">
+    <costs amount="87.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Mat Lam Tam version 8.43" contributesTo="//@requirements.62/@realisations.0" solutions="//@solutions.0">
+    <costs amount="52.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Opela version 0.3.8" contributesTo="//@requirements.63/@realisations.0">
+    <costs amount="89.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Daltfresh version 7.7" contributesTo="//@requirements.63/@realisations.1" solutions="//@solutions.0">
+    <costs amount="75.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Alphazap version 1.80" contributesTo="//@requirements.64/@realisations.0">
+    <costs amount="89.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Toughjoyfax version 0.4.2" contributesTo="//@requirements.64/@realisations.1">
+    <costs amount="92.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Stringtough version 5.06" contributesTo="//@requirements.65/@realisations.0" solutions="//@solutions.0">
+    <costs amount="98.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Quo Lux version 0.07" contributesTo="//@requirements.65/@realisations.1">
+    <costs amount="72.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Otcom version 2.3.1" contributesTo="//@requirements.66/@realisations.0">
+    <costs amount="85.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Stronghold version 0.0.4" contributesTo="//@requirements.67/@realisations.0" solutions="//@solutions.0">
+    <costs amount="83.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Domainer version 1.97" contributesTo="//@requirements.67/@realisations.1">
+    <costs amount="82.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Zathin version 0.9.3" contributesTo="//@requirements.67/@realisations.2">
+    <costs amount="63.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Hatity version 6.2" contributesTo="//@requirements.68/@realisations.0" solutions="//@solutions.0">
+    <costs amount="88.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Vagram version 0.20" contributesTo="//@requirements.68/@realisations.1">
+    <costs amount="56.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Opela version 0.7.0" contributesTo="//@requirements.68/@realisations.2">
+    <costs amount="86.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Tin version 5.17" contributesTo="//@requirements.69/@realisations.0" solutions="//@solutions.0">
+    <costs amount="70.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bitwolf version 0.52" contributesTo="//@requirements.69/@realisations.1">
+    <costs amount="68.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Pannier version 0.0.2" contributesTo="//@requirements.70/@realisations.0">
+    <costs amount="97.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Voyatouch version 0.4.8" contributesTo="//@requirements.70/@realisations.1" solutions="//@solutions.0">
+    <costs amount="67.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Wrapsafe version 5.0.9" contributesTo="//@requirements.71/@realisations.0" solutions="//@solutions.0">
+    <costs amount="91.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Toughjoyfax version 5.2" contributesTo="//@requirements.72/@realisations.0">
+    <costs amount="90.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Fixflex version 9.9" contributesTo="//@requirements.72/@realisations.1" solutions="//@solutions.0">
+    <costs amount="64.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Flowdesk version 0.51" contributesTo="//@requirements.73/@realisations.0" solutions="//@solutions.0">
+    <costs amount="81.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Home Ing version 5.0.0" contributesTo="//@requirements.74/@realisations.0" solutions="//@solutions.0">
+    <costs amount="96.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bitchip version 1.7" contributesTo="//@requirements.74/@realisations.1">
+    <costs amount="95.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Alphazap version 4.84" contributesTo="//@requirements.16/@realisations.0">
+    <costs amount="99.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Alphazap version 1.9" contributesTo="//@requirements.4/@realisations.0" solutions="//@solutions.0">
+    <costs amount="50.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Alphazap version 5.5.2" contributesTo="//@requirements.20/@realisations.1">
+    <costs amount="80.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Sub-Ex version 0.5.5" contributesTo="//@requirements.9/@realisations.0 //@requirements.16/@realisations.0">
+    <costs amount="59.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Overhold version 0.8.8" contributesTo="//@requirements.9/@realisations.0 //@requirements.48/@realisations.1">
+    <costs amount="65.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Wrapsafe version 0.65" contributesTo="//@requirements.9/@realisations.0 //@requirements.8/@realisations.0">
+    <costs amount="57.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Aerified version 0.7.1" requires="//@availableArtifacts.156 //@availableArtifacts.157 //@availableArtifacts.158" contributesTo="//@requirements.9/@realisations.0">
+    <costs amount="83.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Flexidy version 0.0.4" contributesTo="//@requirements.4/@realisations.0">
+    <costs amount="67.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Sub-Ex version 2.3" contributesTo="//@requirements.57/@realisations.0">
+    <costs amount="97.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Tresom version 0.63" contributesTo="//@requirements.50/@realisations.0 //@requirements.24/@realisations.1">
+    <costs amount="67.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bamity version 7.4.1" contributesTo="//@requirements.50/@realisations.0 //@requirements.37/@realisations.0" solutions="//@solutions.0">
+    <costs amount="62.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bytecard version 9.2" requires="//@availableArtifacts.162 //@availableArtifacts.163" contributesTo="//@requirements.50/@realisations.0">
+    <costs amount="69.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Zoolab version 5.5" contributesTo="//@requirements.37/@realisations.1">
+    <costs amount="90.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Treeflex version 7.5.4" contributesTo="//@requirements.0/@realisations.1 //@requirements.56/@realisations.0">
+    <costs amount="83.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Pannier version 0.49" contributesTo="//@requirements.0/@realisations.1 //@requirements.9/@realisations.1">
+    <costs amount="76.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Mat Lam Tam version 4.8.5" contributesTo="//@requirements.0/@realisations.1 //@requirements.61/@realisations.0">
+    <costs amount="76.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Job version 0.13" requires="//@availableArtifacts.166 //@availableArtifacts.167 //@availableArtifacts.168" contributesTo="//@requirements.0/@realisations.1">
+    <costs amount="76.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Gembucket version 9.1.0" contributesTo="//@requirements.20/@realisations.0">
+    <costs amount="74.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Viva version 0.07" contributesTo="//@requirements.31/@realisations.2">
+    <costs amount="70.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Zamit version 8.63" contributesTo="//@requirements.6/@realisations.0">
+    <costs amount="98.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Flexidy version 0.12" contributesTo="//@requirements.49/@realisations.1 //@requirements.68/@realisations.0" solutions="//@solutions.0">
+    <costs amount="51.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Lotlux version 3.5.3" contributesTo="//@requirements.49/@realisations.1 //@requirements.57/@realisations.1" solutions="//@solutions.0">
+    <costs amount="67.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Daltfresh version 9.1" contributesTo="//@requirements.49/@realisations.1 //@requirements.36/@realisations.1">
+    <costs amount="74.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Sonsing version 5.52" requires="//@availableArtifacts.173 //@availableArtifacts.174 //@availableArtifacts.175" contributesTo="//@requirements.49/@realisations.1">
+    <costs amount="95.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bytecard version 6.0" contributesTo="//@requirements.12/@realisations.0">
+    <costs amount="89.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact It version 0.95" contributesTo="//@requirements.13/@realisations.2 //@requirements.46/@realisations.0">
+    <costs amount="94.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Holdlamis version 1.42" contributesTo="//@requirements.13/@realisations.2 //@requirements.48/@realisations.0">
+    <costs amount="87.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Wrapsafe version 0.4.8" contributesTo="//@requirements.13/@realisations.2 //@requirements.67/@realisations.2">
+    <costs amount="74.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Tres-Zap version 6.22" requires="//@availableArtifacts.178 //@availableArtifacts.179 //@availableArtifacts.180" contributesTo="//@requirements.13/@realisations.2">
+    <costs amount="71.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Matsoft version 9.89" contributesTo="//@requirements.51/@realisations.0">
+    <costs amount="65.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Duobam version 0.36" contributesTo="//@requirements.24/@realisations.1 //@requirements.60/@realisations.2" solutions="//@solutions.0">
+    <costs amount="92.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Mat Lam Tam version 4.1" requires="//@availableArtifacts.183" contributesTo="//@requirements.24/@realisations.1">
+    <costs amount="94.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Job version 9.1.1" contributesTo="//@requirements.31/@realisations.2 //@requirements.53/@realisations.1">
+    <costs amount="86.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Rank version 0.9.1" contributesTo="//@requirements.31/@realisations.2 //@requirements.42/@realisations.1">
+    <costs amount="90.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Ventosanzap version 5.9" requires="//@availableArtifacts.185 //@availableArtifacts.186" contributesTo="//@requirements.31/@realisations.2">
+    <costs amount="79.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Lotlux version 8.6.9" contributesTo="//@requirements.25/@realisations.1 //@requirements.6/@realisations.2" solutions="//@solutions.0">
+    <costs amount="64.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Keylex version 3.4" contributesTo="//@requirements.25/@realisations.1 //@requirements.32/@realisations.0" solutions="//@solutions.0">
+    <costs amount="59.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Overhold version 3.5" contributesTo="//@requirements.25/@realisations.1 //@requirements.18/@realisations.0" solutions="//@solutions.0">
+    <costs amount="97.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Matsoft version 7.1.3" requires="//@availableArtifacts.188 //@availableArtifacts.189 //@availableArtifacts.190" contributesTo="//@requirements.25/@realisations.1" solutions="//@solutions.0">
+    <costs amount="89.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Alphazap version 6.9" contributesTo="//@requirements.44/@realisations.0 //@requirements.42/@realisations.1">
+    <costs amount="67.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Duobam version 0.0.2" requires="//@availableArtifacts.192" contributesTo="//@requirements.44/@realisations.0">
+    <costs amount="70.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Domainer version 0.78" contributesTo="//@requirements.64/@realisations.1 //@requirements.27/@realisations.0" solutions="//@solutions.0">
+    <costs amount="62.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bytecard version 0.64" contributesTo="//@requirements.64/@realisations.1 //@requirements.22/@realisations.0">
+    <costs amount="100.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Opela version 3.03" requires="//@availableArtifacts.194 //@availableArtifacts.195" contributesTo="//@requirements.64/@realisations.1">
+    <costs amount="88.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Trippledex version 2.2" contributesTo="//@requirements.53/@realisations.1">
+    <costs amount="55.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Cardguard version 6.41" contributesTo="//@requirements.11/@realisations.0">
+    <costs amount="73.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Sonair version 0.56" contributesTo="//@requirements.17/@realisations.1">
+    <costs amount="66.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Fix San version 0.41" contributesTo="//@requirements.29/@realisations.0">
+    <costs amount="72.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Tres-Zap version 2.0" contributesTo="//@requirements.11/@realisations.2" solutions="//@solutions.0">
+    <costs amount="55.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Prodder version 1.4" contributesTo="//@requirements.14/@realisations.1">
+    <costs amount="60.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Otcom version 0.18" contributesTo="//@requirements.47/@realisations.0">
+    <costs amount="60.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Latlux version 0.27" contributesTo="//@requirements.63/@realisations.0">
+    <costs amount="74.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Alphazap version 0.79" contributesTo="//@requirements.72/@realisations.0">
+    <costs amount="50.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Pannier version 0.40" contributesTo="//@requirements.34/@realisations.1">
+    <costs amount="51.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Biodex version 2.5.7" contributesTo="//@requirements.38/@realisations.0" solutions="//@solutions.0">
+    <costs amount="97.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Alphazap version 0.72" contributesTo="//@requirements.11/@realisations.2 //@requirements.37/@realisations.0">
+    <costs amount="55.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact It version 0.44" requires="//@availableArtifacts.208" contributesTo="//@requirements.11/@realisations.2">
+    <costs amount="99.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Otcom version 6.71" contributesTo="//@requirements.23/@realisations.0" solutions="//@solutions.0">
+    <costs amount="86.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Home Ing version 7.7.5" contributesTo="//@requirements.42/@realisations.0">
+    <costs amount="50.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Redhold version 4.6.9" contributesTo="//@requirements.16/@realisations.0" solutions="//@solutions.0">
+    <costs amount="88.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Stronghold version 6.5.0" contributesTo="//@requirements.33/@realisations.1">
+    <costs amount="81.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Viva version 1.0" contributesTo="//@requirements.8/@realisations.1" solutions="//@solutions.0">
+    <costs amount="54.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Voltsillam version 2.47" contributesTo="//@requirements.21/@realisations.1">
+    <costs amount="63.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Daltfresh version 1.9" contributesTo="//@requirements.44/@realisations.2 //@requirements.27/@realisations.0" solutions="//@solutions.0">
+    <costs amount="98.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Tresom version 2.79" contributesTo="//@requirements.44/@realisations.2 //@requirements.48/@realisations.0" solutions="//@solutions.0">
+    <costs amount="84.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Zathin version 8.4" contributesTo="//@requirements.44/@realisations.2 //@requirements.31/@realisations.0" solutions="//@solutions.0">
+    <costs amount="92.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Tampflex version 0.92" requires="//@availableArtifacts.216 //@availableArtifacts.217 //@availableArtifacts.218" contributesTo="//@requirements.44/@realisations.2" solutions="//@solutions.0">
+    <costs amount="56.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Tres-Zap version 0.07" contributesTo="//@requirements.61/@realisations.0">
+    <costs amount="56.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Trippledex version 2.25" contributesTo="//@requirements.8/@realisations.0 //@requirements.24/@realisations.0">
+    <costs amount="64.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Daltfresh version 0.9.7" contributesTo="//@requirements.8/@realisations.0 //@requirements.40/@realisations.0" solutions="//@solutions.0">
+    <costs amount="81.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Lotstring version 0.5.8" contributesTo="//@requirements.8/@realisations.0 //@requirements.17/@realisations.2" solutions="//@solutions.0">
+    <costs amount="80.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Biodex version 1.2.2" requires="//@availableArtifacts.221 //@availableArtifacts.222 //@availableArtifacts.223" contributesTo="//@requirements.8/@realisations.0">
+    <costs amount="69.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Andalax version 6.4" contributesTo="//@requirements.27/@realisations.0" solutions="//@solutions.0">
+    <costs amount="62.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Latlux version 8.9.4" contributesTo="//@requirements.22/@realisations.0 //@requirements.11/@realisations.2">
+    <costs amount="87.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Zathin version 1.97" contributesTo="//@requirements.22/@realisations.0 //@requirements.38/@realisations.1">
+    <costs amount="98.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Mat Lam Tam version 1.1.7" contributesTo="//@requirements.22/@realisations.0 //@requirements.63/@realisations.1" solutions="//@solutions.0">
+    <costs amount="64.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Asoka version 0.0" requires="//@availableArtifacts.226 //@availableArtifacts.227 //@availableArtifacts.228" contributesTo="//@requirements.22/@realisations.0">
+    <costs amount="89.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Konklab version 4.0.5" contributesTo="//@requirements.68/@realisations.2 //@requirements.48/@realisations.1">
+    <costs amount="99.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Alpha version 4.42" requires="//@availableArtifacts.230" contributesTo="//@requirements.68/@realisations.2">
+    <costs amount="81.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Namfix version 0.6" contributesTo="//@requirements.73/@realisations.0" solutions="//@solutions.0">
+    <costs amount="95.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Alpha version 1.9" contributesTo="//@requirements.20/@realisations.1">
+    <costs amount="86.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Cardguard version 0.6.2" contributesTo="//@requirements.45/@realisations.1">
+    <costs amount="74.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bytecard version 0.3.1" contributesTo="//@requirements.51/@realisations.1 //@requirements.41/@realisations.0" solutions="//@solutions.0">
+    <costs amount="59.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Vagram version 4.69" requires="//@availableArtifacts.235" contributesTo="//@requirements.51/@realisations.1" solutions="//@solutions.0">
+    <costs amount="70.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Vagram version 1.9.6" contributesTo="//@requirements.48/@realisations.2" solutions="//@solutions.0">
+    <costs amount="83.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Stim version 8.6" contributesTo="//@requirements.12/@realisations.0">
+    <costs amount="68.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Fintone version 9.86" contributesTo="//@requirements.28/@realisations.0 //@requirements.15/@realisations.0" solutions="//@solutions.0">
+    <costs amount="58.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Namfix version 1.21" requires="//@availableArtifacts.239" contributesTo="//@requirements.28/@realisations.0" solutions="//@solutions.0">
+    <costs amount="58.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Zamit version 0.5.1" contributesTo="//@requirements.65/@realisations.1">
+    <costs amount="54.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Konklux version 1.8" contributesTo="//@requirements.40/@realisations.0">
+    <costs amount="73.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Voltsillam version 0.5" contributesTo="//@requirements.45/@realisations.1 //@requirements.3/@realisations.1">
+    <costs amount="87.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Sonsing version 0.53" contributesTo="//@requirements.45/@realisations.1 //@requirements.56/@realisations.1">
+    <costs amount="54.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Daltfresh version 8.5.2" contributesTo="//@requirements.45/@realisations.1 //@requirements.39/@realisations.0" solutions="//@solutions.0">
+    <costs amount="63.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Veribet version 0.70" requires="//@availableArtifacts.243 //@availableArtifacts.244 //@availableArtifacts.245" contributesTo="//@requirements.45/@realisations.1">
+    <costs amount="80.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Konklux version 0.7.3" contributesTo="//@requirements.47/@realisations.0 //@requirements.2/@realisations.0">
+    <costs amount="79.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Sonair version 0.3.5" contributesTo="//@requirements.47/@realisations.0 //@requirements.65/@realisations.1">
+    <costs amount="91.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Home Ing version 0.2.7" requires="//@availableArtifacts.247 //@availableArtifacts.248" contributesTo="//@requirements.47/@realisations.0">
+    <costs amount="54.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bytecard version 0.0.6" contributesTo="//@requirements.53/@realisations.1 //@requirements.6/@realisations.2">
+    <costs amount="90.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bamity version 7.68" requires="//@availableArtifacts.250" contributesTo="//@requirements.53/@realisations.1">
+    <costs amount="72.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Zoolab version 4.5" contributesTo="//@requirements.64/@realisations.0">
+    <costs amount="71.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Wrapsafe version 8.86" contributesTo="//@requirements.60/@realisations.1">
+    <costs amount="74.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Veribet version 0.7.5" contributesTo="//@requirements.64/@realisations.0">
+    <costs amount="80.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Hatity version 5.39" contributesTo="//@requirements.25/@realisations.1" solutions="//@solutions.0">
+    <costs amount="59.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Kanlam version 0.56" contributesTo="//@requirements.70/@realisations.0 //@requirements.1/@realisations.0">
+    <costs amount="89.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Opela version 4.3.8" contributesTo="//@requirements.70/@realisations.0 //@requirements.6/@realisations.1" solutions="//@solutions.0">
+    <costs amount="53.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Lotstring version 0.6.3" contributesTo="//@requirements.70/@realisations.0 //@requirements.16/@realisations.1">
+    <costs amount="83.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Fixflex version 6.2.9" requires="//@availableArtifacts.256 //@availableArtifacts.257 //@availableArtifacts.258" contributesTo="//@requirements.70/@realisations.0">
+    <costs amount="71.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Daltfresh version 5.3" contributesTo="//@requirements.72/@realisations.0 //@requirements.44/@realisations.1">
+    <costs amount="79.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Otcom version 5.0.9" contributesTo="//@requirements.72/@realisations.0 //@requirements.6/@realisations.2">
+    <costs amount="79.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Fix San version 4.6.2" requires="//@availableArtifacts.260 //@availableArtifacts.261" contributesTo="//@requirements.72/@realisations.0">
+    <costs amount="81.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Namfix version 0.1.6" contributesTo="//@requirements.40/@realisations.1" solutions="//@solutions.0">
+    <costs amount="87.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Tampflex version 0.6.2" contributesTo="//@requirements.11/@realisations.0 //@requirements.67/@realisations.1">
+    <costs amount="98.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Tres-Zap version 0.5.9" requires="//@availableArtifacts.264" contributesTo="//@requirements.11/@realisations.0">
+    <costs amount="88.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Hatity version 0.53" contributesTo="//@requirements.68/@realisations.1 //@requirements.31/@realisations.1">
+    <costs amount="53.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Sonair version 0.71" requires="//@availableArtifacts.266" contributesTo="//@requirements.68/@realisations.1">
+    <costs amount="73.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Tempsoft version 4.08" contributesTo="//@requirements.38/@realisations.1 //@requirements.1/@realisations.1" solutions="//@solutions.0">
+    <costs amount="99.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Aerified version 9.16" contributesTo="//@requirements.38/@realisations.1 //@requirements.66/@realisations.0">
+    <costs amount="72.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Tin version 0.6.3" requires="//@availableArtifacts.268 //@availableArtifacts.269" contributesTo="//@requirements.38/@realisations.1">
+    <costs amount="64.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Greenlam version 0.53" contributesTo="//@requirements.55/@realisations.0 //@requirements.25/@realisations.0">
+    <costs amount="57.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Fix San version 0.50" contributesTo="//@requirements.55/@realisations.0 //@requirements.1/@realisations.0">
+    <costs amount="63.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Y-Solowarm version 0.65" contributesTo="//@requirements.55/@realisations.0 //@requirements.24/@realisations.0">
+    <costs amount="55.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Sub-Ex version 9.5" requires="//@availableArtifacts.271 //@availableArtifacts.272 //@availableArtifacts.273" contributesTo="//@requirements.55/@realisations.0">
+    <costs amount="92.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Temp version 1.21" contributesTo="//@requirements.17/@realisations.2">
+    <costs amount="96.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Sonsing version 0.91" contributesTo="//@requirements.55/@realisations.0 //@requirements.36/@realisations.1">
+    <costs amount="100.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Zamit version 8.3.8" contributesTo="//@requirements.55/@realisations.0 //@requirements.25/@realisations.1" solutions="//@solutions.0">
+    <costs amount="61.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Konklab version 6.6" contributesTo="//@requirements.55/@realisations.0 //@requirements.28/@realisations.0" solutions="//@solutions.0">
+    <costs amount="69.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Hatity version 9.7" requires="//@availableArtifacts.276 //@availableArtifacts.277 //@availableArtifacts.278" contributesTo="//@requirements.55/@realisations.0">
+    <costs amount="57.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Fintone version 0.2.1" contributesTo="//@requirements.14/@realisations.1">
+    <costs amount="98.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Greenlam version 9.0.9" contributesTo="//@requirements.14/@realisations.0 //@requirements.11/@realisations.1">
+    <costs amount="90.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bitchip version 2.9.1" contributesTo="//@requirements.14/@realisations.0 //@requirements.53/@realisations.1">
+    <costs amount="70.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Fintone version 4.3.5" requires="//@availableArtifacts.281 //@availableArtifacts.282" contributesTo="//@requirements.14/@realisations.0">
+    <costs amount="80.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bitchip version 0.48" contributesTo="//@requirements.14/@realisations.0">
+    <costs amount="74.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Tresom version 4.9" contributesTo="//@requirements.38/@realisations.1">
+    <costs amount="70.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Flowdesk version 8.0.4" contributesTo="//@requirements.54/@realisations.0 //@requirements.23/@realisations.1">
+    <costs amount="74.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Cardify version 0.3.9" contributesTo="//@requirements.54/@realisations.0 //@requirements.31/@realisations.2">
+    <costs amount="81.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Ventosanzap version 0.5.4" contributesTo="//@requirements.54/@realisations.0 //@requirements.45/@realisations.0" solutions="//@solutions.0">
+    <costs amount="81.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Konklux version 5.53" requires="//@availableArtifacts.286 //@availableArtifacts.287 //@availableArtifacts.288" contributesTo="//@requirements.54/@realisations.0">
+    <costs amount="100.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Kanlam version 0.61" contributesTo="//@requirements.67/@realisations.2">
+    <costs amount="74.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Veribet version 9.7.8" contributesTo="//@requirements.20/@realisations.0">
+    <costs amount="70.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Zontrax version 0.6.5" contributesTo="//@requirements.11/@realisations.2">
+    <costs amount="56.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Stringtough version 3.6" contributesTo="//@requirements.25/@realisations.0">
+    <costs amount="67.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Flowdesk version 0.1" contributesTo="//@requirements.31/@realisations.1">
+    <costs amount="94.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Cookley version 0.9.8" contributesTo="//@requirements.30/@realisations.0">
+    <costs amount="92.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Tresom version 0.22" contributesTo="//@requirements.55/@realisations.0">
+    <costs amount="94.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Zamit version 0.6.9" contributesTo="//@requirements.12/@realisations.1">
+    <costs amount="93.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Alpha version 0.82" contributesTo="//@requirements.65/@realisations.0" solutions="//@solutions.0">
+    <costs amount="93.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Zaam-Dox version 3.2.9" contributesTo="//@requirements.19/@realisations.0" solutions="//@solutions.0">
+    <costs amount="52.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Sub-Ex version 0.4.8" contributesTo="//@requirements.8/@realisations.1" solutions="//@solutions.0">
+    <costs amount="62.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Transcof version 2.6" contributesTo="//@requirements.8/@realisations.1 //@requirements.73/@realisations.0" solutions="//@solutions.0">
+    <costs amount="82.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Transcof version 1.30" requires="//@availableArtifacts.300 //@availableArtifacts.301" contributesTo="//@requirements.8/@realisations.1" solutions="//@solutions.0">
+    <costs amount="71.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Kanlam version 8.43" contributesTo="//@requirements.50/@realisations.0">
+    <costs amount="65.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Tres-Zap version 6.3" contributesTo="//@requirements.61/@realisations.0">
+    <costs amount="87.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Zontrax version 5.22" contributesTo="//@requirements.8/@realisations.0">
+    <costs amount="55.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Toughjoyfax version 0.14" contributesTo="//@requirements.57/@realisations.0 //@requirements.25/@realisations.0">
+    <costs amount="85.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Voyatouch version 7.5.6" contributesTo="//@requirements.57/@realisations.0 //@requirements.40/@realisations.2">
+    <costs amount="78.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Holdlamis version 0.87" requires="//@availableArtifacts.306 //@availableArtifacts.307" contributesTo="//@requirements.57/@realisations.0">
+    <costs amount="95.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Sonsing version 2.0.7" contributesTo="//@requirements.3/@realisations.0">
+    <costs amount="72.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Hatity version 0.97" contributesTo="//@requirements.23/@realisations.2">
+    <costs amount="93.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Solarbreeze version 0.86" contributesTo="//@requirements.16/@realisations.1">
+    <costs amount="68.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Treeflex version 0.39" contributesTo="//@requirements.35/@realisations.1">
+    <costs amount="92.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Veribet version 7.73" contributesTo="//@requirements.41/@realisations.0">
+    <costs amount="97.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Wrapsafe version 0.3.5" contributesTo="//@requirements.47/@realisations.0">
+    <costs amount="88.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Andalax version 2.38" contributesTo="//@requirements.22/@realisations.0">
+    <costs amount="75.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Stronghold version 8.2" contributesTo="//@requirements.29/@realisations.1">
+    <costs amount="58.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Alpha version 7.1" contributesTo="//@requirements.16/@realisations.0">
+    <costs amount="97.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Gembucket version 6.92" contributesTo="//@requirements.15/@realisations.2" solutions="//@solutions.0">
+    <costs amount="67.0"/>
+  </availableArtifacts>
+  <requirements name="Specification #47709126">
+    <valuations value="10.0" assignedBy="//@customers.22"/>
+    <realisations percentage="0.03" dependsOn="//@availableArtifacts.0"/>
+    <realisations percentage="0.24" dependsOn="//@availableArtifacts.1 //@availableArtifacts.169 //@availableArtifacts.166 //@availableArtifacts.167 //@availableArtifacts.168"/>
+  </requirements>
+  <requirements name="Specification #75574253">
+    <valuations value="9.0" assignedBy="//@customers.31 //@customers.45"/>
+    <valuations value="7.0" assignedBy="//@customers.43"/>
+    <realisations percentage="0.05" dependsOn="//@availableArtifacts.2 //@availableArtifacts.256 //@availableArtifacts.272"/>
+    <realisations percentage="0.41" dependsOn="//@availableArtifacts.3 //@availableArtifacts.268"/>
+  </requirements>
+  <requirements name="Specification #51201852">
+    <valuations value="1.0" assignedBy="//@customers.15"/>
+    <valuations value="6.0" assignedBy="//@customers.34 //@customers.5"/>
+    <realisations percentage="0.2" dependsOn="//@availableArtifacts.4 //@availableArtifacts.247"/>
+  </requirements>
+  <requirements name="Specification #76767821">
+    <valuations value="6.0" assignedBy="//@customers.9 //@customers.32 //@customers.25"/>
+    <valuations value="2.0" assignedBy="//@customers.25 //@customers.31"/>
+    <realisations percentage="0.84" dependsOn="//@availableArtifacts.5 //@availableArtifacts.309"/>
+    <realisations percentage="0.5" dependsOn="//@availableArtifacts.6 //@availableArtifacts.243"/>
+  </requirements>
+  <requirements name="Specification #68896645">
+    <valuations value="6.0" assignedBy="//@customers.41 //@customers.47"/>
+    <valuations value="2.0" assignedBy="//@customers.43 //@customers.32"/>
+    <realisations percentage="0.23" dependsOn="//@availableArtifacts.7 //@availableArtifacts.154 //@availableArtifacts.160"/>
+  </requirements>
+  <requirements name="Specification #37833985">
+    <valuations value="9.0" assignedBy="//@customers.4 //@customers.49"/>
+    <valuations value="8.0" assignedBy="//@customers.38"/>
+    <realisations percentage="0.52" dependsOn="//@availableArtifacts.8"/>
+    <realisations percentage="0.25" dependsOn="//@availableArtifacts.9"/>
+  </requirements>
+  <requirements name="Specification #09325494">
+    <valuations value="7.0" assignedBy="//@customers.39"/>
+    <valuations value="3.0" assignedBy="//@customers.22 //@customers.25 //@customers.4"/>
+    <realisations percentage="0.1" dependsOn="//@availableArtifacts.10 //@availableArtifacts.172"/>
+    <realisations percentage="0.17" dependsOn="//@availableArtifacts.11 //@availableArtifacts.257"/>
+    <realisations percentage="0.81" dependsOn="//@availableArtifacts.12 //@availableArtifacts.188 //@availableArtifacts.250 //@availableArtifacts.261"/>
+  </requirements>
+  <requirements name="Specification #38263446">
+    <valuations value="3.0" assignedBy="//@customers.22 //@customers.40 //@customers.13"/>
+    <realisations percentage="0.57" dependsOn="//@availableArtifacts.13"/>
+  </requirements>
+  <requirements name="Specification #72051245">
+    <valuations value="10.0" assignedBy="//@customers.43 //@customers.30"/>
+    <realisations percentage="0.7" dependsOn="//@availableArtifacts.14 //@availableArtifacts.158 //@availableArtifacts.224 //@availableArtifacts.221 //@availableArtifacts.222 //@availableArtifacts.223 //@availableArtifacts.305"/>
+    <realisations percentage="0.93" dependsOn="//@availableArtifacts.15 //@availableArtifacts.214 //@availableArtifacts.302 //@availableArtifacts.300 //@availableArtifacts.301"/>
+  </requirements>
+  <requirements name="Specification #46927347">
+    <valuations value="4.0" assignedBy="//@customers.28"/>
+    <valuations value="4.0" assignedBy="//@customers.32 //@customers.17"/>
+    <valuations value="1.0" assignedBy="//@customers.49 //@customers.27"/>
+    <realisations percentage="0.37" dependsOn="//@availableArtifacts.16 //@availableArtifacts.159 //@availableArtifacts.156 //@availableArtifacts.157 //@availableArtifacts.158"/>
+    <realisations percentage="0.13" dependsOn="//@availableArtifacts.17 //@availableArtifacts.167"/>
+  </requirements>
+  <requirements name="Specification #15547903">
+    <valuations value="4.0" assignedBy="//@customers.30"/>
+    <valuations value="5.0" assignedBy="//@customers.11"/>
+    <realisations percentage="0.93" dependsOn="//@availableArtifacts.18"/>
+    <realisations percentage="0.32" dependsOn="//@availableArtifacts.19"/>
+    <realisations percentage="0.83" dependsOn="//@availableArtifacts.20"/>
+  </requirements>
+  <requirements name="Specification #71590394">
+    <valuations value="3.0" assignedBy="//@customers.28 //@customers.43"/>
+    <valuations value="7.0" assignedBy="//@customers.30 //@customers.13"/>
+    <realisations percentage="0.32" dependsOn="//@availableArtifacts.21 //@availableArtifacts.198 //@availableArtifacts.265 //@availableArtifacts.264"/>
+    <realisations percentage="0.74" dependsOn="//@availableArtifacts.22 //@availableArtifacts.281"/>
+    <realisations percentage="0.96" dependsOn="//@availableArtifacts.23 //@availableArtifacts.201 //@availableArtifacts.209 //@availableArtifacts.208 //@availableArtifacts.226 //@availableArtifacts.292"/>
+  </requirements>
+  <requirements name="Specification #06801694">
+    <valuations value="3.0" assignedBy="//@customers.28 //@customers.8 //@customers.37"/>
+    <realisations percentage="0.15" dependsOn="//@availableArtifacts.24 //@availableArtifacts.177 //@availableArtifacts.238"/>
+    <realisations percentage="0.13" dependsOn="//@availableArtifacts.25 //@availableArtifacts.297"/>
+  </requirements>
+  <requirements name="Specification #61122079">
+    <valuations value="1.0" assignedBy="//@customers.14"/>
+    <valuations value="5.0" assignedBy="//@customers.2 //@customers.38"/>
+    <valuations value="2.0" assignedBy="//@customers.28 //@customers.14 //@customers.30"/>
+    <realisations percentage="0.27" dependsOn="//@availableArtifacts.26"/>
+    <realisations percentage="0.36" dependsOn="//@availableArtifacts.27"/>
+    <realisations percentage="0.89" dependsOn="//@availableArtifacts.28 //@availableArtifacts.181 //@availableArtifacts.178 //@availableArtifacts.179 //@availableArtifacts.180"/>
+  </requirements>
+  <requirements name="Specification #58061763">
+    <valuations value="1.0" assignedBy="//@customers.7 //@customers.32 //@customers.48"/>
+    <valuations value="5.0" assignedBy="//@customers.24 //@customers.13"/>
+    <realisations percentage="0.8" dependsOn="//@availableArtifacts.29 //@availableArtifacts.283 //@availableArtifacts.281 //@availableArtifacts.282 //@availableArtifacts.284"/>
+    <realisations percentage="0.65" dependsOn="//@availableArtifacts.30 //@availableArtifacts.202 //@availableArtifacts.280"/>
+  </requirements>
+  <requirements name="Specification #26168098">
+    <valuations value="4.0" assignedBy="//@customers.40 //@customers.29 //@customers.7"/>
+    <valuations value="9.0" assignedBy="//@customers.37"/>
+    <valuations value="7.0" assignedBy="//@customers.9 //@customers.4"/>
+    <realisations percentage="0.48" dependsOn="//@availableArtifacts.31 //@availableArtifacts.239"/>
+    <realisations percentage="0.01" dependsOn="//@availableArtifacts.32"/>
+    <realisations percentage="0.64" dependsOn="//@availableArtifacts.33 //@availableArtifacts.318"/>
+  </requirements>
+  <requirements name="Specification #66893448">
+    <valuations value="1.0" assignedBy="//@customers.34 //@customers.48"/>
+    <valuations value="10.0" assignedBy="//@customers.6 //@customers.29"/>
+    <valuations value="4.0" assignedBy="//@customers.40"/>
+    <realisations percentage="0.62" dependsOn="//@availableArtifacts.34 //@availableArtifacts.153 //@availableArtifacts.156 //@availableArtifacts.212 //@availableArtifacts.317"/>
+    <realisations percentage="0.06" dependsOn="//@availableArtifacts.35 //@availableArtifacts.258 //@availableArtifacts.311"/>
+  </requirements>
+  <requirements name="Specification #06567224">
+    <valuations value="4.0" assignedBy="//@customers.2 //@customers.34"/>
+    <realisations percentage="0.98" dependsOn="//@availableArtifacts.36"/>
+    <realisations percentage="0.0" dependsOn="//@availableArtifacts.37 //@availableArtifacts.199"/>
+    <realisations percentage="0.63" dependsOn="//@availableArtifacts.38 //@availableArtifacts.223 //@availableArtifacts.275"/>
+  </requirements>
+  <requirements name="Specification #03790274">
+    <valuations value="3.0" assignedBy="//@customers.22 //@customers.16 //@customers.19"/>
+    <valuations value="6.0" assignedBy="//@customers.40 //@customers.26"/>
+    <valuations value="3.0" assignedBy="//@customers.39 //@customers.22"/>
+    <realisations percentage="0.61" dependsOn="//@availableArtifacts.39 //@availableArtifacts.190"/>
+    <realisations percentage="0.32" dependsOn="//@availableArtifacts.40"/>
+  </requirements>
+  <requirements name="Specification #94680232">
+    <valuations value="6.0" assignedBy="//@customers.5"/>
+    <realisations percentage="0.21" dependsOn="//@availableArtifacts.41 //@availableArtifacts.299"/>
+    <realisations percentage="0.32" dependsOn="//@availableArtifacts.42"/>
+  </requirements>
+  <requirements name="Specification #66251033">
+    <valuations value="8.0" assignedBy="//@customers.22"/>
+    <valuations value="2.0" assignedBy="//@customers.18"/>
+    <realisations percentage="0.81" dependsOn="//@availableArtifacts.43 //@availableArtifacts.170 //@availableArtifacts.291"/>
+    <realisations percentage="0.86" dependsOn="//@availableArtifacts.44 //@availableArtifacts.155 //@availableArtifacts.233"/>
+  </requirements>
+  <requirements name="Specification #85947313">
+    <valuations value="5.0" assignedBy="//@customers.46 //@customers.17"/>
+    <valuations value="7.0" assignedBy="//@customers.12"/>
+    <realisations percentage="0.31" dependsOn="//@availableArtifacts.45"/>
+    <realisations percentage="0.57" dependsOn="//@availableArtifacts.46 //@availableArtifacts.215"/>
+    <realisations percentage="0.58" dependsOn="//@availableArtifacts.47"/>
+  </requirements>
+  <requirements name="Specification #12947904">
+    <valuations value="5.0" assignedBy="//@customers.38"/>
+    <valuations value="9.0" assignedBy="//@customers.35"/>
+    <valuations value="10.0" assignedBy="//@customers.8 //@customers.49"/>
+    <realisations percentage="0.89" dependsOn="//@availableArtifacts.48 //@availableArtifacts.195 //@availableArtifacts.229 //@availableArtifacts.226 //@availableArtifacts.227 //@availableArtifacts.228 //@availableArtifacts.315"/>
+    <realisations percentage="0.45" dependsOn="//@availableArtifacts.49"/>
+  </requirements>
+  <requirements name="Specification #97236825">
+    <valuations value="9.0" assignedBy="//@customers.7 //@customers.23 //@customers.22"/>
+    <realisations percentage="0.94" dependsOn="//@availableArtifacts.50 //@availableArtifacts.210"/>
+    <realisations percentage="0.87" dependsOn="//@availableArtifacts.51 //@availableArtifacts.286"/>
+    <realisations percentage="0.24" dependsOn="//@availableArtifacts.52 //@availableArtifacts.310"/>
+  </requirements>
+  <requirements name="Specification #98763467">
+    <valuations value="5.0" assignedBy="//@customers.13 //@customers.48 //@customers.44"/>
+    <realisations percentage="0.01" dependsOn="//@availableArtifacts.53 //@availableArtifacts.221 //@availableArtifacts.273"/>
+    <realisations percentage="0.75" dependsOn="//@availableArtifacts.54 //@availableArtifacts.162 //@availableArtifacts.184 //@availableArtifacts.183"/>
+  </requirements>
+  <requirements name="Specification #19509969">
+    <valuations value="9.0" assignedBy="//@customers.9"/>
+    <valuations value="2.0" assignedBy="//@customers.41 //@customers.0"/>
+    <realisations percentage="0.94" dependsOn="//@availableArtifacts.55 //@availableArtifacts.271 //@availableArtifacts.293 //@availableArtifacts.306"/>
+    <realisations percentage="0.82" dependsOn="//@availableArtifacts.56 //@availableArtifacts.191 //@availableArtifacts.188 //@availableArtifacts.189 //@availableArtifacts.190 //@availableArtifacts.255 //@availableArtifacts.277"/>
+  </requirements>
+  <requirements name="Specification #24227162">
+    <valuations value="9.0" assignedBy="//@customers.16 //@customers.8 //@customers.24"/>
+    <realisations percentage="0.07" dependsOn="//@availableArtifacts.57"/>
+  </requirements>
+  <requirements name="Specification #37401672">
+    <valuations value="5.0" assignedBy="//@customers.23"/>
+    <valuations value="8.0" assignedBy="//@customers.49 //@customers.0"/>
+    <realisations percentage="0.99" dependsOn="//@availableArtifacts.58 //@availableArtifacts.194 //@availableArtifacts.216 //@availableArtifacts.225"/>
+  </requirements>
+  <requirements name="Specification #00473392">
+    <valuations value="9.0" assignedBy="//@customers.2"/>
+    <valuations value="10.0" assignedBy="//@customers.39 //@customers.49"/>
+    <realisations percentage="0.38" dependsOn="//@availableArtifacts.59 //@availableArtifacts.240 //@availableArtifacts.239 //@availableArtifacts.278"/>
+    <realisations percentage="0.29" dependsOn="//@availableArtifacts.60"/>
+  </requirements>
+  <requirements name="Specification #82237400">
+    <valuations value="4.0" assignedBy="//@customers.39 //@customers.34"/>
+    <valuations value="3.0" assignedBy="//@customers.38 //@customers.33"/>
+    <realisations percentage="0.01" dependsOn="//@availableArtifacts.61 //@availableArtifacts.200"/>
+    <realisations percentage="0.29" dependsOn="//@availableArtifacts.62 //@availableArtifacts.316"/>
+    <realisations percentage="0.44" dependsOn="//@availableArtifacts.63"/>
+  </requirements>
+  <requirements name="Specification #95724157">
+    <valuations value="2.0" assignedBy="//@customers.8"/>
+    <realisations percentage="0.37" dependsOn="//@availableArtifacts.64 //@availableArtifacts.295"/>
+    <realisations percentage="0.9" dependsOn="//@availableArtifacts.65"/>
+  </requirements>
+  <requirements name="Specification #18796773">
+    <valuations value="3.0" assignedBy="//@customers.13 //@customers.25"/>
+    <valuations value="3.0" assignedBy="//@customers.40 //@customers.29 //@customers.15"/>
+    <realisations percentage="0.23" dependsOn="//@availableArtifacts.66 //@availableArtifacts.218"/>
+    <realisations percentage="0.06" dependsOn="//@availableArtifacts.67 //@availableArtifacts.266 //@availableArtifacts.294"/>
+    <realisations percentage="0.22" dependsOn="//@availableArtifacts.68 //@availableArtifacts.171 //@availableArtifacts.187 //@availableArtifacts.185 //@availableArtifacts.186 //@availableArtifacts.287"/>
+  </requirements>
+  <requirements name="Specification #58501634">
+    <valuations value="8.0" assignedBy="//@customers.35 //@customers.22 //@customers.27"/>
+    <realisations percentage="0.58" dependsOn="//@availableArtifacts.69 //@availableArtifacts.189"/>
+  </requirements>
+  <requirements name="Specification #62529167">
+    <valuations value="2.0" assignedBy="//@customers.36"/>
+    <valuations value="9.0" assignedBy="//@customers.38 //@customers.49"/>
+    <realisations percentage="0.81" dependsOn="//@availableArtifacts.70"/>
+    <realisations percentage="0.86" dependsOn="//@availableArtifacts.71 //@availableArtifacts.213"/>
+  </requirements>
+  <requirements name="Specification #47015487">
+    <valuations value="5.0" assignedBy="//@customers.18"/>
+    <valuations value="7.0" assignedBy="//@customers.24 //@customers.37 //@customers.10"/>
+    <realisations percentage="0.4" dependsOn="//@availableArtifacts.72"/>
+    <realisations percentage="0.61" dependsOn="//@availableArtifacts.73 //@availableArtifacts.206"/>
+    <realisations percentage="0.06" dependsOn="//@availableArtifacts.74"/>
+  </requirements>
+  <requirements name="Specification #92804265">
+    <valuations value="2.0" assignedBy="//@customers.45"/>
+    <valuations value="10.0" assignedBy="//@customers.38 //@customers.19 //@customers.4"/>
+    <realisations percentage="0.86" dependsOn="//@availableArtifacts.75"/>
+    <realisations percentage="0.28" dependsOn="//@availableArtifacts.76 //@availableArtifacts.312"/>
+  </requirements>
+  <requirements name="Specification #89916544">
+    <valuations value="3.0" assignedBy="//@customers.45"/>
+    <valuations value="7.0" assignedBy="//@customers.21"/>
+    <realisations percentage="0.21" dependsOn="//@availableArtifacts.77"/>
+    <realisations percentage="0.43" dependsOn="//@availableArtifacts.78 //@availableArtifacts.175 //@availableArtifacts.276"/>
+  </requirements>
+  <requirements name="Specification #74776061">
+    <valuations value="5.0" assignedBy="//@customers.23"/>
+    <valuations value="6.0" assignedBy="//@customers.35 //@customers.40 //@customers.32"/>
+    <realisations percentage="0.72" dependsOn="//@availableArtifacts.79 //@availableArtifacts.163 //@availableArtifacts.208"/>
+    <realisations percentage="0.41" dependsOn="//@availableArtifacts.80 //@availableArtifacts.165"/>
+    <realisations percentage="0.63" dependsOn="//@availableArtifacts.81"/>
+  </requirements>
+  <requirements name="Specification #27133545">
+    <valuations value="3.0" assignedBy="//@customers.39 //@customers.41 //@customers.15"/>
+    <valuations value="7.0" assignedBy="//@customers.32 //@customers.36 //@customers.28"/>
+    <valuations value="5.0" assignedBy="//@customers.33 //@customers.7"/>
+    <realisations percentage="0.77" dependsOn="//@availableArtifacts.82 //@availableArtifacts.207"/>
+    <realisations percentage="0.22" dependsOn="//@availableArtifacts.83 //@availableArtifacts.227 //@availableArtifacts.270 //@availableArtifacts.268 //@availableArtifacts.269 //@availableArtifacts.285"/>
+  </requirements>
+  <requirements name="Specification #50272082">
+    <valuations value="2.0" assignedBy="//@customers.40 //@customers.36 //@customers.33"/>
+    <valuations value="2.0" assignedBy="//@customers.15 //@customers.39"/>
+    <valuations value="1.0" assignedBy="//@customers.47"/>
+    <realisations percentage="0.13" dependsOn="//@availableArtifacts.84 //@availableArtifacts.245"/>
+  </requirements>
+  <requirements name="Specification #29937776">
+    <valuations value="7.0" assignedBy="//@customers.8"/>
+    <realisations percentage="0.37" dependsOn="//@availableArtifacts.85 //@availableArtifacts.222 //@availableArtifacts.242"/>
+    <realisations percentage="0.76" dependsOn="//@availableArtifacts.86 //@availableArtifacts.263"/>
+    <realisations percentage="0.24" dependsOn="//@availableArtifacts.87 //@availableArtifacts.307"/>
+  </requirements>
+  <requirements name="Specification #19728988">
+    <valuations value="1.0" assignedBy="//@customers.0 //@customers.26"/>
+    <realisations percentage="0.39" dependsOn="//@availableArtifacts.88 //@availableArtifacts.235 //@availableArtifacts.313"/>
+  </requirements>
+  <requirements name="Specification #50057016">
+    <valuations value="1.0" assignedBy="//@customers.25 //@customers.47"/>
+    <realisations percentage="0.97" dependsOn="//@availableArtifacts.89 //@availableArtifacts.211"/>
+    <realisations percentage="0.89" dependsOn="//@availableArtifacts.90 //@availableArtifacts.186 //@availableArtifacts.192"/>
+  </requirements>
+  <requirements name="Specification #93682824">
+    <valuations value="6.0" assignedBy="//@customers.2"/>
+    <valuations value="4.0" assignedBy="//@customers.23"/>
+    <realisations percentage="0.63" dependsOn="//@availableArtifacts.91"/>
+  </requirements>
+  <requirements name="Specification #59199489">
+    <valuations value="9.0" assignedBy="//@customers.29"/>
+    <valuations value="9.0" assignedBy="//@customers.35 //@customers.34 //@customers.29"/>
+    <valuations value="4.0" assignedBy="//@customers.6"/>
+    <realisations percentage="0.12" dependsOn="//@availableArtifacts.92 //@availableArtifacts.193 //@availableArtifacts.192"/>
+    <realisations percentage="0.67" dependsOn="//@availableArtifacts.93 //@availableArtifacts.260"/>
+    <realisations percentage="0.76" dependsOn="//@availableArtifacts.94 //@availableArtifacts.219 //@availableArtifacts.216 //@availableArtifacts.217 //@availableArtifacts.218"/>
+  </requirements>
+  <requirements name="Specification #42719700">
+    <valuations value="4.0" assignedBy="//@customers.3 //@customers.21"/>
+    <realisations percentage="0.72" dependsOn="//@availableArtifacts.95 //@availableArtifacts.288"/>
+    <realisations percentage="0.21" dependsOn="//@availableArtifacts.96 //@availableArtifacts.234 //@availableArtifacts.246 //@availableArtifacts.243 //@availableArtifacts.244 //@availableArtifacts.245"/>
+  </requirements>
+  <requirements name="Specification #50256679">
+    <valuations value="7.0" assignedBy="//@customers.37"/>
+    <realisations percentage="0.41" dependsOn="//@availableArtifacts.97 //@availableArtifacts.178"/>
+  </requirements>
+  <requirements name="Specification #66985280">
+    <valuations value="3.0" assignedBy="//@customers.7"/>
+    <valuations value="2.0" assignedBy="//@customers.45 //@customers.11"/>
+    <valuations value="2.0" assignedBy="//@customers.9 //@customers.1 //@customers.19"/>
+    <realisations percentage="0.08" dependsOn="//@availableArtifacts.98 //@availableArtifacts.203 //@availableArtifacts.249 //@availableArtifacts.247 //@availableArtifacts.248 //@availableArtifacts.314"/>
+    <realisations percentage="0.95" dependsOn="//@availableArtifacts.99"/>
+    <realisations percentage="0.02" dependsOn="//@availableArtifacts.100"/>
+  </requirements>
+  <requirements name="Specification #79895538">
+    <valuations value="8.0" assignedBy="//@customers.27 //@customers.30"/>
+    <valuations value="9.0" assignedBy="//@customers.30 //@customers.1 //@customers.2"/>
+    <valuations value="9.0" assignedBy="//@customers.29 //@customers.45"/>
+    <realisations percentage="0.39" dependsOn="//@availableArtifacts.101 //@availableArtifacts.179 //@availableArtifacts.217"/>
+    <realisations percentage="0.65" dependsOn="//@availableArtifacts.102 //@availableArtifacts.157 //@availableArtifacts.230"/>
+    <realisations percentage="0.56" dependsOn="//@availableArtifacts.103 //@availableArtifacts.237"/>
+  </requirements>
+  <requirements name="Specification #93358804">
+    <valuations value="7.0" assignedBy="//@customers.11"/>
+    <valuations value="3.0" assignedBy="//@customers.44 //@customers.0 //@customers.48"/>
+    <realisations percentage="0.28" dependsOn="//@availableArtifacts.104"/>
+    <realisations percentage="0.65" dependsOn="//@availableArtifacts.105 //@availableArtifacts.176 //@availableArtifacts.173 //@availableArtifacts.174 //@availableArtifacts.175"/>
+  </requirements>
+  <requirements name="Specification #15732484">
+    <valuations value="6.0" assignedBy="//@customers.0"/>
+    <valuations value="5.0" assignedBy="//@customers.22 //@customers.28"/>
+    <valuations value="6.0" assignedBy="//@customers.11 //@customers.15"/>
+    <realisations percentage="0.53" dependsOn="//@availableArtifacts.106 //@availableArtifacts.164 //@availableArtifacts.162 //@availableArtifacts.163 //@availableArtifacts.303"/>
+    <realisations percentage="0.21" dependsOn="//@availableArtifacts.107"/>
+  </requirements>
+  <requirements name="Specification #33623214">
+    <valuations value="2.0" assignedBy="//@customers.42"/>
+    <valuations value="7.0" assignedBy="//@customers.27 //@customers.37"/>
+    <valuations value="1.0" assignedBy="//@customers.30 //@customers.47"/>
+    <realisations percentage="0.54" dependsOn="//@availableArtifacts.108 //@availableArtifacts.182"/>
+    <realisations percentage="0.82" dependsOn="//@availableArtifacts.109 //@availableArtifacts.236 //@availableArtifacts.235"/>
+  </requirements>
+  <requirements name="Specification #75853792">
+    <valuations value="4.0" assignedBy="//@customers.24 //@customers.17 //@customers.44"/>
+    <realisations percentage="0.47" dependsOn="//@availableArtifacts.110"/>
+    <realisations percentage="0.85" dependsOn="//@availableArtifacts.111"/>
+  </requirements>
+  <requirements name="Specification #92565500">
+    <valuations value="10.0" assignedBy="//@customers.34"/>
+    <valuations value="6.0" assignedBy="//@customers.22 //@customers.9"/>
+    <valuations value="2.0" assignedBy="//@customers.13 //@customers.26 //@customers.17"/>
+    <realisations percentage="0.8" dependsOn="//@availableArtifacts.112"/>
+    <realisations percentage="0.77" dependsOn="//@availableArtifacts.113 //@availableArtifacts.185 //@availableArtifacts.197 //@availableArtifacts.251 //@availableArtifacts.250 //@availableArtifacts.282"/>
+  </requirements>
+  <requirements name="Specification #12988877">
+    <valuations value="6.0" assignedBy="//@customers.27 //@customers.14"/>
+    <valuations value="7.0" assignedBy="//@customers.45 //@customers.27"/>
+    <valuations value="8.0" assignedBy="//@customers.14"/>
+    <realisations percentage="0.24" dependsOn="//@availableArtifacts.114 //@availableArtifacts.289 //@availableArtifacts.286 //@availableArtifacts.287 //@availableArtifacts.288"/>
+    <realisations percentage="0.31" dependsOn="//@availableArtifacts.115"/>
+    <realisations percentage="0.39" dependsOn="//@availableArtifacts.116"/>
+  </requirements>
+  <requirements name="Specification #95240091">
+    <valuations value="8.0" assignedBy="//@customers.18"/>
+    <valuations value="5.0" assignedBy="//@customers.47"/>
+    <realisations percentage="0.19" dependsOn="//@availableArtifacts.117 //@availableArtifacts.274 //@availableArtifacts.271 //@availableArtifacts.272 //@availableArtifacts.273 //@availableArtifacts.279 //@availableArtifacts.276 //@availableArtifacts.277 //@availableArtifacts.278 //@availableArtifacts.296"/>
+  </requirements>
+  <requirements name="Specification #97424284">
+    <valuations value="10.0" assignedBy="//@customers.17 //@customers.45"/>
+    <realisations percentage="0.16" dependsOn="//@availableArtifacts.118 //@availableArtifacts.166"/>
+    <realisations percentage="0.22" dependsOn="//@availableArtifacts.119 //@availableArtifacts.244"/>
+  </requirements>
+  <requirements name="Specification #77321428">
+    <valuations value="1.0" assignedBy="//@customers.38"/>
+    <realisations percentage="0.99" dependsOn="//@availableArtifacts.120 //@availableArtifacts.161 //@availableArtifacts.308 //@availableArtifacts.306 //@availableArtifacts.307"/>
+    <realisations percentage="0.12" dependsOn="//@availableArtifacts.121 //@availableArtifacts.174"/>
+  </requirements>
+  <requirements name="Specification #31677448">
+    <valuations value="2.0" assignedBy="//@customers.35 //@customers.12 //@customers.9"/>
+    <valuations value="1.0" assignedBy="//@customers.26 //@customers.5"/>
+    <valuations value="9.0" assignedBy="//@customers.31 //@customers.43"/>
+    <realisations percentage="0.63" dependsOn="//@availableArtifacts.122"/>
+  </requirements>
+  <requirements name="Specification #07340147">
+    <valuations value="2.0" assignedBy="//@customers.37 //@customers.35 //@customers.0"/>
+    <realisations percentage="0.5" dependsOn="//@availableArtifacts.123"/>
+    <realisations percentage="0.02" dependsOn="//@availableArtifacts.124"/>
+  </requirements>
+  <requirements name="Specification #96505632">
+    <valuations value="6.0" assignedBy="//@customers.35 //@customers.13"/>
+    <valuations value="2.0" assignedBy="//@customers.13 //@customers.45"/>
+    <valuations value="1.0" assignedBy="//@customers.46 //@customers.6 //@customers.36"/>
+    <realisations percentage="0.32" dependsOn="//@availableArtifacts.125"/>
+    <realisations percentage="0.07" dependsOn="//@availableArtifacts.126 //@availableArtifacts.253"/>
+    <realisations percentage="0.43" dependsOn="//@availableArtifacts.127 //@availableArtifacts.183"/>
+  </requirements>
+  <requirements name="Specification #75197568">
+    <valuations value="1.0" assignedBy="//@customers.42 //@customers.24"/>
+    <valuations value="2.0" assignedBy="//@customers.42"/>
+    <realisations percentage="0.66" dependsOn="//@availableArtifacts.128 //@availableArtifacts.168 //@availableArtifacts.220 //@availableArtifacts.304"/>
+  </requirements>
+  <requirements name="Specification #88738178">
+    <valuations value="9.0" assignedBy="//@customers.31"/>
+    <valuations value="5.0" assignedBy="//@customers.47 //@customers.5 //@customers.24"/>
+    <realisations percentage="0.38" dependsOn="//@availableArtifacts.129"/>
+  </requirements>
+  <requirements name="Specification #74275328">
+    <valuations value="6.0" assignedBy="//@customers.47 //@customers.36"/>
+    <valuations value="4.0" assignedBy="//@customers.16"/>
+    <realisations percentage="0.71" dependsOn="//@availableArtifacts.130 //@availableArtifacts.204"/>
+    <realisations percentage="0.52" dependsOn="//@availableArtifacts.131 //@availableArtifacts.228"/>
+  </requirements>
+  <requirements name="Specification #82767587">
+    <valuations value="8.0" assignedBy="//@customers.0"/>
+    <valuations value="6.0" assignedBy="//@customers.39 //@customers.16"/>
+    <realisations percentage="0.26" dependsOn="//@availableArtifacts.132 //@availableArtifacts.252 //@availableArtifacts.254"/>
+    <realisations percentage="0.58" dependsOn="//@availableArtifacts.133 //@availableArtifacts.196 //@availableArtifacts.194 //@availableArtifacts.195"/>
+  </requirements>
+  <requirements name="Specification #37374242">
+    <valuations value="6.0" assignedBy="//@customers.34"/>
+    <valuations value="3.0" assignedBy="//@customers.48 //@customers.37 //@customers.13"/>
+    <valuations value="9.0" assignedBy="//@customers.46 //@customers.0"/>
+    <realisations percentage="0.09" dependsOn="//@availableArtifacts.134 //@availableArtifacts.298"/>
+    <realisations percentage="0.28" dependsOn="//@availableArtifacts.135 //@availableArtifacts.241 //@availableArtifacts.248"/>
+  </requirements>
+  <requirements name="Specification #25336757">
+    <valuations value="2.0" assignedBy="//@customers.49"/>
+    <realisations percentage="0.05" dependsOn="//@availableArtifacts.136 //@availableArtifacts.269"/>
+  </requirements>
+  <requirements name="Specification #01562507">
+    <valuations value="2.0" assignedBy="//@customers.21"/>
+    <valuations value="5.0" assignedBy="//@customers.38 //@customers.45"/>
+    <realisations percentage="0.38" dependsOn="//@availableArtifacts.137"/>
+    <realisations percentage="0.5" dependsOn="//@availableArtifacts.138 //@availableArtifacts.264"/>
+    <realisations percentage="0.21" dependsOn="//@availableArtifacts.139 //@availableArtifacts.180 //@availableArtifacts.290"/>
+  </requirements>
+  <requirements name="Specification #52830495">
+    <valuations value="3.0" assignedBy="//@customers.12 //@customers.3"/>
+    <valuations value="1.0" assignedBy="//@customers.15 //@customers.44 //@customers.19"/>
+    <realisations percentage="0.71" dependsOn="//@availableArtifacts.140 //@availableArtifacts.173"/>
+    <realisations percentage="0.76" dependsOn="//@availableArtifacts.141 //@availableArtifacts.267 //@availableArtifacts.266"/>
+    <realisations percentage="0.27" dependsOn="//@availableArtifacts.142 //@availableArtifacts.231 //@availableArtifacts.230"/>
+  </requirements>
+  <requirements name="Specification #36084654">
+    <valuations value="6.0" assignedBy="//@customers.45"/>
+    <realisations percentage="0.79" dependsOn="//@availableArtifacts.143"/>
+    <realisations percentage="0.94" dependsOn="//@availableArtifacts.144"/>
+  </requirements>
+  <requirements name="Specification #26044279">
+    <valuations value="2.0" assignedBy="//@customers.44"/>
+    <valuations value="5.0" assignedBy="//@customers.8 //@customers.0"/>
+    <realisations percentage="0.57" dependsOn="//@availableArtifacts.145 //@availableArtifacts.259 //@availableArtifacts.256 //@availableArtifacts.257 //@availableArtifacts.258"/>
+    <realisations percentage="0.44" dependsOn="//@availableArtifacts.146"/>
+  </requirements>
+  <requirements name="Specification #59996910">
+    <valuations value="2.0" assignedBy="//@customers.14 //@customers.33"/>
+    <valuations value="2.0" assignedBy="//@customers.2 //@customers.20"/>
+    <valuations value="7.0" assignedBy="//@customers.47 //@customers.22 //@customers.28"/>
+    <realisations percentage="0.26" dependsOn="//@availableArtifacts.147"/>
+  </requirements>
+  <requirements name="Specification #40711744">
+    <valuations value="8.0" assignedBy="//@customers.5"/>
+    <valuations value="3.0" assignedBy="//@customers.27"/>
+    <valuations value="5.0" assignedBy="//@customers.31 //@customers.9"/>
+    <realisations percentage="0.01" dependsOn="//@availableArtifacts.148 //@availableArtifacts.205 //@availableArtifacts.262 //@availableArtifacts.260 //@availableArtifacts.261"/>
+    <realisations percentage="0.31" dependsOn="//@availableArtifacts.149"/>
+  </requirements>
+  <requirements name="Specification #08923691">
+    <valuations value="3.0" assignedBy="//@customers.3 //@customers.8 //@customers.49"/>
+    <valuations value="1.0" assignedBy="//@customers.41 //@customers.39 //@customers.29"/>
+    <realisations percentage="0.55" dependsOn="//@availableArtifacts.150 //@availableArtifacts.232 //@availableArtifacts.301"/>
+  </requirements>
+  <requirements name="Specification #70860467">
+    <valuations value="9.0" assignedBy="//@customers.33 //@customers.21"/>
+    <valuations value="1.0" assignedBy="//@customers.45 //@customers.30 //@customers.19"/>
+    <valuations value="6.0" assignedBy="//@customers.48"/>
+    <realisations percentage="0.87" dependsOn="//@availableArtifacts.151"/>
+    <realisations percentage="0.61" dependsOn="//@availableArtifacts.152"/>
+  </requirements>
+  <solutions selectedArtifacts="//@availableArtifacts.3 //@availableArtifacts.8 //@availableArtifacts.11 //@availableArtifacts.13 //@availableArtifacts.15 //@availableArtifacts.18 //@availableArtifacts.26 //@availableArtifacts.31 //@availableArtifacts.33 //@availableArtifacts.36 //@availableArtifacts.39 //@availableArtifacts.47 //@availableArtifacts.49 //@availableArtifacts.50 //@availableArtifacts.56 //@availableArtifacts.58 //@availableArtifacts.59 //@availableArtifacts.63 //@availableArtifacts.65 //@availableArtifacts.67 //@availableArtifacts.69 //@availableArtifacts.70 //@availableArtifacts.72 //@availableArtifacts.74 //@availableArtifacts.75 //@availableArtifacts.81 //@availableArtifacts.82 //@availableArtifacts.84 //@availableArtifacts.85 //@availableArtifacts.86 //@availableArtifacts.87 //@availableArtifacts.91 //@availableArtifacts.94 //@availableArtifacts.95 //@availableArtifacts.103 //@availableArtifacts.104 //@availableArtifacts.107 //@availableArtifacts.109 //@availableArtifacts.110 //@availableArtifacts.111 //@availableArtifacts.112 //@availableArtifacts.116 //@availableArtifacts.122 //@availableArtifacts.127 //@availableArtifacts.129 //@availableArtifacts.131 //@availableArtifacts.134 //@availableArtifacts.137 //@availableArtifacts.140 //@availableArtifacts.143 //@availableArtifacts.146 //@availableArtifacts.147 //@availableArtifacts.149 //@availableArtifacts.150 //@availableArtifacts.151 //@availableArtifacts.154 //@availableArtifacts.163 //@availableArtifacts.173 //@availableArtifacts.174 //@availableArtifacts.183 //@availableArtifacts.188 //@availableArtifacts.189 //@availableArtifacts.190 //@availableArtifacts.191 //@availableArtifacts.194 //@availableArtifacts.201 //@availableArtifacts.207 //@availableArtifacts.210 //@availableArtifacts.212 //@availableArtifacts.214 //@availableArtifacts.216 //@availableArtifacts.217 //@availableArtifacts.218 //@availableArtifacts.219 //@availableArtifacts.222 //@availableArtifacts.223 //@availableArtifacts.225 //@availableArtifacts.228 //@availableArtifacts.232 //@availableArtifacts.235 //@availableArtifacts.236 //@availableArtifacts.237 //@availableArtifacts.239 //@availableArtifacts.240 //@availableArtifacts.245 //@availableArtifacts.255 //@availableArtifacts.257 //@availableArtifacts.263 //@availableArtifacts.268 //@availableArtifacts.277 //@availableArtifacts.278 //@availableArtifacts.288 //@availableArtifacts.298 //@availableArtifacts.299 //@availableArtifacts.300 //@availableArtifacts.301 //@availableArtifacts.302 //@availableArtifacts.318"/>
+</nrp:NRP>

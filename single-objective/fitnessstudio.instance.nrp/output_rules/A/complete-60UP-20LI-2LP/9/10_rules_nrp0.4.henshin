@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_kTuW8JIsEeuxXP_J3jTOMQ">
+  <units xsi:type="henshin:Rule" xmi:id="_kTuW8ZIsEeuxXP_J3jTOMQ" name="rule" description="null, createPreserveNodeWithIncomingEdge, createCrOrDelEdge, createPreserveNodeWithIncomingEdge, createCrOrDelEdge, addNAC, createPreserveNodeWithIncomingEdge, createCrOrDelEdge, CreateMultiRuleWithMappedPreserveNode, createPreserveNodeWithOutgoingEdge, addNAC">
+    <lhs xmi:id="_kTuW8pIsEeuxXP_J3jTOMQ" name="Lhs">
+      <nodes xmi:id="_kTuW85IsEeuxXP_J3jTOMQ" incoming="_kTuW-JIsEeuxXP_J3jTOMQ _kTuW-pIsEeuxXP_J3jTOMQ" outgoing="_kTuW95IsEeuxXP_J3jTOMQ _kTuW-ZIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_kTuW9JIsEeuxXP_J3jTOMQ" incoming="_kTuW95IsEeuxXP_J3jTOMQ" outgoing="_kTuW-JIsEeuxXP_J3jTOMQ _kTuW-5IsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_kTuW9ZIsEeuxXP_J3jTOMQ" incoming="_kTuW-ZIsEeuxXP_J3jTOMQ" outgoing="_kTuW-pIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_kTuW9pIsEeuxXP_J3jTOMQ" incoming="_kTuW-5IsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//RequirementRealisation"/>
+      </nodes>
+      <edges xmi:id="_kTuW95IsEeuxXP_J3jTOMQ" source="_kTuW85IsEeuxXP_J3jTOMQ" target="_kTuW9JIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+      <edges xmi:id="_kTuW-JIsEeuxXP_J3jTOMQ" source="_kTuW9JIsEeuxXP_J3jTOMQ" target="_kTuW85IsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/solutions"/>
+      </edges>
+      <edges xmi:id="_kTuW-ZIsEeuxXP_J3jTOMQ" source="_kTuW85IsEeuxXP_J3jTOMQ" target="_kTuW9ZIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+      <edges xmi:id="_kTuW-pIsEeuxXP_J3jTOMQ" source="_kTuW9ZIsEeuxXP_J3jTOMQ" target="_kTuW85IsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/solutions"/>
+      </edges>
+      <edges xmi:id="_kTuW-5IsEeuxXP_J3jTOMQ" source="_kTuW9JIsEeuxXP_J3jTOMQ" target="_kTuW9pIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/contributesTo"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_kTuW_JIsEeuxXP_J3jTOMQ">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_kTuW_ZIsEeuxXP_J3jTOMQ">
+          <conclusion xmi:id="_kTuW_pIsEeuxXP_J3jTOMQ">
+            <nodes xmi:id="_kTuW_5IsEeuxXP_J3jTOMQ" incoming="_kTuXAZIsEeuxXP_J3jTOMQ" outgoing="_kTuXApIsEeuxXP_J3jTOMQ">
+              <type href="http://nrp.model/nrp#//RequirementRealisation"/>
+            </nodes>
+            <nodes xmi:id="_kTuXAJIsEeuxXP_J3jTOMQ" incoming="_kTuXApIsEeuxXP_J3jTOMQ" outgoing="_kTuXAZIsEeuxXP_J3jTOMQ">
+              <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+            </nodes>
+            <edges xmi:id="_kTuXAZIsEeuxXP_J3jTOMQ" source="_kTuXAJIsEeuxXP_J3jTOMQ" target="_kTuW_5IsEeuxXP_J3jTOMQ">
+              <type href="http://nrp.model/nrp#//SoftwareArtifact/contributesTo"/>
+            </edges>
+            <edges xmi:id="_kTuXApIsEeuxXP_J3jTOMQ" source="_kTuW_5IsEeuxXP_J3jTOMQ" target="_kTuXAJIsEeuxXP_J3jTOMQ">
+              <type href="http://nrp.model/nrp#//RequirementRealisation/dependsOn"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_kTuXA5IsEeuxXP_J3jTOMQ" origin="_kTuW9ZIsEeuxXP_J3jTOMQ" image="_kTuXAJIsEeuxXP_J3jTOMQ"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_kTuXBJIsEeuxXP_J3jTOMQ" name="Rhs">
+      <nodes xmi:id="_kTuXBZIsEeuxXP_J3jTOMQ" outgoing="_kTuXCZIsEeuxXP_J3jTOMQ _kTuXCpIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_kTuXBpIsEeuxXP_J3jTOMQ" incoming="_kTuXCZIsEeuxXP_J3jTOMQ" outgoing="_kTuXC5IsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_kTuXB5IsEeuxXP_J3jTOMQ" incoming="_kTuXCpIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_kTuXCJIsEeuxXP_J3jTOMQ" incoming="_kTuXC5IsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//RequirementRealisation"/>
+      </nodes>
+      <edges xmi:id="_kTuXCZIsEeuxXP_J3jTOMQ" source="_kTuXBZIsEeuxXP_J3jTOMQ" target="_kTuXBpIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+      <edges xmi:id="_kTuXCpIsEeuxXP_J3jTOMQ" source="_kTuXBZIsEeuxXP_J3jTOMQ" target="_kTuXB5IsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+      <edges xmi:id="_kTuXC5IsEeuxXP_J3jTOMQ" source="_kTuXBpIsEeuxXP_J3jTOMQ" target="_kTuXCJIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/contributesTo"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_kTuXDJIsEeuxXP_J3jTOMQ" origin="_kTuW85IsEeuxXP_J3jTOMQ" image="_kTuXBZIsEeuxXP_J3jTOMQ"/>
+    <mappings xmi:id="_kTuXDZIsEeuxXP_J3jTOMQ" origin="_kTuW9JIsEeuxXP_J3jTOMQ" image="_kTuXBpIsEeuxXP_J3jTOMQ"/>
+    <mappings xmi:id="_kTuXDpIsEeuxXP_J3jTOMQ" origin="_kTuW9ZIsEeuxXP_J3jTOMQ" image="_kTuXB5IsEeuxXP_J3jTOMQ"/>
+    <mappings xmi:id="_kTuXD5IsEeuxXP_J3jTOMQ" origin="_kTuW9pIsEeuxXP_J3jTOMQ" image="_kTuXCJIsEeuxXP_J3jTOMQ"/>
+    <multiRules xmi:id="_kTuXEJIsEeuxXP_J3jTOMQ">
+      <lhs xmi:id="_kTuXEZIsEeuxXP_J3jTOMQ">
+        <nodes xmi:id="_kTuXEpIsEeuxXP_J3jTOMQ" incoming="_kTuXFJIsEeuxXP_J3jTOMQ">
+          <type href="http://nrp.model/nrp#//RequirementRealisation"/>
+        </nodes>
+        <nodes xmi:id="_kTuXE5IsEeuxXP_J3jTOMQ" outgoing="_kTuXFJIsEeuxXP_J3jTOMQ">
+          <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+        </nodes>
+        <edges xmi:id="_kTuXFJIsEeuxXP_J3jTOMQ" source="_kTuXE5IsEeuxXP_J3jTOMQ" target="_kTuXEpIsEeuxXP_J3jTOMQ">
+          <type href="http://nrp.model/nrp#//SoftwareArtifact/contributesTo"/>
+        </edges>
+        <formula xsi:type="henshin:Not" xmi:id="_kTuXFZIsEeuxXP_J3jTOMQ">
+          <child xsi:type="henshin:NestedCondition" xmi:id="_kTuXFpIsEeuxXP_J3jTOMQ">
+            <conclusion xmi:id="_kTuXF5IsEeuxXP_J3jTOMQ">
+              <nodes xmi:id="_kTuXGJIsEeuxXP_J3jTOMQ" incoming="_kTuXGpIsEeuxXP_J3jTOMQ">
+                <type href="http://nrp.model/nrp#//Requirement"/>
+              </nodes>
+              <nodes xmi:id="_kTuXGZIsEeuxXP_J3jTOMQ" outgoing="_kTuXGpIsEeuxXP_J3jTOMQ">
+                <type href="http://nrp.model/nrp#//RequirementRealisation"/>
+              </nodes>
+              <edges xmi:id="_kTuXGpIsEeuxXP_J3jTOMQ" source="_kTuXGZIsEeuxXP_J3jTOMQ" target="_kTuXGJIsEeuxXP_J3jTOMQ">
+                <type href="http://nrp.model/nrp#//RequirementRealisation/requirement"/>
+              </edges>
+            </conclusion>
+            <mappings xmi:id="_kTuXG5IsEeuxXP_J3jTOMQ" origin="_kTuXEpIsEeuxXP_J3jTOMQ" image="_kTuXGZIsEeuxXP_J3jTOMQ"/>
+          </child>
+        </formula>
+      </lhs>
+      <rhs xmi:id="_kTuXHJIsEeuxXP_J3jTOMQ">
+        <nodes xmi:id="_kTuXHZIsEeuxXP_J3jTOMQ" incoming="_kTuXH5IsEeuxXP_J3jTOMQ">
+          <type href="http://nrp.model/nrp#//RequirementRealisation"/>
+        </nodes>
+        <nodes xmi:id="_kTuXHpIsEeuxXP_J3jTOMQ" outgoing="_kTuXH5IsEeuxXP_J3jTOMQ">
+          <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+        </nodes>
+        <edges xmi:id="_kTuXH5IsEeuxXP_J3jTOMQ" source="_kTuXHpIsEeuxXP_J3jTOMQ" target="_kTuXHZIsEeuxXP_J3jTOMQ">
+          <type href="http://nrp.model/nrp#//SoftwareArtifact/contributesTo"/>
+        </edges>
+      </rhs>
+      <mappings xmi:id="_kTuXIJIsEeuxXP_J3jTOMQ" origin="_kTuXEpIsEeuxXP_J3jTOMQ" image="_kTuXHZIsEeuxXP_J3jTOMQ"/>
+      <mappings xmi:id="_kTuXIZIsEeuxXP_J3jTOMQ" origin="_kTuXE5IsEeuxXP_J3jTOMQ" image="_kTuXHpIsEeuxXP_J3jTOMQ"/>
+      <multiMappings xmi:id="_kTuXIpIsEeuxXP_J3jTOMQ" origin="_kTuW9pIsEeuxXP_J3jTOMQ" image="_kTuXEpIsEeuxXP_J3jTOMQ"/>
+      <multiMappings xmi:id="_kTuXI5IsEeuxXP_J3jTOMQ" origin="_kTuXCJIsEeuxXP_J3jTOMQ" image="_kTuXHZIsEeuxXP_J3jTOMQ"/>
+    </multiRules>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_kTuXJJIsEeuxXP_J3jTOMQ" name="rule" description="null, createPreserveNodeWithIncomingEdge, createCrOrDelEdge, createPreserveNodeWithIncomingEdge, createCrOrDelEdge, addNAC, createPreserveNodeWithIncomingEdge, createCrOrDelEdge, createPreserveNodeWithOutgoingEdge">
+    <lhs xmi:id="_kTuXJZIsEeuxXP_J3jTOMQ" name="Lhs">
+      <nodes xmi:id="_kTuXJpIsEeuxXP_J3jTOMQ" incoming="_kTuXLJIsEeuxXP_J3jTOMQ _kTuXLpIsEeuxXP_J3jTOMQ" outgoing="_kTuXK5IsEeuxXP_J3jTOMQ _kTuXLZIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_kTuXJ5IsEeuxXP_J3jTOMQ" incoming="_kTuXK5IsEeuxXP_J3jTOMQ" outgoing="_kTuXLJIsEeuxXP_J3jTOMQ _kTuXL5IsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_kTuXKJIsEeuxXP_J3jTOMQ" incoming="_kTuXLZIsEeuxXP_J3jTOMQ" outgoing="_kTuXLpIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_kTuXKZIsEeuxXP_J3jTOMQ" incoming="_kTuXL5IsEeuxXP_J3jTOMQ _kTuXMJIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//RequirementRealisation"/>
+      </nodes>
+      <nodes xmi:id="_kTuXKpIsEeuxXP_J3jTOMQ" outgoing="_kTuXMJIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Requirement"/>
+      </nodes>
+      <edges xmi:id="_kTuXK5IsEeuxXP_J3jTOMQ" source="_kTuXJpIsEeuxXP_J3jTOMQ" target="_kTuXJ5IsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+      <edges xmi:id="_kTuXLJIsEeuxXP_J3jTOMQ" source="_kTuXJ5IsEeuxXP_J3jTOMQ" target="_kTuXJpIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/solutions"/>
+      </edges>
+      <edges xmi:id="_kTuXLZIsEeuxXP_J3jTOMQ" source="_kTuXJpIsEeuxXP_J3jTOMQ" target="_kTuXKJIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+      <edges xmi:id="_kTuXLpIsEeuxXP_J3jTOMQ" source="_kTuXKJIsEeuxXP_J3jTOMQ" target="_kTuXJpIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/solutions"/>
+      </edges>
+      <edges xmi:id="_kTuXL5IsEeuxXP_J3jTOMQ" source="_kTuXJ5IsEeuxXP_J3jTOMQ" target="_kTuXKZIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/contributesTo"/>
+      </edges>
+      <edges xmi:id="_kTuXMJIsEeuxXP_J3jTOMQ" source="_kTuXKpIsEeuxXP_J3jTOMQ" target="_kTuXKZIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Requirement/realisations"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_kTuXMZIsEeuxXP_J3jTOMQ">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_kTuXMpIsEeuxXP_J3jTOMQ">
+          <conclusion xmi:id="_kTuXM5IsEeuxXP_J3jTOMQ">
+            <nodes xmi:id="_kTuXNJIsEeuxXP_J3jTOMQ" incoming="_kTuXNpIsEeuxXP_J3jTOMQ" outgoing="_kTuXN5IsEeuxXP_J3jTOMQ">
+              <type href="http://nrp.model/nrp#//RequirementRealisation"/>
+            </nodes>
+            <nodes xmi:id="_kTuXNZIsEeuxXP_J3jTOMQ" incoming="_kTuXN5IsEeuxXP_J3jTOMQ" outgoing="_kTuXNpIsEeuxXP_J3jTOMQ">
+              <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+            </nodes>
+            <edges xmi:id="_kTuXNpIsEeuxXP_J3jTOMQ" source="_kTuXNZIsEeuxXP_J3jTOMQ" target="_kTuXNJIsEeuxXP_J3jTOMQ">
+              <type href="http://nrp.model/nrp#//SoftwareArtifact/contributesTo"/>
+            </edges>
+            <edges xmi:id="_kTuXN5IsEeuxXP_J3jTOMQ" source="_kTuXNJIsEeuxXP_J3jTOMQ" target="_kTuXNZIsEeuxXP_J3jTOMQ">
+              <type href="http://nrp.model/nrp#//RequirementRealisation/dependsOn"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_kTuXOJIsEeuxXP_J3jTOMQ" origin="_kTuXKJIsEeuxXP_J3jTOMQ" image="_kTuXNZIsEeuxXP_J3jTOMQ"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_kTuXOZIsEeuxXP_J3jTOMQ" name="Rhs">
+      <nodes xmi:id="_kTuXOpIsEeuxXP_J3jTOMQ" outgoing="_kTuXP5IsEeuxXP_J3jTOMQ _kTuXQJIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_kTuXO5IsEeuxXP_J3jTOMQ" incoming="_kTuXP5IsEeuxXP_J3jTOMQ" outgoing="_kTuXQZIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_kTuXPJIsEeuxXP_J3jTOMQ" incoming="_kTuXQJIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_kTuXPZIsEeuxXP_J3jTOMQ" incoming="_kTuXQZIsEeuxXP_J3jTOMQ _kTuXQpIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//RequirementRealisation"/>
+      </nodes>
+      <nodes xmi:id="_kTuXPpIsEeuxXP_J3jTOMQ" outgoing="_kTuXQpIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Requirement"/>
+      </nodes>
+      <edges xmi:id="_kTuXP5IsEeuxXP_J3jTOMQ" source="_kTuXOpIsEeuxXP_J3jTOMQ" target="_kTuXO5IsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+      <edges xmi:id="_kTuXQJIsEeuxXP_J3jTOMQ" source="_kTuXOpIsEeuxXP_J3jTOMQ" target="_kTuXPJIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+      <edges xmi:id="_kTuXQZIsEeuxXP_J3jTOMQ" source="_kTuXO5IsEeuxXP_J3jTOMQ" target="_kTuXPZIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/contributesTo"/>
+      </edges>
+      <edges xmi:id="_kTuXQpIsEeuxXP_J3jTOMQ" source="_kTuXPpIsEeuxXP_J3jTOMQ" target="_kTuXPZIsEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Requirement/realisations"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_kTuXQ5IsEeuxXP_J3jTOMQ" origin="_kTuXJpIsEeuxXP_J3jTOMQ" image="_kTuXOpIsEeuxXP_J3jTOMQ"/>
+    <mappings xmi:id="_kTuXRJIsEeuxXP_J3jTOMQ" origin="_kTuXJ5IsEeuxXP_J3jTOMQ" image="_kTuXO5IsEeuxXP_J3jTOMQ"/>
+    <mappings xmi:id="_kTuXRZIsEeuxXP_J3jTOMQ" origin="_kTuXKJIsEeuxXP_J3jTOMQ" image="_kTuXPJIsEeuxXP_J3jTOMQ"/>
+    <mappings xmi:id="_kTuXRpIsEeuxXP_J3jTOMQ" origin="_kTuXKZIsEeuxXP_J3jTOMQ" image="_kTuXPZIsEeuxXP_J3jTOMQ"/>
+    <mappings xmi:id="_kTuXR5IsEeuxXP_J3jTOMQ" origin="_kTuXKpIsEeuxXP_J3jTOMQ" image="_kTuXPpIsEeuxXP_J3jTOMQ"/>
+  </units>
+</henshin:Module>

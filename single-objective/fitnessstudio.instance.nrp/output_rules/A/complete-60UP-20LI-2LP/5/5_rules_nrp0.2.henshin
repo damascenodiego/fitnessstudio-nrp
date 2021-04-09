@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_V2Zg0JIjEeuxXP_J3jTOMQ">
+  <units xsi:type="henshin:Rule" xmi:id="_Ib64sZIjEeuxXP_J3jTOMQ" name="rule" description="null, createPreserveEdgesWithNode, createCrOrDelEdge">
+    <lhs xmi:id="_Ib64spIjEeuxXP_J3jTOMQ" name="Lhs">
+      <nodes xmi:id="_Ib64s5IjEeuxXP_J3jTOMQ" incoming="_Ib64tpIjEeuxXP_J3jTOMQ" outgoing="_Ib64tZIjEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_Ib64tJIjEeuxXP_J3jTOMQ" incoming="_Ib64tZIjEeuxXP_J3jTOMQ" outgoing="_Ib64tpIjEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <edges xmi:id="_Ib64tZIjEeuxXP_J3jTOMQ" source="_Ib64s5IjEeuxXP_J3jTOMQ" target="_Ib64tJIjEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/solutions"/>
+      </edges>
+      <edges xmi:id="_Ib64tpIjEeuxXP_J3jTOMQ" source="_Ib64tJIjEeuxXP_J3jTOMQ" target="_Ib64s5IjEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_Ib64t5IjEeuxXP_J3jTOMQ" name="Rhs">
+      <nodes xmi:id="_Ib64uJIjEeuxXP_J3jTOMQ" outgoing="_Ib64upIjEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_Ib64uZIjEeuxXP_J3jTOMQ" incoming="_Ib64upIjEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <edges xmi:id="_Ib64upIjEeuxXP_J3jTOMQ" source="_Ib64uJIjEeuxXP_J3jTOMQ" target="_Ib64uZIjEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/solutions"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_Ib64u5IjEeuxXP_J3jTOMQ" origin="_Ib64s5IjEeuxXP_J3jTOMQ" image="_Ib64uJIjEeuxXP_J3jTOMQ"/>
+    <mappings xmi:id="_Ib64vJIjEeuxXP_J3jTOMQ" origin="_Ib64tJIjEeuxXP_J3jTOMQ" image="_Ib64uZIjEeuxXP_J3jTOMQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Ib64vZIjEeuxXP_J3jTOMQ" name="rule" description="null, createPreserveEdgesWithNode, createCrOrDelEdge">
+    <lhs xmi:id="_Ib64vpIjEeuxXP_J3jTOMQ" name="Lhs">
+      <nodes xmi:id="_Ib64v5IjEeuxXP_J3jTOMQ" incoming="_Ib64wpIjEeuxXP_J3jTOMQ" outgoing="_Ib64wZIjEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_Ib64wJIjEeuxXP_J3jTOMQ" incoming="_Ib64wZIjEeuxXP_J3jTOMQ" outgoing="_Ib64wpIjEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <edges xmi:id="_Ib64wZIjEeuxXP_J3jTOMQ" source="_Ib64v5IjEeuxXP_J3jTOMQ" target="_Ib64wJIjEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+      <edges xmi:id="_Ib64wpIjEeuxXP_J3jTOMQ" source="_Ib64wJIjEeuxXP_J3jTOMQ" target="_Ib64v5IjEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/solutions"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_Ib64w5IjEeuxXP_J3jTOMQ" name="Rhs">
+      <nodes xmi:id="_Ib64xJIjEeuxXP_J3jTOMQ" outgoing="_Ib64xpIjEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_Ib64xZIjEeuxXP_J3jTOMQ" incoming="_Ib64xpIjEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <edges xmi:id="_Ib64xpIjEeuxXP_J3jTOMQ" source="_Ib64xJIjEeuxXP_J3jTOMQ" target="_Ib64xZIjEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_Ib64x5IjEeuxXP_J3jTOMQ" origin="_Ib64v5IjEeuxXP_J3jTOMQ" image="_Ib64xJIjEeuxXP_J3jTOMQ"/>
+    <mappings xmi:id="_Ib64yJIjEeuxXP_J3jTOMQ" origin="_Ib64wJIjEeuxXP_J3jTOMQ" image="_Ib64xZIjEeuxXP_J3jTOMQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Ib64yZIjEeuxXP_J3jTOMQ" name="rule">
+    <lhs xmi:id="_Ib64ypIjEeuxXP_J3jTOMQ" name="Lhs">
+      <nodes xmi:id="_Ib64y5IjEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Customer"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_Ib64zJIjEeuxXP_J3jTOMQ" name="Rhs">
+      <nodes xmi:id="_Ib64zZIjEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Customer"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_Ib64zpIjEeuxXP_J3jTOMQ" origin="_Ib64y5IjEeuxXP_J3jTOMQ" image="_Ib64zZIjEeuxXP_J3jTOMQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_Ib64z5IjEeuxXP_J3jTOMQ" name="rule" description="null, createPreserveEdgesWithNode, createCrOrDelEdge">
+    <lhs xmi:id="_Ib640JIjEeuxXP_J3jTOMQ" name="Lhs">
+      <nodes xmi:id="_Ib640ZIjEeuxXP_J3jTOMQ" incoming="_Ib641JIjEeuxXP_J3jTOMQ" outgoing="_Ib6405IjEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_Ib640pIjEeuxXP_J3jTOMQ" incoming="_Ib6405IjEeuxXP_J3jTOMQ" outgoing="_Ib641JIjEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <edges xmi:id="_Ib6405IjEeuxXP_J3jTOMQ" source="_Ib640ZIjEeuxXP_J3jTOMQ" target="_Ib640pIjEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/solutions"/>
+      </edges>
+      <edges xmi:id="_Ib641JIjEeuxXP_J3jTOMQ" source="_Ib640pIjEeuxXP_J3jTOMQ" target="_Ib640ZIjEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_Ib641ZIjEeuxXP_J3jTOMQ" name="Rhs">
+      <nodes xmi:id="_Ib641pIjEeuxXP_J3jTOMQ" outgoing="_Ib642JIjEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_Ib6415IjEeuxXP_J3jTOMQ" incoming="_Ib642JIjEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <edges xmi:id="_Ib642JIjEeuxXP_J3jTOMQ" source="_Ib641pIjEeuxXP_J3jTOMQ" target="_Ib6415IjEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/solutions"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_Ib642ZIjEeuxXP_J3jTOMQ" origin="_Ib640ZIjEeuxXP_J3jTOMQ" image="_Ib641pIjEeuxXP_J3jTOMQ"/>
+    <mappings xmi:id="_Ib642pIjEeuxXP_J3jTOMQ" origin="_Ib640pIjEeuxXP_J3jTOMQ" image="_Ib6415IjEeuxXP_J3jTOMQ"/>
+  </units>
+</henshin:Module>

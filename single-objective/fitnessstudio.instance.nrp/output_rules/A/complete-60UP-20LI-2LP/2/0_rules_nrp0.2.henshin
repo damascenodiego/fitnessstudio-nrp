@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_z6_IEJIeEeuxXP_J3jTOMQ">
+  <units xsi:type="henshin:Rule" xmi:id="_z6_IEZIeEeuxXP_J3jTOMQ" name="rule">
+    <lhs xmi:id="_z6_IEpIeEeuxXP_J3jTOMQ" name="Lhs">
+      <nodes xmi:id="_z6_IE5IeEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_z6_IFJIeEeuxXP_J3jTOMQ" name="Rhs">
+      <nodes xmi:id="_z6_IFZIeEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_z6_IFpIeEeuxXP_J3jTOMQ" origin="_z6_IE5IeEeuxXP_J3jTOMQ" image="_z6_IFZIeEeuxXP_J3jTOMQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_z6_IF5IeEeuxXP_J3jTOMQ" name="rule" description="null, createPreserveEdgesWithNode, createCrOrDelEdge">
+    <lhs xmi:id="_z6_IGJIeEeuxXP_J3jTOMQ" name="Lhs">
+      <nodes xmi:id="_z6_IGZIeEeuxXP_J3jTOMQ" incoming="_z6_IHJIeEeuxXP_J3jTOMQ" outgoing="_z6_IG5IeEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_z6_IGpIeEeuxXP_J3jTOMQ" incoming="_z6_IG5IeEeuxXP_J3jTOMQ" outgoing="_z6_IHJIeEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <edges xmi:id="_z6_IG5IeEeuxXP_J3jTOMQ" source="_z6_IGZIeEeuxXP_J3jTOMQ" target="_z6_IGpIeEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+      <edges xmi:id="_z6_IHJIeEeuxXP_J3jTOMQ" source="_z6_IGpIeEeuxXP_J3jTOMQ" target="_z6_IGZIeEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/solutions"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_z6_IHZIeEeuxXP_J3jTOMQ" name="Rhs">
+      <nodes xmi:id="_z6_IHpIeEeuxXP_J3jTOMQ" outgoing="_z6_IIJIeEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_z6_IH5IeEeuxXP_J3jTOMQ" incoming="_z6_IIJIeEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <edges xmi:id="_z6_IIJIeEeuxXP_J3jTOMQ" source="_z6_IHpIeEeuxXP_J3jTOMQ" target="_z6_IH5IeEeuxXP_J3jTOMQ">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_z6_IIZIeEeuxXP_J3jTOMQ" origin="_z6_IGZIeEeuxXP_J3jTOMQ" image="_z6_IHpIeEeuxXP_J3jTOMQ"/>
+    <mappings xmi:id="_z6_IIpIeEeuxXP_J3jTOMQ" origin="_z6_IGpIeEeuxXP_J3jTOMQ" image="_z6_IH5IeEeuxXP_J3jTOMQ"/>
+  </units>
+</henshin:Module>
