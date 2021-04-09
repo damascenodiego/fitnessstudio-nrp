@@ -21,15 +21,15 @@ import fitnessstudio.instance.nrp.customized.NRPInit;
 
 @SuppressWarnings("all")
 public class UpperTierRunner {
-	private static String INPUT_MODEL_ID = "NRP2";
+	private static String INPUT_MODEL_ID = "A";
 	private static String INPUT_MODEL = "input\\" + INPUT_MODEL_ID + ".xmi";
 	private static String OUTPUT_PREFIX = "output_rules\\" + INPUT_MODEL_ID + "\\"
 			+ new SimpleDateFormat("HH_mm_ss").format(Calendar.getInstance().getTime()).toString() + "\\";
 
-	private static int UPPER_TIER_ITERATIONS = 20;
-	private static int UPPER_TIER_POPULATION_SIZE = 100;
-	private static int LOWER_TIER_ITERATIONS = 25; // 20
-	private static int LOWER_TIER_POPULATION_SIZE = 2; // 6
+	private static int UPPER_TIER_ITERATIONS = 15;
+	private static int UPPER_TIER_POPULATION_SIZE = 60;
+	private static int LOWER_TIER_ITERATIONS = 15; // 20
+	private static int LOWER_TIER_POPULATION_SIZE = 10; // 6
 	private static int RUNS = 10;
 	private static int TIMEOUT = 90;
 	
@@ -48,7 +48,7 @@ public class UpperTierRunner {
 
 			NRPPackage.eINSTANCE.eClass();
 			EPackage metaModel = NRPPackage.eINSTANCE;
-			NRPFitness domainModelFitness = new NRPFitness();
+			NRPFitness domainModelFitness = new NRPFitness(INPUT_MODEL_ID);
 			NRPCrossover domainModelCrossover = new NRPCrossover();
 			NRPConstraintChecker mutationConstraintChecker = new NRPConstraintChecker();
 			EObject inputModel = ModelIO.loadModel(INPUT_MODEL);

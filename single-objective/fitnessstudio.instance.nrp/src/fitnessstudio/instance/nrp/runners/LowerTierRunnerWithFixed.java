@@ -34,7 +34,7 @@ import fitnessstudio.instance.nrp.customized.NRPInit;
 
 @SuppressWarnings("all")
 public class LowerTierRunnerWithFixed {
-	private static String INPUT_MODEL_ID = "NRP3";
+	private static String INPUT_MODEL_ID = "B";
 	private static String INPUT_MODEL = "input\\" + INPUT_MODEL_ID+".xmi";
 	private static String MUTATION_RULES_DIRECTORY = "transformation\\fixed";
 	private static String OUTPUT_PREFIX = "output_models\\" +INPUT_MODEL_ID + "\\" + new SimpleDateFormat("HH_mm_ss").format(Calendar.getInstance().getTime()).toString() + "\\";
@@ -56,8 +56,8 @@ public class LowerTierRunnerWithFixed {
 
 			EObject inputModel = ModelIO.loadModel(INPUT_MODEL);
 			DomainModelMutator mutator = new DomainModelMutator(getGenRules(), getFixedRules());//getFixedMutationRules());
-			NRPFitness fitness = new NRPFitness();
-			NRPInit init = new NRPInit(inputModel, mutator);
+			NRPFitness fitness = new NRPFitness(INPUT_MODEL_ID);
+			NRPInit init = new NRPInit(inputModel, mutator, INPUT_MODEL_ID);
 			NRPConstraintChecker constraintChecker = new NRPConstraintChecker();
 			
 			LowerGAManager gaManager = new LowerGAManager(mutator, fitness, init, configuration, constraintChecker);

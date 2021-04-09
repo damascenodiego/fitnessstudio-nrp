@@ -20,13 +20,19 @@ public class NRPCrossover implements DomainModelCrossover {
 	public List<DomainModel> crossover(DomainModel parent1, DomainModel parent2) {
 		List<DomainModel> result = new ArrayList<DomainModel>();
 	
-		NRP p1 = (NRP) parent1.getContent();
-		NRP p2 = (NRP) parent2.getContent();
-		
-		int pivot = ThreadLocalRandom.current().nextInt(p1.getAvailableArtifacts().size());
-		
-		result.add(new DomainModel(createChild(p1, p2, pivot), parent1.getMutator(), parent1.getCrossover(), parent1.getFitness()));
-		result.add(new DomainModel(createChild(p2, p1, pivot), parent2.getMutator(), parent2.getCrossover(), parent2.getFitness()));
+		// Single Point Crossover with P_c = 0.9
+		if (Math.random() < 0.9) {
+			NRP p1 = (NRP) parent1.getContent();
+			NRP p2 = (NRP) parent2.getContent();
+			
+			int pivot = ThreadLocalRandom.current().nextInt(p1.getAvailableArtifacts().size());
+			
+			result.add(new DomainModel(createChild(p1, p2, pivot), parent1.getMutator(), parent1.getCrossover(), parent1.getFitness()));
+			result.add(new DomainModel(createChild(p2, p1, pivot), parent2.getMutator(), parent2.getCrossover(), parent2.getFitness()));
+		} else {
+			result.add(parent1);
+			result.add(parent2);
+		}
 		
 		return result;
 	}

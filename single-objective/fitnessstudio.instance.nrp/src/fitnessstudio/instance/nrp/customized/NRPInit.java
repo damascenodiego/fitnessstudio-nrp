@@ -11,6 +11,8 @@ import nrp.model.nrp.*;
 import de.uni_ko.fitnessstudio.lower.DomainModel;
 import de.uni_ko.fitnessstudio.lower.DomainModelInit;
 import de.uni_ko.fitnessstudio.lower.DomainModelMutator;
+import fitnessstudio.instance.nrp.fitness.MaximiseSatisfactionReimplemented;
+import fitnessstudio.instance.nrp.fitness.MinimiseCost;
 
 public class NRPInit implements DomainModelInit {
 
@@ -20,12 +22,12 @@ public class NRPInit implements DomainModelInit {
 	NRPFitness fitness;
 	
 
-	public NRPInit(EObject inputModel, DomainModelMutator mutator) {
+	public NRPInit(EObject inputModel, DomainModelMutator mutator, final String INPUT_MODEL_ID) {
 		super();
 		this.inputModel = inputModel;
 		this.mutator = mutator;
 		this.crossover = new NRPCrossover();
-		this.fitness = new NRPFitness();
+		this.fitness = new NRPFitness(INPUT_MODEL_ID);
 	}
 	
 	public NRPInit(EObject inputModel, DomainModelMutator mutator, NRPCrossover crossover,
@@ -42,8 +44,12 @@ public class NRPInit implements DomainModelInit {
 		GAPopulation<DomainModel> result = new GAPopulation<DomainModel>();
 
 		for (int i = 0; i < populationSize; i++) {
-			result.addChromosome(createRandomSolution());
+			//result.addChromosome(createEmptySolution());
+			result.addChromosome(createCompleteSolution());
+			//result.addChromosome(createRandomSolution());
 		} 
+		
+		//result = createERPPopulation(populationSize);
 		
 		return result;
 	}
@@ -111,6 +117,58 @@ public class NRPInit implements DomainModelInit {
 		}
 	}
 	
+	private boolean implementAllDependencies(SoftwareArtifact artifact, NRP model) {
+		boolean changed = false;
+		for (SoftwareArtifact dependency : artifact.getRequires()) {
+			if (dependency.getSolutions().isEmpty()) {
+				dependency.getSolutions().add(model.getSolutions().get(0));
+				model.getSolutions().get(0).getSelectedArtifacts().add(dependency);
+				changed = true;
+			}
+		}
+		
+		return changed;
+	}
+	
+	private boolean allDependenciesImplemented(SoftwareArtifact artifact) {
+		for (SoftwareArtifact dependency : artifact.getRequires()) {
+			if (dependency.getSolutions().isEmpty())
+				return false;
+		}
+		
+		return true;
+	}
+	
+	private void customFixSolution(DomainModel domainModel) {
+		NRP model = (NRP) domainModel.getContent();
+		boolean feasible = false;
+		
+		while (!feasible) {
+			boolean changed = false;
+			int nrSelectedArtifacts = model.getSolutions().get(0).getSelectedArtifacts().size();
+			for (int i = nrSelectedArtifacts - 1; i >= 0; i--) {
+				SoftwareArtifact artifact = model.getSolutions().get(0).getSelectedArtifacts().get(i);
+				
+				if (artifact.getRequires().size() > 0) {
+					// Artifact has dependencies
+					if (Math.random() > 0.5) {
+						// Implement all dependencies
+						if (implementAllDependencies(artifact, model))
+							changed = true;
+					} else if (!allDependenciesImplemented(artifact)) {
+						// Remove artifact from solution if not all dependencies are implemented
+						artifact.getSolutions().remove(model.getSolutions().get(0));
+						model.getSolutions().get(0).getSelectedArtifacts().remove(artifact);
+						changed = true;
+					}
+				}
+			}
+			
+			feasible = !changed;
+		}
+	}
+	
+	
 	private GAPopulation<DomainModel> createPath(int e) {
 		GAPopulation<DomainModel> population = new GAPopulation<DomainModel>();
 		
@@ -128,6 +186,7 @@ public class NRPInit implements DomainModelInit {
 					// artifact not already in solution, add
 					fresh.getSolutions().get(0).getSelectedArtifacts().add(artifact);
 					artifact.getSolutions().add(fresh.getSolutions().get(0));
+					break;
 				}
 			}
 			if (k % step == 0) {
@@ -141,9 +200,17 @@ public class NRPInit implements DomainModelInit {
 	
 	// https://link.springer.com/content/pdf/10.1007%2F978-3-319-13650-9.pdf
 	private GAPopulation<DomainModel> createERPPopulation(int populationSize) {
-		GAPopulation<DomainModel> population = createPath(8);
-		int solutionsCreated = population.getSize();
+		GAPopulation<DomainModel> population = createPath(30);
+		//population.addChromosome(createCompleteSolution());
 		
+		int solutionsCreated = population.getSize();
+		/*
+		for (int i = 0; i < population.getSize(); i++) {
+			calculateFitness(population.getChromosomeByIndex(i));
+		}
+
+		System.out.println("------------");
+		*/
 		while (solutionsCreated < populationSize) {
 			DomainModel individual = createRandomSolution();
 			fixSolution(individual);
