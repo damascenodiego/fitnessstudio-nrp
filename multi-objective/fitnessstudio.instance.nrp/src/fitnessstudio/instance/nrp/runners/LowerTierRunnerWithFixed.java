@@ -1,6 +1,7 @@
 package fitnessstudio.instance.nrp.runners;
 
 import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -20,6 +21,7 @@ import org.eclipse.emf.henshin.model.Module;
 import org.eclipse.emf.henshin.model.Rule;
 import org.eclipse.emf.henshin.model.Unit;
 import org.eclipse.emf.henshin.model.resource.HenshinResourceSet;
+import org.uma.jmetal.util.JMetalException;
 
 import nrp.model.nrp.*;
 import de.uni_ko.fitnessstudio.lower.DomainModelCrossover;
@@ -46,7 +48,7 @@ public class LowerTierRunnerWithFixed {
 	
 	private static GAConfiguration configuration = new GAConfiguration(ITERATIONS, POPULATION_SIZE, true);
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws JMetalException, InterruptedException, FileNotFoundException {
 		NRPPackage.eINSTANCE.eClass();
 		System.out.println("============");
 		
