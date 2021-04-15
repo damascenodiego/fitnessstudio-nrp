@@ -25,16 +25,11 @@ public class NRPSolution extends DomainModelSolution<NRP> {
 
 		this.solutionRandomGenerator = () -> JMetalRandom.getInstance().nextDouble();
 		
-		NRP inputModel = (NRP) ModelIO.loadModel(INPUT_MODEL);
-		for (int i = 0; i < inputModel.getAvailableArtifacts().size(); i++) {
-			if (solutionRandomGenerator.getRandomValue() > 0.5) {
-				SoftwareArtifact artifact = inputModel.getAvailableArtifacts().get(i);
-				artifact.getSolutions().add(inputModel.getSolutions().get(0));
-				inputModel.getSolutions().get(0).getSelectedArtifacts().add(artifact);
-			}
-		}
+		NRP solution = createRandomSolution();
+		// NRP solution = createCompleteSolution();
+		// NRP solution = createEmptySolution();
 		
-		super.setVariable(0, inputModel);
+		super.setVariable(0, solution);
 	}
 	
 	/** Constructor */
@@ -57,6 +52,36 @@ public class NRPSolution extends DomainModelSolution<NRP> {
 	    attributes = new HashMap<Object, Object>(solution.attributes) ;
 	}
 
+	private NRP createRandomSolution() {
+		NRP inputModel = (NRP) ModelIO.loadModel(INPUT_MODEL);
+		for (int i = 0; i < inputModel.getAvailableArtifacts().size(); i++) {
+			if (solutionRandomGenerator.getRandomValue() > 0.5) {
+				SoftwareArtifact artifact = inputModel.getAvailableArtifacts().get(i);
+				artifact.getSolutions().add(inputModel.getSolutions().get(0));
+				inputModel.getSolutions().get(0).getSelectedArtifacts().add(artifact);
+			}
+		}
+		
+		return inputModel;
+	}
+	
+	private NRP createCompleteSolution() {
+		NRP inputModel = (NRP) ModelIO.loadModel(INPUT_MODEL);
+		for (int i = 0; i < inputModel.getAvailableArtifacts().size(); i++) {
+				SoftwareArtifact artifact = inputModel.getAvailableArtifacts().get(i);
+				artifact.getSolutions().add(inputModel.getSolutions().get(0));
+				inputModel.getSolutions().get(0).getSelectedArtifacts().add(artifact);
+		}
+		
+		return inputModel;
+	}
+	
+	private NRP createEmptySolution() {
+		NRP inputModel = (NRP) ModelIO.loadModel(INPUT_MODEL);
+		
+		return inputModel;
+	}
+	
 	@Override
 	public Solution<NRP> copy() {
 		return new NRPSolution(this);

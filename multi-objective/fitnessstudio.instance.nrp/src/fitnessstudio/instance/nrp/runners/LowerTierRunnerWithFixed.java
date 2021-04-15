@@ -53,8 +53,8 @@ public class LowerTierRunnerWithFixed {
 		System.out.println("============");
 		
 		DomainModelProblem problem = new NRPProblem(1, 2, 0);
-		DomainModelCrossover crossover = new NRPCrossover(1.0);
-		DomainModelMutation mutation = new DomainModelMutation(getGenRules(), 0.4);
+		DomainModelCrossover crossover = new NRPCrossover(0.9);
+		DomainModelMutation mutation = new DomainModelMutation(getGenRules(), getFixedRules(), 0.4);
 		
 		LowerNSGAIIManager gaManager = new LowerNSGAIIManager(problem, crossover, mutation);
 		gaManager.runNSGAII();
