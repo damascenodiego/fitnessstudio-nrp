@@ -11,17 +11,24 @@ import org.uma.jmetal.lab.visualization.plot.PlotFront;
 import org.uma.jmetal.lab.visualization.plot.impl.PlotSmile;
 import org.uma.jmetal.operator.selection.SelectionOperator;
 import org.uma.jmetal.operator.selection.impl.BinaryTournamentSelection;
+import org.uma.jmetal.qualityindicator.impl.NormalizedHypervolume;
 import org.uma.jmetal.qualityindicator.impl.hypervolume.Hypervolume;
 import org.uma.jmetal.solution.Solution;
 import org.uma.jmetal.util.AbstractAlgorithmRunner;
 import org.uma.jmetal.util.JMetalException;
 import org.uma.jmetal.util.JMetalLogger;
 import org.uma.jmetal.util.comparator.RankingAndCrowdingDistanceComparator;
+import org.uma.jmetal.util.front.Front;
 import org.uma.jmetal.util.front.impl.ArrayFront;
+import org.uma.jmetal.util.front.util.FrontNormalizer;
+import org.uma.jmetal.util.front.util.FrontUtils;
 import org.uma.jmetal.util.measure.MeasureListener;
 import org.uma.jmetal.util.measure.MeasureManager;
 import org.uma.jmetal.util.measure.impl.BasicMeasure;
 import org.uma.jmetal.util.measure.impl.DurationMeasure;
+import org.uma.jmetal.util.point.PointSolution;
+
+import de.uni_ko.fitnessstudio.util.GAConfiguration;
 
 public class LowerNSGAIIManager<S> extends AbstractAlgorithmRunner {
 	DomainModelProblem<S> problem;
@@ -29,25 +36,25 @@ public class LowerNSGAIIManager<S> extends AbstractAlgorithmRunner {
 	DomainModelCrossover<DomainModelSolution<S>> crossover;
 	DomainModelMutation<S> mutation;
 	SelectionOperator<List<DomainModelSolution<S>>, DomainModelSolution<S>> selection;
+	GAConfiguration configuration;
+	
+	long computingTime = -1;
+	String referenceParetoFront = "resource/reference.csv";
 	
 	public LowerNSGAIIManager(DomainModelProblem<S> problem, 
-			DomainModelCrossover<DomainModelSolution<S>> crossover, DomainModelMutation<S> mutation) {
+			DomainModelCrossover<DomainModelSolution<S>> crossover, DomainModelMutation<S> mutation, GAConfiguration configuration) {
 		this.problem = problem;
 		this.crossover = crossover;
 		this.mutation = mutation;
 		this.selection = new BinaryTournamentSelection<>(new RankingAndCrowdingDistanceComparator<>());
+		this.configuration = configuration;
 	}
 	
 	public void runNSGAII() throws JMetalException, InterruptedException, FileNotFoundException {
-		// Should probably use benchmark (random search) here
-		String referenceParetoFront = referenceParetoFront = "resource/reference.csv" ;
-		int maxEvaluations = 25000;
-		int populationSize = 100 ;
-		
 		algorithm = 
-				new NSGAIIBuilder<>(problem, crossover, mutation, populationSize)
+				new NSGAIIBuilder<>(problem, crossover, mutation, configuration.getPopulationSize())
 	            	.setSelectionOperator(selection)
-	            	.setMaxEvaluations(maxEvaluations)
+	            	.setMaxEvaluations(configuration.getMaxEvaluations())
 	            	.setVariant(NSGAIIBuilder.NSGAIIVariant.Measures)
 	            	.build();
 
@@ -65,7 +72,6 @@ public class LowerNSGAIIManager<S> extends AbstractAlgorithmRunner {
         BasicMeasure<Double> hypervolumeMeasure =
                 (BasicMeasure<Double>) measureManager.<Double>getPushMeasure("hypervolume");
 
-        hypervolumeMeasure.register(new Listener());
         /* End of measure management */
 	        
         Thread algorithmThread = new Thread(algorithm) ;
@@ -74,8 +80,9 @@ public class LowerNSGAIIManager<S> extends AbstractAlgorithmRunner {
         algorithmThread.join();
         
 	    List<DomainModelSolution<S>> population = algorithm.getResult();
-	    long computingTime = algorithmRunner.getComputingTime();
+	    computingTime = algorithmRunner.getComputingTime();
 
+	    /*
 	    JMetalLogger.logger.info("Total execution time: " + computingTime + "ms");
 	
 	    printFinalSolutionSet(population);
@@ -84,15 +91,26 @@ public class LowerNSGAIIManager<S> extends AbstractAlgorithmRunner {
 	    }
 
 	    PlotFront plot = new PlotSmile(new ArrayFront(population).getMatrix()) ;
-	    plot.plot();
+	    plot.plot();*/
 	}
 	
-	private static class Listener implements MeasureListener<Double> {
-		private static int counter = 0 ;
-		@Override synchronized public void measureGenerated(Double value) {
-			if ((counter++ % 10 == 0)) {
-				System.out.println("Hypervolume: " + value) ;
-			}
-    	}
+	public List<DomainModelSolution<S>> getResult() {
+		return algorithm.getResult();
+	}
+	
+	public long getComputingTime() {
+		return computingTime;
+	}
+	
+	public double getHypervolume() throws FileNotFoundException {
+		Front referenceFront = new ArrayFront(referenceParetoFront);
+	    FrontNormalizer frontNormalizer = new FrontNormalizer(referenceFront) ;
+
+	    Front normalizedReferenceFront = frontNormalizer.normalize(referenceFront) ;
+	    Front normalizedFront = frontNormalizer.normalize(new ArrayFront(algorithm.getResult())) ;
+	    List<PointSolution> normalizedPopulation = FrontUtils
+	        .convertFrontToSolutionList(normalizedFront) ;
+	    
+	    return new NormalizedHypervolume<PointSolution>(normalizedReferenceFront).evaluate(normalizedPopulation);
 	}
 }

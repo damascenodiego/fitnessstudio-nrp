@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.henshin.interpreter.EGraph;
 import org.eclipse.emf.henshin.interpreter.Engine;
 import org.eclipse.emf.henshin.interpreter.RuleApplication;
@@ -77,7 +78,6 @@ public class DomainModelMutation<S> implements MutationOperator<DomainModelSolut
 		}
 
 		graph.clear();
-		
 		return solution;
 	}
 	/*

@@ -40,61 +40,47 @@ public class LowerTierRunnerWithFixed {
 	private static String INPUT_MODEL_ID = "NRP2";
 	private static String INPUT_MODEL = "input\\" + INPUT_MODEL_ID+".xmi";
 	private static String MUTATION_RULES_DIRECTORY = "transformation\\fixed";
-	private static String OUTPUT_PREFIX = "output_models\\" +INPUT_MODEL_ID + "\\" + new SimpleDateFormat("HH_mm_ss").format(Calendar.getInstance().getTime()).toString() + "\\";
+	private static String OUTPUT_PREFIX = "output_models\\" +INPUT_MODEL_ID + "\\" + new SimpleDateFormat("HH_mm_ss").format(Calendar.getInstance().getTime()).toString();
 
 	private static int RUNS = 30;
-	private static int ITERATIONS = 60;
+	private static int MAX_EVALUATIONS = 4000;
 	private static int POPULATION_SIZE = 40;
 	
-	private static GAConfiguration configuration = new GAConfiguration(ITERATIONS, POPULATION_SIZE, true);
+	private static GAConfiguration configuration = new GAConfiguration(MAX_EVALUATIONS, POPULATION_SIZE, true);
 
 	public static void main(String[] args) throws JMetalException, InterruptedException, FileNotFoundException {
 		NRPPackage.eINSTANCE.eClass();
 		System.out.println("============");
 		
-		DomainModelProblem problem = new NRPProblem(1, 2, 0);
-		DomainModelCrossover crossover = new NRPCrossover(0.9);
-		DomainModelMutation mutation = new DomainModelMutation(getGenRules(), getFixedRules(), 0.4);
 		
-		LowerNSGAIIManager gaManager = new LowerNSGAIIManager(problem, crossover, mutation);
-		gaManager.runNSGAII();
-		/*
-		for (int i = 1; i<=RUNS ; i++) {
+		
+		for (int i = 1; i <= RUNS; i++) {
 			System.out.println("============");
 			System.out.println("Run "+i);
 			System.out.println("============");
-
-			long start = System.currentTimeMillis();
-
-			EObject inputModel = ModelIO.loadModel(INPUT_MODEL);
-			DomainModelMutation mutator = new DomainModelMutation(getGenRules(), getFixedRules());//getFixedMutationRules());
-			NRPFitness fitness = new NRPFitness();
-			NRPInit init = new NRPInit(inputModel, mutator);
-			NRPConstraintChecker constraintChecker = new NRPConstraintChecker();
 			
-			LowerGAManager gaManager = new LowerGAManager(mutator, fitness, init, configuration, constraintChecker);
-			double result = gaManager.runGA();
-			DomainModel resultModel = gaManager.getResult();
-			long end = System.currentTimeMillis();
+			DomainModelProblem problem = new NRPProblem(1, 2, 0);
+			DomainModelCrossover crossover = new NRPCrossover(0.9);
+			DomainModelMutation mutation = new DomainModelMutation(getGenRules(), getFixedRules(), 0.6);
 			
-			double best = 0.0;
-			double cumulative = 0.0;
+			LowerNSGAIIManager gaManager = new LowerNSGAIIManager(problem, crossover, mutation, configuration);
+			gaManager.runNSGAII();
+			
+			
+			// Models parento front
+			gaManager.getResult();
 
-			cumulative += result;
-			if (result > best) {
-				best = result;
-			}
-			System.out.println("Best: "+best+", mean: "+(cumulative / i));
-			ModelIO.saveProducedModel(resultModel.getContent(), i, result, OUTPUT_PREFIX);
+			long computingTime = gaManager.getComputingTime();
 			
-			long time = end - start;
-			createLogEntry(i, result, time);
-		}*/
+			// For each run: log i + hypervolume + runtime
+			// System.out.println(i + "\t" + gaManager.getHypervolume() + "\t" + computingTime);
+			createLogEntry(i, gaManager.getHypervolume(), computingTime);
+		}
 	}
 
 	private static void createLogEntry(int i, double result, long time) {
 		String line = i+ " \t " + time + " \t " + result +"\n";
-		String path = OUTPUT_PREFIX + "log.txt";
+		String path = OUTPUT_PREFIX + ".txt";
 	
 		try {
 			BufferedWriter bw = new BufferedWriter(new FileWriter(path, true));

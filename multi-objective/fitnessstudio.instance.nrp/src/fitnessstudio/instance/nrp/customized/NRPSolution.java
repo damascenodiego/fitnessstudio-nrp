@@ -25,9 +25,9 @@ public class NRPSolution extends DomainModelSolution<NRP> {
 
 		this.solutionRandomGenerator = () -> JMetalRandom.getInstance().nextDouble();
 		
-		NRP solution = createRandomSolution();
-		// NRP solution = createCompleteSolution();
-		// NRP solution = createEmptySolution();
+		// NRP solution = createRandomSolution();
+		// NRP solution = createExtremeSolution();
+		NRP solution = createEmptySolution();
 		
 		super.setVariable(0, solution);
 	}
@@ -52,6 +52,20 @@ public class NRPSolution extends DomainModelSolution<NRP> {
 	    attributes = new HashMap<Object, Object>(solution.attributes) ;
 	}
 
+	private NRP createExtremeSolution() {
+		NRP inputModel = (NRP) ModelIO.loadModel(INPUT_MODEL);
+		
+		if (Math.random() > 0.5) {
+			for (int i = 0; i < inputModel.getAvailableArtifacts().size(); i++) {
+					SoftwareArtifact artifact = inputModel.getAvailableArtifacts().get(i);
+					artifact.getSolutions().add(inputModel.getSolutions().get(0));
+					inputModel.getSolutions().get(0).getSelectedArtifacts().add(artifact);
+			}
+		}
+		
+		return inputModel;
+	}
+	
 	private NRP createRandomSolution() {
 		NRP inputModel = (NRP) ModelIO.loadModel(INPUT_MODEL);
 		for (int i = 0; i < inputModel.getAvailableArtifacts().size(); i++) {

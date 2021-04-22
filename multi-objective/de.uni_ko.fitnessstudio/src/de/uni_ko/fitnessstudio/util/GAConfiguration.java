@@ -1,30 +1,30 @@
 package de.uni_ko.fitnessstudio.util;
 
 public class GAConfiguration {
-	private int iterations;
+	private int maxEvaluations;
 	private int populationSize;
 	private boolean printInfoAfterIteration;
 
-	public GAConfiguration(int iterations, int populationSize) {
+	public GAConfiguration(int maxEvaluations, int populationSize) {
 		super();
-		this.iterations = iterations;
+		this.maxEvaluations = maxEvaluations;
 		this.populationSize = populationSize;
 		this.printInfoAfterIteration = false;
 	}
 
-	public GAConfiguration(int iterations, int populationSize, boolean printInfoAfterIteration) {
+	public GAConfiguration(int maxEvaluations, int populationSize, boolean printInfoAfterIteration) {
 		super();
-		this.iterations = iterations;
+		this.maxEvaluations = maxEvaluations;
 		this.populationSize = populationSize;
 		this.printInfoAfterIteration = printInfoAfterIteration;
 	}
 
-	public int getIterations() {
-		return iterations;
+	public int getMaxEvaluations() {
+		return maxEvaluations;
 	}
 
-	public void setIterations(int iterations) {
-		this.iterations = iterations;
+	public void setMaxEvaluations(int maxEvaluations) {
+		this.maxEvaluations = maxEvaluations;
 	}
 
 	public int getPopulationSize() {
