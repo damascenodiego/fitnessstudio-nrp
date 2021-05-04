@@ -14,16 +14,12 @@ public class NRPProblem extends DomainModelProblem<NRP> {
 	private final MaximiseSatisfaction satisfaction;
 	private final MinimiseCost cost;
 	
-	public NRPProblem(int variables, int objectives, int constraints) {
-		super(variables, objectives, constraints);
+	public NRPProblem(String inputModelId) {
+		// nrVariables, nrObjectives, nrConstraints
+		super(1, 2, 0, inputModelId);
 		
 		this.satisfaction = new MaximiseSatisfaction();
 		this.cost = new MinimiseCost();
-	}
-
-	@Override
-	public DomainModelSolution<NRP> createSolution() {
-		return new NRPSolution(getNumberOfVariables(), getNumberOfObjectives());
 	}
 
 	@Override
@@ -33,5 +29,10 @@ public class NRPProblem extends DomainModelProblem<NRP> {
 		
 		solution.setObjective(0, -satisfaction.computeFitness(solution.getVariable(0)));
 		solution.setObjective(1, cost.computeFitness(solution.getVariable(0)));
+	}
+
+	@Override
+	public DomainModelSolution<NRP> createSolution() {
+		return new NRPSolution(getNumberOfVariables(), getNumberOfObjectives(), INPUT_MODEL_ID);
 	}
 }

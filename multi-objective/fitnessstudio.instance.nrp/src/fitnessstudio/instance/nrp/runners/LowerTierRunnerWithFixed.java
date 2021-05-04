@@ -37,8 +37,7 @@ import fitnessstudio.instance.nrp.customized.NRPProblem;
 
 @SuppressWarnings("all")
 public class LowerTierRunnerWithFixed {
-	private static String INPUT_MODEL_ID = "NRP2";
-	private static String INPUT_MODEL = "input\\" + INPUT_MODEL_ID+".xmi";
+	private static String INPUT_MODEL_ID = "B";
 	private static String MUTATION_RULES_DIRECTORY = "transformation\\fixed";
 	private static String OUTPUT_PREFIX = "output_models\\" +INPUT_MODEL_ID + "\\" + new SimpleDateFormat("HH_mm_ss").format(Calendar.getInstance().getTime()).toString();
 
@@ -59,7 +58,7 @@ public class LowerTierRunnerWithFixed {
 			System.out.println("Run "+i);
 			System.out.println("============");
 			
-			DomainModelProblem problem = new NRPProblem(1, 2, 0);
+			DomainModelProblem problem = new NRPProblem(INPUT_MODEL_ID);
 			DomainModelCrossover crossover = new NRPCrossover(0.9);
 			DomainModelMutation mutation = new DomainModelMutation(getGenRules(), getFixedRules(), 0.6);
 			

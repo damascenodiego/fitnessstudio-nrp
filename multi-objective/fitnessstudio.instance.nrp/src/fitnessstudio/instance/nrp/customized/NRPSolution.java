@@ -14,20 +14,20 @@ import nrp.model.nrp.SoftwareArtifact;
 
 @SuppressWarnings("serial")
 public class NRPSolution extends DomainModelSolution<NRP> {
-	private static String INPUT_MODEL_ID = "NRP3";
-	private static String INPUT_MODEL = "input\\" + INPUT_MODEL_ID+".xmi";
+	
 
 	private RandomGenerator<Double> solutionRandomGenerator;
 	
 	/** Constructor */
-	protected NRPSolution(int numberOfVariables, int numberOfObjectives) {
+	protected NRPSolution(int numberOfVariables, int numberOfObjectives, String inputModelId) {
 		super(numberOfVariables, numberOfObjectives, 0);
 
 		this.solutionRandomGenerator = () -> JMetalRandom.getInstance().nextDouble();
 		
-		// NRP solution = createRandomSolution();
-		// NRP solution = createExtremeSolution();
-		NRP solution = createEmptySolution();
+		String path = "input\\" + inputModelId + ".xmi";
+		// NRP solution = createRandomSolution(path);
+		NRP solution = createExtremeSolution(path);
+		// NRP solution = createEmptySolution(path);
 		
 		super.setVariable(0, solution);
 	}
@@ -52,8 +52,8 @@ public class NRPSolution extends DomainModelSolution<NRP> {
 	    attributes = new HashMap<Object, Object>(solution.attributes) ;
 	}
 
-	private NRP createExtremeSolution() {
-		NRP inputModel = (NRP) ModelIO.loadModel(INPUT_MODEL);
+	private NRP createExtremeSolution(String path) {
+		NRP inputModel = (NRP) ModelIO.loadModel(path);
 		
 		if (Math.random() > 0.5) {
 			for (int i = 0; i < inputModel.getAvailableArtifacts().size(); i++) {
@@ -66,8 +66,8 @@ public class NRPSolution extends DomainModelSolution<NRP> {
 		return inputModel;
 	}
 	
-	private NRP createRandomSolution() {
-		NRP inputModel = (NRP) ModelIO.loadModel(INPUT_MODEL);
+	private NRP createRandomSolution(String path) {
+		NRP inputModel = (NRP) ModelIO.loadModel(path);
 		for (int i = 0; i < inputModel.getAvailableArtifacts().size(); i++) {
 			if (solutionRandomGenerator.getRandomValue() > 0.5) {
 				SoftwareArtifact artifact = inputModel.getAvailableArtifacts().get(i);
@@ -79,8 +79,8 @@ public class NRPSolution extends DomainModelSolution<NRP> {
 		return inputModel;
 	}
 	
-	private NRP createCompleteSolution() {
-		NRP inputModel = (NRP) ModelIO.loadModel(INPUT_MODEL);
+	private NRP createCompleteSolution(String path) {
+		NRP inputModel = (NRP) ModelIO.loadModel(path);
 		for (int i = 0; i < inputModel.getAvailableArtifacts().size(); i++) {
 				SoftwareArtifact artifact = inputModel.getAvailableArtifacts().get(i);
 				artifact.getSolutions().add(inputModel.getSolutions().get(0));
@@ -90,8 +90,8 @@ public class NRPSolution extends DomainModelSolution<NRP> {
 		return inputModel;
 	}
 	
-	private NRP createEmptySolution() {
-		NRP inputModel = (NRP) ModelIO.loadModel(INPUT_MODEL);
+	private NRP createEmptySolution(String path) {
+		NRP inputModel = (NRP) ModelIO.loadModel(path);
 		
 		return inputModel;
 	}

@@ -7,11 +7,15 @@ public abstract class DomainModelProblem<S> implements Problem<DomainModelSoluti
 	private int numberOfVariables;
 	private int numberOfObjectives;
 	private int numberOfConstraints;
+	
+	public final String INPUT_MODEL_ID;
 
-	public DomainModelProblem(int variables, int objectives, int constraints) {
+	public DomainModelProblem(int variables, int objectives, int constraints, String inputModelId) {
 		this.numberOfVariables = variables;
 		this.numberOfObjectives = objectives;
 		this.numberOfConstraints = constraints;
+		
+		this.INPUT_MODEL_ID = inputModelId;
 	}
 	
 	@Override

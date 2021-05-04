@@ -39,7 +39,7 @@ public class LowerNSGAIIManager<S> extends AbstractAlgorithmRunner {
 	GAConfiguration configuration;
 	
 	long computingTime = -1;
-	String referenceParetoFront = "resource/reference.csv";
+	String referenceParetoFront;
 	
 	public LowerNSGAIIManager(DomainModelProblem<S> problem, 
 			DomainModelCrossover<DomainModelSolution<S>> crossover, DomainModelMutation<S> mutation, GAConfiguration configuration) {
@@ -48,6 +48,7 @@ public class LowerNSGAIIManager<S> extends AbstractAlgorithmRunner {
 		this.mutation = mutation;
 		this.selection = new BinaryTournamentSelection<>(new RankingAndCrowdingDistanceComparator<>());
 		this.configuration = configuration;
+		this.referenceParetoFront  = "resource\\ref" + problem.INPUT_MODEL_ID + ".csv";
 	}
 	
 	public void runNSGAII() throws JMetalException, InterruptedException, FileNotFoundException {
@@ -79,19 +80,21 @@ public class LowerNSGAIIManager<S> extends AbstractAlgorithmRunner {
 
         algorithmThread.join();
         
+	    computingTime = algorithmRunner.getComputingTime();
 	    List<DomainModelSolution<S>> population = algorithm.getResult();
+        /*
 	    computingTime = algorithmRunner.getComputingTime();
 
-	    /*
+	    
 	    JMetalLogger.logger.info("Total execution time: " + computingTime + "ms");
 	
 	    printFinalSolutionSet(population);
 	    if (!referenceParetoFront.equals("")) {
 	      printQualityIndicators(population, referenceParetoFront);
 	    }
-
+*/
 	    PlotFront plot = new PlotSmile(new ArrayFront(population).getMatrix()) ;
-	    plot.plot();*/
+	    plot.plot(); 
 	}
 	
 	public List<DomainModelSolution<S>> getResult() {

@@ -12,20 +12,21 @@ import com.lagodiuk.GAIterationListener;
 import com.lagodiuk.GAPopulation;
 import com.lagodiuk.GAwithTimeout;
 
-import de.uni_ko.fitnessstudio.lower.DomainModelFitness;
-import de.uni_ko.fitnessstudio.lower.DomainModelInit;
+import de.uni_ko.fitnessstudio.lower.DomainModelCrossover;
+import de.uni_ko.fitnessstudio.lower.DomainModelProblem;
+import de.uni_ko.fitnessstudio.lower.DomainModelSolution;
 import de.uni_ko.fitnessstudio.util.GAConfiguration;
 import de.uni_ko.fitnessstudio.util.ModelIO;
 
-public class UpperGAManager {
+public class UpperGAManager<S> {
 
 	private String prefix = "output_rules\\"
 			+ new SimpleDateFormat("HH_mm_ss").format(Calendar.getInstance().getTime()).toString();
 
 	private EObject inputModel;
 	private EPackage metaModel;
-	private DomainModelFitness domainModelFitness;
-	private DomainModelInit init;
+	private DomainModelProblem<S> domainModelProblem;
+	private DomainModelCrossover<DomainModelSolution<S>> domainModelCrossover;
 	private ConstraintChecker constraintChecker;
 	private GAConfiguration configurationUpper;
 	private GAConfiguration configurationLower;
@@ -35,13 +36,12 @@ public class UpperGAManager {
 
 	private GA<RuleSet, Double> ga;
 
-	public UpperGAManager(DomainModelFitness domainModelFitness, DomainModelInit init, ConstraintChecker ruleSetChecker,
-			EPackage metaModel, GAConfiguration configurationUpper, GAConfiguration configurationLower,
-			EObject inputModel, int timeoutSeconds) {
-		this.domainModelFitness = domainModelFitness;
-		this.init = init;
+	public UpperGAManager(ConstraintChecker ruleSetChecker, EPackage metaModel, DomainModelProblem<S> problem, DomainModelCrossover<DomainModelSolution<S>> crossover, 
+			GAConfiguration configurationUpper, GAConfiguration configurationLower, EObject inputModel, int timeoutSeconds) {
 		this.constraintChecker = ruleSetChecker;
 		this.metaModel = metaModel;
+		this.domainModelProblem = problem;
+		this.domainModelCrossover = crossover;
 		this.configurationUpper = configurationUpper;
 		this.configurationLower = configurationLower;
 		this.inputModel = inputModel;
@@ -52,11 +52,10 @@ public class UpperGAManager {
 		time = System.currentTimeMillis();
 		GAPopulation<RuleSet> population = RuleSetInit.create(configurationUpper.getPopulationSize(), metaModel,
 				constraintChecker);
-		Fitness<RuleSet, Double> fitness = new RuleSetFitness(domainModelFitness, init, inputModel, configurationLower,
-				constraintChecker);
+		Fitness<RuleSet, Double> fitness = new RuleSetFitness<S>(inputModel, domainModelProblem, domainModelCrossover, configurationLower, constraintChecker);
 		ga = new GAwithTimeout<RuleSet, Double>(population, fitness, timeoutSeconds);
 		addListener(ga);
-		ga.evolve(configurationUpper.getIterations());
+		ga.evolve(configurationUpper.getMaxEvaluations());
 		RuleSet best = ga.getBest();
 		double fitnessVal = ga.fitness(best);
 		ga.getPopulation().trim(0);

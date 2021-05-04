@@ -1,32 +1,39 @@
 package de.uni_ko.fitnessstudio.upper;
 
+import java.io.FileNotFoundException;
+
 import org.eclipse.emf.ecore.EObject;
+import org.uma.jmetal.util.JMetalException;
 
 import com.lagodiuk.Fitness;
 
-import de.uni_ko.fitnessstudio.lower.DomainModelFitness;
-import de.uni_ko.fitnessstudio.lower.DomainModelInit;
+import de.uni_ko.fitnessstudio.lower.DomainModelCrossover;
 import de.uni_ko.fitnessstudio.lower.DomainModelMutation;
-import de.uni_ko.fitnessstudio.lower.LowerGAManager;
+import de.uni_ko.fitnessstudio.lower.DomainModelProblem;
+import de.uni_ko.fitnessstudio.lower.DomainModelSolution;
+import de.uni_ko.fitnessstudio.lower.LowerNSGAIIManager;
 import de.uni_ko.fitnessstudio.util.GAConfiguration;
 
 /**
  * Fitness function, which calculates difference two chromosomes.
  */
-public class RuleSetFitness implements Fitness<RuleSet, Double> {
+public class RuleSetFitness<S> implements Fitness<RuleSet, Double> {
 
 	// Map<RuleSet, Double> cache = new HashMap<RuleSet, Double>();
 	EObject model;
-	DomainModelFitness fitness;
-	DomainModelInit init;
+	DomainModelProblem<S> domainModelProblem;
+	DomainModelCrossover<DomainModelSolution<S>> domainModelCrossover;
+	
 	GAConfiguration configurationLower;
+	
+	// TODO: Might let LowerNSGAIIManager use constraintChecker
 	private ConstraintChecker constraintChecker;
 	
-	public RuleSetFitness(DomainModelFitness fitness, DomainModelInit init, EObject model,
+	public RuleSetFitness(EObject model, DomainModelProblem<S> problem, DomainModelCrossover<DomainModelSolution<S>> crossover, 
 			GAConfiguration configurationLower, ConstraintChecker constraintChecker) {
 		this.model = model;
-		this.fitness = fitness;
-		this.init = init;
+		this.domainModelProblem = problem;
+		this.domainModelCrossover = crossover;
 		this.configurationLower = configurationLower;
 		this.constraintChecker = constraintChecker;
 	}
@@ -34,17 +41,22 @@ public class RuleSetFitness implements Fitness<RuleSet, Double> {
 	@Override
 	public Double calculate(RuleSet chromosome) {
 		if (chromosome.getConstraintChecker().satisfiesMutationConstraints(chromosome.getGenRules())) {
-			DomainModelMutation mutator = new DomainModelMutation(chromosome.getGenRules());
-			return getResultWithTimeout(mutator);
+			DomainModelMutation<S> domainModelMutation = new DomainModelMutation<S>(chromosome.getGenRules(), 0.6);
+			return getResultWithTimeout(domainModelMutation);
 		} else {
 			return -10000.0;
 		}
 	}
 
-	private Double getResultWithTimeout(DomainModelMutation mutator) {
-
-		LowerGAManager manager = new LowerGAManager(mutator, fitness, init, configurationLower, constraintChecker);
-		return  manager.runGA();
+	private Double getResultWithTimeout(DomainModelMutation<S> domainModelMutation) {
+		LowerNSGAIIManager<S> manager = new LowerNSGAIIManager<S>(domainModelProblem, domainModelCrossover, domainModelMutation, configurationLower);
+		try {
+			manager.runNSGAII();
+			
+			return -manager.getHypervolume();
+		} catch (JMetalException | FileNotFoundException | InterruptedException e1) {}
+		
+		return -10000.0;
 	}
 
 }
