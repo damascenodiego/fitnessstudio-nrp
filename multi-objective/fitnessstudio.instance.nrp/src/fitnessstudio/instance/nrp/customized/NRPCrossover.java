@@ -2,7 +2,10 @@ package fitnessstudio.instance.nrp.customized;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
+
 import org.uma.jmetal.util.checking.Check;
+
 import de.uni_ko.fitnessstudio.lower.DomainModelCrossover;
 import nrp.model.nrp.NRP;
 import nrp.model.nrp.SoftwareArtifact;
@@ -12,6 +15,7 @@ import nrp.model.nrp.SoftwareArtifact;
 public class NRPCrossover implements DomainModelCrossover<NRPSolution> {
 
 	private double crossoverProbability;
+	private Random generator = new Random();
 	
 	/** Constructor */
 	public NRPCrossover(double probability) {
