@@ -12,12 +12,14 @@ import org.eclipse.emf.ecore.EPackage;
 import nrp.model.nrp.*;
 import de.uni_ko.fitnessstudio.lower.DomainModelCrossover;
 import de.uni_ko.fitnessstudio.lower.DomainModelProblem;
+import de.uni_ko.fitnessstudio.nsga.Init;
 import de.uni_ko.fitnessstudio.upper.UpperGAManager;
 import de.uni_ko.fitnessstudio.util.GAConfiguration;
 import de.uni_ko.fitnessstudio.util.ModelIO;
 import fitnessstudio.instance.nrp.customized.NRPConstraintChecker;
 import fitnessstudio.instance.nrp.customized.NRPConstraintChecker;
 import fitnessstudio.instance.nrp.customized.NRPCrossover;
+import fitnessstudio.instance.nrp.customized.NRPInit;
 import fitnessstudio.instance.nrp.customized.NRPProblem;
 
 @SuppressWarnings("all")
@@ -28,11 +30,11 @@ public class UpperTierRunner {
 			+ new SimpleDateFormat("HH_mm_ss").format(Calendar.getInstance().getTime()).toString() + "\\";
 
 	private static int UPPER_TIER_ITERATIONS = 15;
-	private static int UPPER_TIER_POPULATION_SIZE = 40;
-	private static int LOWER_TIER_MAX_EVALUATIONS = 120;
-	private static int LOWER_TIER_POPULATION_SIZE = 6;
+	private static int UPPER_TIER_POPULATION_SIZE = 60;
+	private static int LOWER_TIER_MAX_EVALUATIONS = 200;
+	private static int LOWER_TIER_POPULATION_SIZE = 4;//8;//12;
 	private static int RUNS = 10;
-	private static int TIMEOUT = 90;
+	private static int TIMEOUT = 180;
 	
 	private static GAConfiguration configurationUpper = new GAConfiguration(UPPER_TIER_ITERATIONS, UPPER_TIER_POPULATION_SIZE, true);
 	private static GAConfiguration configurationLower = new GAConfiguration(LOWER_TIER_MAX_EVALUATIONS, LOWER_TIER_POPULATION_SIZE, false);
@@ -50,12 +52,13 @@ public class UpperTierRunner {
 			NRPPackage.eINSTANCE.eClass();
 			EPackage metaModel = NRPPackage.eINSTANCE;
 			DomainModelProblem domainModelProblem = new NRPProblem(INPUT_MODEL_ID);
+			Init init = new NRPInit();
 			DomainModelCrossover domainModelCrossover = new NRPCrossover(0.9);
 			
 			NRPConstraintChecker mutationConstraintChecker = new NRPConstraintChecker();
 			EObject inputModel = ModelIO.loadModel(INPUT_MODEL);
 			
-			UpperGAManager manager = new UpperGAManager(mutationConstraintChecker, metaModel, domainModelProblem, domainModelCrossover,
+			UpperGAManager manager = new UpperGAManager(mutationConstraintChecker, metaModel, domainModelProblem, init, domainModelCrossover,
 					configurationUpper, configurationLower, inputModel, TIMEOUT);
 			manager.setPrefix(OUTPUT_PREFIX + "\\"+i);
 			double result = manager.runGA();

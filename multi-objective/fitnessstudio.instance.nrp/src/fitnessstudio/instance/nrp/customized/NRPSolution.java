@@ -26,8 +26,8 @@ public class NRPSolution extends DomainModelSolution<NRP> {
 		
 		String path = "input\\" + inputModelId + ".xmi";
 		// NRP solution = createRandomSolution(path);
-		NRP solution = createExtremeSolution(path);
-		// NRP solution = createEmptySolution(path);
+		// NRP solution = createExtremeSolution(path);
+		NRP solution = createEmptySolution(path);
 		
 		super.setVariable(0, solution);
 	}

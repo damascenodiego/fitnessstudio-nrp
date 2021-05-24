@@ -8,6 +8,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.HashSet;
 import java.util.List;
@@ -28,30 +30,47 @@ import de.uni_ko.fitnessstudio.lower.DomainModelCrossover;
 import de.uni_ko.fitnessstudio.lower.DomainModelMutation;
 import de.uni_ko.fitnessstudio.lower.DomainModelProblem;
 import de.uni_ko.fitnessstudio.lower.LowerNSGAIIManager;
+
+import de.uni_ko.fitnessstudio.nsga.Init;
 import de.uni_ko.fitnessstudio.util.GAConfiguration;
 import de.uni_ko.fitnessstudio.util.ModelIO;
 import fitnessstudio.instance.nrp.customized.NRPConstraintChecker;
 import fitnessstudio.instance.nrp.customized.NRPCrossover;
 import fitnessstudio.instance.nrp.customized.NRPConstraintChecker;
 import fitnessstudio.instance.nrp.customized.NRPProblem;
+import fitnessstudio.instance.nrp.customized.NRPInit;
 
 @SuppressWarnings("all")
 public class LowerTierRunnerWithFixed {
-	private static String INPUT_MODEL_ID = "B";
 	private static String MUTATION_RULES_DIRECTORY = "transformation\\fixed";
-	private static String OUTPUT_PREFIX = "output_models\\" +INPUT_MODEL_ID + "\\" + new SimpleDateFormat("HH_mm_ss").format(Calendar.getInstance().getTime()).toString();
 
-	private static int RUNS = 30;
-	private static int MAX_EVALUATIONS = 4000;
-	private static int POPULATION_SIZE = 40;
+	private static int RUNS = 3;//1;//
+	private static int MAX_EVALUATIONS = 5000;//50000;//
+	private static int POPULATION_SIZE = 40;//200;//
 	
 	private static GAConfiguration configuration = new GAConfiguration(MAX_EVALUATIONS, POPULATION_SIZE, true);
 
 	public static void main(String[] args) throws JMetalException, InterruptedException, FileNotFoundException {
 		NRPPackage.eINSTANCE.eClass();
+		
+		List<String> models = Arrays.asList("A", "B", "C", "D", "E");
+		for (String model : models) {
+			runWithModel(model);
+		}
+	}
+	
+	private static void runWithModel(final String INPUT_MODEL_ID) throws JMetalException, InterruptedException, FileNotFoundException {
+		final String OUTPUT_PREFIX = "output_models\\" +INPUT_MODEL_ID + "\\" + new SimpleDateFormat("HH_mm_ss").format(Calendar.getInstance().getTime()).toString() + "\\";
 		System.out.println("============");
 		
-		
+		try {
+		    Path path = Paths.get(OUTPUT_PREFIX);
+
+		    Files.createDirectories(path);
+
+		  } catch (IOException e) {
+		    System.err.println("Failed to create directory!" + e.getMessage());
+		  }
 		
 		for (int i = 1; i <= RUNS; i++) {
 			System.out.println("============");
@@ -59,10 +78,12 @@ public class LowerTierRunnerWithFixed {
 			System.out.println("============");
 			
 			DomainModelProblem problem = new NRPProblem(INPUT_MODEL_ID);
+			Init init = new NRPInit();
 			DomainModelCrossover crossover = new NRPCrossover(0.9);
 			DomainModelMutation mutation = new DomainModelMutation(getGenRules(), getFixedRules(), 0.6);
 			
-			LowerNSGAIIManager gaManager = new LowerNSGAIIManager(problem, crossover, mutation, configuration);
+			LowerNSGAIIManager gaManager = new LowerNSGAIIManager(problem, init, crossover, mutation, configuration);
+			gaManager.setPrefix(OUTPUT_PREFIX + i);
 			gaManager.runNSGAII();
 			
 			
@@ -73,13 +94,13 @@ public class LowerTierRunnerWithFixed {
 			
 			// For each run: log i + hypervolume + runtime
 			// System.out.println(i + "\t" + gaManager.getHypervolume() + "\t" + computingTime);
-			createLogEntry(i, gaManager.getHypervolume(), computingTime);
+			createLogEntry(i, gaManager.getHypervolume(), computingTime, OUTPUT_PREFIX);
 		}
 	}
 
-	private static void createLogEntry(int i, double result, long time) {
+	private static void createLogEntry(int i, double result, long time, final String OUTPUT_PREFIX) {
 		String line = i+ " \t " + time + " \t " + result +"\n";
-		String path = OUTPUT_PREFIX + ".txt";
+		String path = OUTPUT_PREFIX + "log.txt";
 	
 		try {
 			BufferedWriter bw = new BufferedWriter(new FileWriter(path, true));
