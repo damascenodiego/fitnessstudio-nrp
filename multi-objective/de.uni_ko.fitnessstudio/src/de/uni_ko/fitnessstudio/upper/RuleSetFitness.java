@@ -12,6 +12,7 @@ import de.uni_ko.fitnessstudio.lower.DomainModelMutation;
 import de.uni_ko.fitnessstudio.lower.DomainModelProblem;
 import de.uni_ko.fitnessstudio.lower.DomainModelSolution;
 import de.uni_ko.fitnessstudio.lower.LowerNSGAIIManager;
+import de.uni_ko.fitnessstudio.nsga.Init;
 import de.uni_ko.fitnessstudio.util.GAConfiguration;
 
 /**
@@ -22,6 +23,7 @@ public class RuleSetFitness<S> implements Fitness<RuleSet, Double> {
 	// Map<RuleSet, Double> cache = new HashMap<RuleSet, Double>();
 	EObject model;
 	DomainModelProblem<S> domainModelProblem;
+	Init<DomainModelSolution<S>> init;
 	DomainModelCrossover<DomainModelSolution<S>> domainModelCrossover;
 	
 	GAConfiguration configurationLower;
@@ -29,10 +31,11 @@ public class RuleSetFitness<S> implements Fitness<RuleSet, Double> {
 	// TODO: Might let LowerNSGAIIManager use constraintChecker
 	private ConstraintChecker constraintChecker;
 	
-	public RuleSetFitness(EObject model, DomainModelProblem<S> problem, DomainModelCrossover<DomainModelSolution<S>> crossover, 
+	public RuleSetFitness(EObject model, DomainModelProblem<S> problem, Init<DomainModelSolution<S>> init, DomainModelCrossover<DomainModelSolution<S>> crossover, 
 			GAConfiguration configurationLower, ConstraintChecker constraintChecker) {
 		this.model = model;
 		this.domainModelProblem = problem;
+		this.init = init;
 		this.domainModelCrossover = crossover;
 		this.configurationLower = configurationLower;
 		this.constraintChecker = constraintChecker;
@@ -49,14 +52,14 @@ public class RuleSetFitness<S> implements Fitness<RuleSet, Double> {
 	}
 
 	private Double getResultWithTimeout(DomainModelMutation<S> domainModelMutation) {
-		LowerNSGAIIManager<S> manager = new LowerNSGAIIManager<S>(domainModelProblem, domainModelCrossover, domainModelMutation, configurationLower);
+		LowerNSGAIIManager<S> manager = new LowerNSGAIIManager<S>(domainModelProblem, init, domainModelCrossover, domainModelMutation, configurationLower);
 		try {
 			manager.runNSGAII();
 			
 			return -manager.getHypervolume();
-		} catch (JMetalException | FileNotFoundException | InterruptedException e1) {}
-		
-		return -10000.0;
+		} catch (JMetalException | FileNotFoundException | InterruptedException e1) {
+			return -10000.0;
+		}
 	}
 
 }

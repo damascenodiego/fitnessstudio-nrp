@@ -5,6 +5,7 @@ Bundle-SymbolicName: de.uni_ko.fitnessstudio
 Bundle-Version: 1.0.0.qualifier
 Export-Package: com.lagodiuk,
  de.uni_ko.fitnessstudio.lower,
+ de.uni_ko.fitnessstudio.nsga,
  de.uni_ko.fitnessstudio.upper,
  de.uni_ko.fitnessstudio.util
 Require-Bundle: org.eclipse.emf.ecore,

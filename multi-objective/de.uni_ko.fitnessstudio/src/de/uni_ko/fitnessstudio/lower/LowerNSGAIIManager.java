@@ -12,26 +12,27 @@ import org.uma.jmetal.lab.visualization.plot.impl.PlotSmile;
 import org.uma.jmetal.operator.selection.SelectionOperator;
 import org.uma.jmetal.operator.selection.impl.BinaryTournamentSelection;
 import org.uma.jmetal.qualityindicator.impl.NormalizedHypervolume;
-import org.uma.jmetal.qualityindicator.impl.hypervolume.Hypervolume;
-import org.uma.jmetal.solution.Solution;
 import org.uma.jmetal.util.AbstractAlgorithmRunner;
 import org.uma.jmetal.util.JMetalException;
-import org.uma.jmetal.util.JMetalLogger;
 import org.uma.jmetal.util.comparator.RankingAndCrowdingDistanceComparator;
+import org.uma.jmetal.util.fileoutput.SolutionListOutput;
+import org.uma.jmetal.util.fileoutput.impl.DefaultFileOutputContext;
 import org.uma.jmetal.util.front.Front;
 import org.uma.jmetal.util.front.impl.ArrayFront;
 import org.uma.jmetal.util.front.util.FrontNormalizer;
 import org.uma.jmetal.util.front.util.FrontUtils;
-import org.uma.jmetal.util.measure.MeasureListener;
 import org.uma.jmetal.util.measure.MeasureManager;
 import org.uma.jmetal.util.measure.impl.BasicMeasure;
 import org.uma.jmetal.util.measure.impl.DurationMeasure;
 import org.uma.jmetal.util.point.PointSolution;
 
+import de.uni_ko.fitnessstudio.nsga.Init;
+import de.uni_ko.fitnessstudio.nsga.InitNSGAIIBuilder;
 import de.uni_ko.fitnessstudio.util.GAConfiguration;
 
 public class LowerNSGAIIManager<S> extends AbstractAlgorithmRunner {
 	DomainModelProblem<S> problem;
+	Init<DomainModelSolution<S>> init;
 	Algorithm<List<DomainModelSolution<S>>> algorithm;
 	DomainModelCrossover<DomainModelSolution<S>> crossover;
 	DomainModelMutation<S> mutation;
@@ -40,10 +41,12 @@ public class LowerNSGAIIManager<S> extends AbstractAlgorithmRunner {
 	
 	long computingTime = -1;
 	String referenceParetoFront;
+	String prefix = "";
 	
-	public LowerNSGAIIManager(DomainModelProblem<S> problem, 
+	public LowerNSGAIIManager(DomainModelProblem<S> problem, Init<DomainModelSolution<S>> init,
 			DomainModelCrossover<DomainModelSolution<S>> crossover, DomainModelMutation<S> mutation, GAConfiguration configuration) {
 		this.problem = problem;
+		this.init = init;
 		this.crossover = crossover;
 		this.mutation = mutation;
 		this.selection = new BinaryTournamentSelection<>(new RankingAndCrowdingDistanceComparator<>());
@@ -53,11 +56,15 @@ public class LowerNSGAIIManager<S> extends AbstractAlgorithmRunner {
 	
 	public void runNSGAII() throws JMetalException, InterruptedException, FileNotFoundException {
 		algorithm = 
-				new NSGAIIBuilder<>(problem, crossover, mutation, configuration.getPopulationSize())
+				new InitNSGAIIBuilder<>(problem, crossover, mutation, configuration.getPopulationSize(), init)
+					.setSelectionOperator(selection)
+					.setMaxEvaluations(configuration.getMaxEvaluations())
+					.build();
+				/* new NSGAIIBuilder<>(problem, crossover, mutation, configuration.getPopulationSize())
 	            	.setSelectionOperator(selection)
 	            	.setMaxEvaluations(configuration.getMaxEvaluations())
 	            	.setVariant(NSGAIIBuilder.NSGAIIVariant.Measures)
-	            	.build();
+	            	.build(); */
 
 		((NSGAIIMeasures<DomainModelSolution<S>>) algorithm).setReferenceFront(new ArrayFront(referenceParetoFront));
 	    AlgorithmRunner algorithmRunner = 
@@ -74,17 +81,13 @@ public class LowerNSGAIIManager<S> extends AbstractAlgorithmRunner {
                 (BasicMeasure<Double>) measureManager.<Double>getPushMeasure("hypervolume");
 
         /* End of measure management */
-	        
-        Thread algorithmThread = new Thread(algorithm) ;
-        algorithmThread.start();
-
-        algorithmThread.join();
+	    
+	    List<DomainModelSolution<S>> population = algorithm.getResult();
         
 	    computingTime = algorithmRunner.getComputingTime();
-	    List<DomainModelSolution<S>> population = algorithm.getResult();
-        /*
-	    computingTime = algorithmRunner.getComputingTime();
-
+	    
+	    printFinalDomainModelSolutionSet(population);
+	    /*
 	    
 	    JMetalLogger.logger.info("Total execution time: " + computingTime + "ms");
 	
@@ -92,9 +95,9 @@ public class LowerNSGAIIManager<S> extends AbstractAlgorithmRunner {
 	    if (!referenceParetoFront.equals("")) {
 	      printQualityIndicators(population, referenceParetoFront);
 	    }
-*/
+*
 	    PlotFront plot = new PlotSmile(new ArrayFront(population).getMatrix()) ;
-	    plot.plot(); 
+	    plot.plot(); */
 	}
 	
 	public List<DomainModelSolution<S>> getResult() {
@@ -115,5 +118,15 @@ public class LowerNSGAIIManager<S> extends AbstractAlgorithmRunner {
 	        .convertFrontToSolutionList(normalizedFront) ;
 	    
 	    return new NormalizedHypervolume<PointSolution>(normalizedReferenceFront).evaluate(normalizedPopulation);
+	}
+	
+	private void printFinalDomainModelSolutionSet(List<DomainModelSolution<S>> population) {
+		new SolutionListOutput(population)
+        	.setFunFileOutputContext(new DefaultFileOutputContext(prefix + "FUN.csv", ","))
+        	.print();
+	}
+	
+	public void setPrefix(String prefix) {
+		this.prefix = prefix;
 	}
 }
