@@ -12,6 +12,7 @@ import org.uma.jmetal.lab.visualization.plot.impl.PlotSmile;
 import org.uma.jmetal.operator.selection.SelectionOperator;
 import org.uma.jmetal.operator.selection.impl.BinaryTournamentSelection;
 import org.uma.jmetal.qualityindicator.impl.NormalizedHypervolume;
+import org.uma.jmetal.qualityindicator.impl.Spread;
 import org.uma.jmetal.util.AbstractAlgorithmRunner;
 import org.uma.jmetal.util.JMetalException;
 import org.uma.jmetal.util.comparator.RankingAndCrowdingDistanceComparator;
@@ -118,6 +119,18 @@ public class LowerNSGAIIManager<S> extends AbstractAlgorithmRunner {
 	        .convertFrontToSolutionList(normalizedFront) ;
 	    
 	    return new NormalizedHypervolume<PointSolution>(normalizedReferenceFront).evaluate(normalizedPopulation);
+	}
+	
+	public double getSpread() throws FileNotFoundException {
+		Front referenceFront = new ArrayFront(referenceParetoFront);
+	    FrontNormalizer frontNormalizer = new FrontNormalizer(referenceFront) ;
+
+	    Front normalizedReferenceFront = frontNormalizer.normalize(referenceFront) ;
+	    Front normalizedFront = frontNormalizer.normalize(new ArrayFront(algorithm.getResult())) ;
+	    List<PointSolution> normalizedPopulation = FrontUtils
+	        .convertFrontToSolutionList(normalizedFront) ;
+		
+		return new Spread<PointSolution>(normalizedReferenceFront).evaluate(normalizedPopulation);
 	}
 	
 	private void printFinalDomainModelSolutionSet(List<DomainModelSolution<S>> population) {

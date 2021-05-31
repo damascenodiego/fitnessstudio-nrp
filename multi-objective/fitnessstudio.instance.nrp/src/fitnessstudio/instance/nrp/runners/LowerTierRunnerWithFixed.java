@@ -94,12 +94,12 @@ public class LowerTierRunnerWithFixed {
 			
 			// For each run: log i + hypervolume + runtime
 			// System.out.println(i + "\t" + gaManager.getHypervolume() + "\t" + computingTime);
-			createLogEntry(i, gaManager.getHypervolume(), computingTime, OUTPUT_PREFIX);
+			createLogEntry(i, gaManager.getHypervolume(), gaManager.getSpread(), computingTime, OUTPUT_PREFIX);
 		}
 	}
 
-	private static void createLogEntry(int i, double result, long time, final String OUTPUT_PREFIX) {
-		String line = i+ " \t " + time + " \t " + result +"\n";
+	private static void createLogEntry(int i, double hypervolume, double spread, long time, final String OUTPUT_PREFIX) {
+		String line = i+ " \t " + time + " \t " + hypervolume + " \t " + spread +"\n";
 		String path = OUTPUT_PREFIX + "log.txt";
 	
 		try {
