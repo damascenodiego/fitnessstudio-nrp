@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_onhsAMEfEeu0aZ47Fg5h1g">
+  <units xsi:type="henshin:Rule" xmi:id="_onhsAcEfEeu0aZ47Fg5h1g" name="rule" description="null, createPreserveNodeWithIncomingEdge">
+    <lhs xmi:id="_onhsAsEfEeu0aZ47Fg5h1g" name="Lhs">
+      <nodes xmi:id="_onhsA8EfEeu0aZ47Fg5h1g" outgoing="_onhsBcEfEeu0aZ47Fg5h1g">
+        <type href="http://nrp.model/nrp#//RequirementRealisation"/>
+      </nodes>
+      <nodes xmi:id="_onhsBMEfEeu0aZ47Fg5h1g" incoming="_onhsBcEfEeu0aZ47Fg5h1g">
+        <type href="http://nrp.model/nrp#//Requirement"/>
+      </nodes>
+      <edges xmi:id="_onhsBcEfEeu0aZ47Fg5h1g" source="_onhsA8EfEeu0aZ47Fg5h1g" target="_onhsBMEfEeu0aZ47Fg5h1g">
+        <type href="http://nrp.model/nrp#//RequirementRealisation/requirement"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_onhsBsEfEeu0aZ47Fg5h1g" name="Rhs">
+      <nodes xmi:id="_onhsB8EfEeu0aZ47Fg5h1g" outgoing="_onhsCcEfEeu0aZ47Fg5h1g">
+        <type href="http://nrp.model/nrp#//RequirementRealisation"/>
+      </nodes>
+      <nodes xmi:id="_onhsCMEfEeu0aZ47Fg5h1g" incoming="_onhsCcEfEeu0aZ47Fg5h1g">
+        <type href="http://nrp.model/nrp#//Requirement"/>
+      </nodes>
+      <edges xmi:id="_onhsCcEfEeu0aZ47Fg5h1g" source="_onhsB8EfEeu0aZ47Fg5h1g" target="_onhsCMEfEeu0aZ47Fg5h1g">
+        <type href="http://nrp.model/nrp#//RequirementRealisation/requirement"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_onhsCsEfEeu0aZ47Fg5h1g" origin="_onhsA8EfEeu0aZ47Fg5h1g" image="_onhsB8EfEeu0aZ47Fg5h1g"/>
+    <mappings xmi:id="_onhsC8EfEeu0aZ47Fg5h1g" origin="_onhsBMEfEeu0aZ47Fg5h1g" image="_onhsCMEfEeu0aZ47Fg5h1g"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_onhsDMEfEeu0aZ47Fg5h1g" name="rule">
+    <lhs xmi:id="_onhsDcEfEeu0aZ47Fg5h1g" name="Lhs">
+      <nodes xmi:id="_onhsDsEfEeu0aZ47Fg5h1g">
+        <type href="http://nrp.model/nrp#//Valuation"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_onhsD8EfEeu0aZ47Fg5h1g" name="Rhs">
+      <nodes xmi:id="_onhsEMEfEeu0aZ47Fg5h1g">
+        <type href="http://nrp.model/nrp#//Valuation"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_onhsEcEfEeu0aZ47Fg5h1g" origin="_onhsDsEfEeu0aZ47Fg5h1g" image="_onhsEMEfEeu0aZ47Fg5h1g"/>
+  </units>
+</henshin:Module>

@@ -28,8 +28,8 @@ public class UpperTierRunner {
 
 	private static int UPPER_TIER_ITERATIONS = 15;
 	private static int UPPER_TIER_POPULATION_SIZE = 60;
-	private static int LOWER_TIER_ITERATIONS = 15; // 20
-	private static int LOWER_TIER_POPULATION_SIZE = 10; // 6
+	private static int LOWER_TIER_ITERATIONS = 20; // 20
+	private static int LOWER_TIER_POPULATION_SIZE = 6; // 6
 	private static int RUNS = 10;
 	private static int TIMEOUT = 90;
 	

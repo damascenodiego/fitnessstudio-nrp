@@ -34,7 +34,7 @@ import fitnessstudio.instance.nrp.customized.NRPInit;
 
 @SuppressWarnings("all")
 public class LowerTierRunnerWithFixed {
-	private static String INPUT_MODEL_ID = "B";
+	private static String INPUT_MODEL_ID = "A";
 	private static String INPUT_MODEL = "input\\" + INPUT_MODEL_ID+".xmi";
 	private static String MUTATION_RULES_DIRECTORY = "transformation\\fixed";
 	private static String OUTPUT_PREFIX = "output_models\\" +INPUT_MODEL_ID + "\\" + new SimpleDateFormat("HH_mm_ss").format(Calendar.getInstance().getTime()).toString() + "\\";

@@ -61,25 +61,39 @@ public class DomainModelMutation<S> implements MutationOperator<DomainModelSolut
 		
 		EGraph graph = new EGraphImpl((EObject) solution.getVariable(0));
 		
-		if (Math.random() > 0.5) {
-			for (Unit unit : fixedRules) {
-				if (Math.random() < mutationProbability) {
-					UnitApplication app = new UnitApplicationImpl(engine, graph, unit, null);
-					app.execute(null);
-				}
-			}
+		if (fixedRules.isEmpty()) {
+			// UpperTierRunner
+			mutateWithGenRules(graph);
 		} else {
-			for (Rule rule : genRules) {
-				if (Math.random() < mutationProbability) {
-					RuleApplication ruleApp = new RuleApplicationImpl(engine, graph, rule, null);
-					ruleApp.execute(null);
-				}
-			}
+			// LowerTierRunner
+			if (Math.random() > 0.5) 
+				mutateWithFixedRules(graph);
+			else
+				mutateWithGenRules(graph);
 		}
 
 		graph.clear();
 		return solution;
 	}
+	
+	private void mutateWithFixedRules(EGraph graph) {
+		for (Unit unit : fixedRules) {
+			if (Math.random() < mutationProbability) {
+				UnitApplication app = new UnitApplicationImpl(engine, graph, unit, null);
+				app.execute(null);
+			}
+		}
+	}
+	
+	private void mutateWithGenRules(EGraph graph) {
+		for (Rule rule : genRules) {
+			if (Math.random() < mutationProbability) {
+				RuleApplication ruleApp = new RuleApplicationImpl(engine, graph, rule, null);
+				ruleApp.execute(null);
+			}
+		}
+	}
+	
 	/*
 	private void initDefaultRules() {
 		if (initialized)

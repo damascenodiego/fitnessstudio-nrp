@@ -44,8 +44,8 @@ import fitnessstudio.instance.nrp.customized.NRPInit;
 public class LowerTierRunnerWithFixed {
 	private static String MUTATION_RULES_DIRECTORY = "transformation\\fixed";
 
-	private static int RUNS = 3;//1;//
-	private static int MAX_EVALUATIONS = 5000;//50000;//
+	private static int RUNS = 30;//1;//
+	private static int MAX_EVALUATIONS = 5000;//150000;//
 	private static int POPULATION_SIZE = 40;//200;//
 	
 	private static GAConfiguration configuration = new GAConfiguration(MAX_EVALUATIONS, POPULATION_SIZE, true);

@@ -21,23 +21,53 @@ public class NRPInit extends Init<NRPSolution> {
 		
 		List<NRPSolution> population = new ArrayList<>(size);
 	    
-		population.add(problem.createSolution());
-		for (int i = 1; i < size - 1; i++) {
-			
-			/*if (i % 2 == 0) {
-				population.add(createCompleteSolution());
-			} else {
-				population.add(problem.createSolution());
-			}*/
-			population.add(createRandomSolution());
-	    }
-		population.add(createCompleteSolution());
-		
-		//List<NRPSolution> population = createPopulationEPR(size);
+		//createRandomPopulation(population, size);
+		createEmptyPopulation(population, size);
+		//createCompletePopulation(population, size);
+		//createExtremesPopulation(population, size);
+		//createRandomWithExtremesPopulation(population, size);
 	    
 	    return population;
 	}
 	
+	private void createRandomPopulation(List<NRPSolution> population, int size) {
+		for (int i = 0; i < size; i++) {
+			population.add(createRandomSolution());
+	    }
+	}
+	
+	private void createEmptyPopulation(List<NRPSolution> population, int size) {
+		for (int i = 0; i < size; i++) {
+			population.add(problem.createSolution());
+	    }
+	}
+	
+	private void createCompletePopulation(List<NRPSolution> population, int size) {
+		for (int i = 0; i < size; i++) {
+			population.add(createCompleteSolution());
+	    }
+	}
+	
+	private void createExtremesPopulation(List<NRPSolution> population, int size) {
+		for (int i = 0; i < size; i++) {
+			if (i % 2 == 0) {
+				population.add(createCompleteSolution());
+			} else {
+				population.add(problem.createSolution());
+			}
+	    }
+	}
+	
+	private void createRandomWithExtremesPopulation(List<NRPSolution> population, int size) {
+		population.add(problem.createSolution());
+		
+		for (int i = 1; i < size - 1; i++) {
+			population.add(createRandomSolution());
+	    }
+		
+		population.add(createCompleteSolution());
+	}
+
 	private boolean implementAllDependencies(SoftwareArtifact artifact, NRP model) {
 		boolean changed = false;
 		for (SoftwareArtifact dependency : artifact.getRequires()) {

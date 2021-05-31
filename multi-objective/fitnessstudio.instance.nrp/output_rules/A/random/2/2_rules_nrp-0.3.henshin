@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_biHsQL6_Eeu9IcL9I8q7vw">
+  <units xsi:type="henshin:Rule" xmi:id="_biHsQb6_Eeu9IcL9I8q7vw" name="rule" description="null, createPreserveNodeWithIncomingEdge, createCrOrDelEdge, CreateMultiRuleWithMappedPreserveNode">
+    <lhs xmi:id="_biHsQr6_Eeu9IcL9I8q7vw" name="Lhs">
+      <nodes xmi:id="_biHsQ76_Eeu9IcL9I8q7vw" incoming="_biHsRr6_Eeu9IcL9I8q7vw" outgoing="_biHsRb6_Eeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_biHsRL6_Eeu9IcL9I8q7vw" incoming="_biHsRb6_Eeu9IcL9I8q7vw" outgoing="_biHsRr6_Eeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <edges xmi:id="_biHsRb6_Eeu9IcL9I8q7vw" source="_biHsQ76_Eeu9IcL9I8q7vw" target="_biHsRL6_Eeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+      <edges xmi:id="_biHsRr6_Eeu9IcL9I8q7vw" source="_biHsRL6_Eeu9IcL9I8q7vw" target="_biHsQ76_Eeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/solutions"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_biHsR76_Eeu9IcL9I8q7vw" name="Rhs">
+      <nodes xmi:id="_biHsSL6_Eeu9IcL9I8q7vw" outgoing="_biHsSr6_Eeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_biHsSb6_Eeu9IcL9I8q7vw" incoming="_biHsSr6_Eeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <edges xmi:id="_biHsSr6_Eeu9IcL9I8q7vw" source="_biHsSL6_Eeu9IcL9I8q7vw" target="_biHsSb6_Eeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_biHsS76_Eeu9IcL9I8q7vw" origin="_biHsQ76_Eeu9IcL9I8q7vw" image="_biHsSL6_Eeu9IcL9I8q7vw"/>
+    <mappings xmi:id="_biHsTL6_Eeu9IcL9I8q7vw" origin="_biHsRL6_Eeu9IcL9I8q7vw" image="_biHsSb6_Eeu9IcL9I8q7vw"/>
+    <multiRules xmi:id="_biHsTb6_Eeu9IcL9I8q7vw">
+      <lhs xmi:id="_biHsTr6_Eeu9IcL9I8q7vw">
+        <nodes xmi:id="_biHsT76_Eeu9IcL9I8q7vw">
+          <type href="http://nrp.model/nrp#//Solution"/>
+        </nodes>
+      </lhs>
+      <rhs xmi:id="_biHsUL6_Eeu9IcL9I8q7vw">
+        <nodes xmi:id="_biHsUb6_Eeu9IcL9I8q7vw">
+          <type href="http://nrp.model/nrp#//Solution"/>
+        </nodes>
+      </rhs>
+      <mappings xmi:id="_biHsUr6_Eeu9IcL9I8q7vw" origin="_biHsT76_Eeu9IcL9I8q7vw" image="_biHsUb6_Eeu9IcL9I8q7vw"/>
+      <multiMappings xmi:id="_biHsU76_Eeu9IcL9I8q7vw" origin="_biHsQ76_Eeu9IcL9I8q7vw" image="_biHsT76_Eeu9IcL9I8q7vw"/>
+      <multiMappings xmi:id="_biHsVL6_Eeu9IcL9I8q7vw" origin="_biHsSL6_Eeu9IcL9I8q7vw" image="_biHsUb6_Eeu9IcL9I8q7vw"/>
+    </multiRules>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_biHsVb6_Eeu9IcL9I8q7vw" name="rule" description="null, createPreserveNodeWithIncomingEdge">
+    <lhs xmi:id="_biHsVr6_Eeu9IcL9I8q7vw" name="Lhs">
+      <nodes xmi:id="_biHsV76_Eeu9IcL9I8q7vw" outgoing="_biHsWb6_Eeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//Customer"/>
+      </nodes>
+      <nodes xmi:id="_biHsWL6_Eeu9IcL9I8q7vw" incoming="_biHsWb6_Eeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//Valuation"/>
+      </nodes>
+      <edges xmi:id="_biHsWb6_Eeu9IcL9I8q7vw" source="_biHsV76_Eeu9IcL9I8q7vw" target="_biHsWL6_Eeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//Customer/assigns"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_biHsWr6_Eeu9IcL9I8q7vw" name="Rhs">
+      <nodes xmi:id="_biHsW76_Eeu9IcL9I8q7vw" outgoing="_biHsXb6_Eeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//Customer"/>
+      </nodes>
+      <nodes xmi:id="_biHsXL6_Eeu9IcL9I8q7vw" incoming="_biHsXb6_Eeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//Valuation"/>
+      </nodes>
+      <edges xmi:id="_biHsXb6_Eeu9IcL9I8q7vw" source="_biHsW76_Eeu9IcL9I8q7vw" target="_biHsXL6_Eeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//Customer/assigns"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_biHsXr6_Eeu9IcL9I8q7vw" origin="_biHsV76_Eeu9IcL9I8q7vw" image="_biHsW76_Eeu9IcL9I8q7vw"/>
+    <mappings xmi:id="_biHsX76_Eeu9IcL9I8q7vw" origin="_biHsWL6_Eeu9IcL9I8q7vw" image="_biHsXL6_Eeu9IcL9I8q7vw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_biHsYL6_Eeu9IcL9I8q7vw" name="rule" description="null, createPreserveNodeWithIncomingEdge, createCrOrDelEdge">
+    <lhs xmi:id="_biHsYb6_Eeu9IcL9I8q7vw" name="Lhs">
+      <nodes xmi:id="_biHsYr6_Eeu9IcL9I8q7vw" incoming="_biHsZb6_Eeu9IcL9I8q7vw" outgoing="_biHsZL6_Eeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_biHsY76_Eeu9IcL9I8q7vw" incoming="_biHsZL6_Eeu9IcL9I8q7vw" outgoing="_biHsZb6_Eeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <edges xmi:id="_biHsZL6_Eeu9IcL9I8q7vw" source="_biHsYr6_Eeu9IcL9I8q7vw" target="_biHsY76_Eeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/solutions"/>
+      </edges>
+      <edges xmi:id="_biHsZb6_Eeu9IcL9I8q7vw" source="_biHsY76_Eeu9IcL9I8q7vw" target="_biHsYr6_Eeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_biHsZr6_Eeu9IcL9I8q7vw" name="Rhs">
+      <nodes xmi:id="_biHsZ76_Eeu9IcL9I8q7vw" outgoing="_biHsab6_Eeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_biHsaL6_Eeu9IcL9I8q7vw" incoming="_biHsab6_Eeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <edges xmi:id="_biHsab6_Eeu9IcL9I8q7vw" source="_biHsZ76_Eeu9IcL9I8q7vw" target="_biHsaL6_Eeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/solutions"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_biHsar6_Eeu9IcL9I8q7vw" origin="_biHsYr6_Eeu9IcL9I8q7vw" image="_biHsZ76_Eeu9IcL9I8q7vw"/>
+    <mappings xmi:id="_biHsa76_Eeu9IcL9I8q7vw" origin="_biHsY76_Eeu9IcL9I8q7vw" image="_biHsaL6_Eeu9IcL9I8q7vw"/>
+  </units>
+</henshin:Module>

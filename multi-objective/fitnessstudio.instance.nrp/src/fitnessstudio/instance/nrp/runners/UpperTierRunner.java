@@ -32,8 +32,8 @@ public class UpperTierRunner {
 	private static int UPPER_TIER_ITERATIONS = 15;
 	private static int UPPER_TIER_POPULATION_SIZE = 60;
 	private static int LOWER_TIER_MAX_EVALUATIONS = 200;
-	private static int LOWER_TIER_POPULATION_SIZE = 4;//8;//12;
-	private static int RUNS = 10;
+	private static int LOWER_TIER_POPULATION_SIZE = 8;
+	private static int RUNS = 5;
 	private static int TIMEOUT = 180;
 	
 	private static GAConfiguration configurationUpper = new GAConfiguration(UPPER_TIER_ITERATIONS, UPPER_TIER_POPULATION_SIZE, true);

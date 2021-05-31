@@ -44,8 +44,9 @@ public class NRPInit implements DomainModelInit {
 		GAPopulation<DomainModel> result = new GAPopulation<DomainModel>();
 
 		for (int i = 0; i < populationSize; i++) {
-			//result.addChromosome(createEmptySolution());
-			result.addChromosome(createCompleteSolution());
+			result.addChromosome(createEmptySolution());
+			//result.addChromosome(createCompleteSolution());
+			//result.addChromosome(createExtremeSolution());
 			//result.addChromosome(createRandomSolution());
 		} 
 		
@@ -77,6 +78,20 @@ public class NRPInit implements DomainModelInit {
 		
 		for (int i = 0; i < fresh.getAvailableArtifacts().size(); i++) {
 			if (Math.random() > 0.5) {
+				SoftwareArtifact artifact = fresh.getAvailableArtifacts().get(i);
+				artifact.getSolutions().add(fresh.getSolutions().get(0));
+				fresh.getSolutions().get(0).getSelectedArtifacts().add(artifact);
+			}
+		}
+		
+		return new DomainModel(fresh, mutator, crossover, fitness);
+	}
+	
+	private DomainModel createExtremeSolution() {
+		NRP fresh = (NRP) EcoreUtil.copy(inputModel);
+
+		if (Math.random() > 0.5) {
+			for (int i = 0; i < fresh.getAvailableArtifacts().size(); i++) {
 				SoftwareArtifact artifact = fresh.getAvailableArtifacts().get(i);
 				artifact.getSolutions().add(fresh.getSolutions().get(0));
 				fresh.getSolutions().get(0).getSelectedArtifacts().add(artifact);

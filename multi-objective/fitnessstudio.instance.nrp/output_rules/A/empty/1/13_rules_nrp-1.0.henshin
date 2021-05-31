@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_RKyUwMEfEeu0aZ47Fg5h1g">
+  <units xsi:type="henshin:Rule" xmi:id="_RKyUwcEfEeu0aZ47Fg5h1g" name="rule" description="null, addNAC, createPreserveNodeWithIncomingEdge, createCrOrDelEdge, CreateMultiRuleWithMappedPreserveNode, createPreserveNodeWithIncomingEdge">
+    <lhs xmi:id="_RKyUwsEfEeu0aZ47Fg5h1g" name="Lhs">
+      <nodes xmi:id="_RKyUw8EfEeu0aZ47Fg5h1g" outgoing="_RKyUxsEfEeu0aZ47Fg5h1g _RKyUx8EfEeu0aZ47Fg5h1g">
+        <type href="http://nrp.model/nrp#//Customer"/>
+      </nodes>
+      <nodes xmi:id="_RKyUxMEfEeu0aZ47Fg5h1g" incoming="_RKyUxsEfEeu0aZ47Fg5h1g">
+        <type href="http://nrp.model/nrp#//Valuation"/>
+      </nodes>
+      <nodes xmi:id="_RKyUxcEfEeu0aZ47Fg5h1g" incoming="_RKyUx8EfEeu0aZ47Fg5h1g">
+        <type href="http://nrp.model/nrp#//Valuation"/>
+      </nodes>
+      <edges xmi:id="_RKyUxsEfEeu0aZ47Fg5h1g" source="_RKyUw8EfEeu0aZ47Fg5h1g" target="_RKyUxMEfEeu0aZ47Fg5h1g">
+        <type href="http://nrp.model/nrp#//Customer/assigns"/>
+      </edges>
+      <edges xmi:id="_RKyUx8EfEeu0aZ47Fg5h1g" source="_RKyUw8EfEeu0aZ47Fg5h1g" target="_RKyUxcEfEeu0aZ47Fg5h1g">
+        <type href="http://nrp.model/nrp#//Customer/assigns"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_RKyUyMEfEeu0aZ47Fg5h1g">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_RKyUycEfEeu0aZ47Fg5h1g">
+          <conclusion xmi:id="_RKyUysEfEeu0aZ47Fg5h1g">
+            <nodes xmi:id="_RKyUy8EfEeu0aZ47Fg5h1g" incoming="_RKy70MEfEeu0aZ47Fg5h1g" outgoing="_RKy70cEfEeu0aZ47Fg5h1g">
+              <type href="http://nrp.model/nrp#//Valuation"/>
+            </nodes>
+            <nodes xmi:id="_RKyUzMEfEeu0aZ47Fg5h1g" incoming="_RKy70cEfEeu0aZ47Fg5h1g" outgoing="_RKy70MEfEeu0aZ47Fg5h1g">
+              <type href="http://nrp.model/nrp#//Customer"/>
+            </nodes>
+            <edges xmi:id="_RKy70MEfEeu0aZ47Fg5h1g" source="_RKyUzMEfEeu0aZ47Fg5h1g" target="_RKyUy8EfEeu0aZ47Fg5h1g">
+              <type href="http://nrp.model/nrp#//Customer/assigns"/>
+            </edges>
+            <edges xmi:id="_RKy70cEfEeu0aZ47Fg5h1g" source="_RKyUy8EfEeu0aZ47Fg5h1g" target="_RKyUzMEfEeu0aZ47Fg5h1g">
+              <type href="http://nrp.model/nrp#//Valuation/assignedBy"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_RKy70sEfEeu0aZ47Fg5h1g" origin="_RKyUw8EfEeu0aZ47Fg5h1g" image="_RKyUzMEfEeu0aZ47Fg5h1g"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_RKy708EfEeu0aZ47Fg5h1g" name="Rhs">
+      <nodes xmi:id="_RKy71MEfEeu0aZ47Fg5h1g" outgoing="_RKy718EfEeu0aZ47Fg5h1g _RKy72MEfEeu0aZ47Fg5h1g">
+        <type href="http://nrp.model/nrp#//Customer"/>
+      </nodes>
+      <nodes xmi:id="_RKy71cEfEeu0aZ47Fg5h1g" incoming="_RKy718EfEeu0aZ47Fg5h1g">
+        <type href="http://nrp.model/nrp#//Valuation"/>
+      </nodes>
+      <nodes xmi:id="_RKy71sEfEeu0aZ47Fg5h1g" incoming="_RKy72MEfEeu0aZ47Fg5h1g">
+        <type href="http://nrp.model/nrp#//Valuation"/>
+      </nodes>
+      <edges xmi:id="_RKy718EfEeu0aZ47Fg5h1g" source="_RKy71MEfEeu0aZ47Fg5h1g" target="_RKy71cEfEeu0aZ47Fg5h1g">
+        <type href="http://nrp.model/nrp#//Customer/assigns"/>
+      </edges>
+      <edges xmi:id="_RKy72MEfEeu0aZ47Fg5h1g" source="_RKy71MEfEeu0aZ47Fg5h1g" target="_RKy71sEfEeu0aZ47Fg5h1g">
+        <type href="http://nrp.model/nrp#//Customer/assigns"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_RKy72cEfEeu0aZ47Fg5h1g" origin="_RKyUw8EfEeu0aZ47Fg5h1g" image="_RKy71MEfEeu0aZ47Fg5h1g"/>
+    <mappings xmi:id="_RKy72sEfEeu0aZ47Fg5h1g" origin="_RKyUxMEfEeu0aZ47Fg5h1g" image="_RKy71cEfEeu0aZ47Fg5h1g"/>
+    <mappings xmi:id="_RKy728EfEeu0aZ47Fg5h1g" origin="_RKyUxcEfEeu0aZ47Fg5h1g" image="_RKy71sEfEeu0aZ47Fg5h1g"/>
+    <multiRules xmi:id="_RKy73MEfEeu0aZ47Fg5h1g">
+      <lhs xmi:id="_RKy73cEfEeu0aZ47Fg5h1g">
+        <nodes xmi:id="_RKy73sEfEeu0aZ47Fg5h1g">
+          <type href="http://nrp.model/nrp#//Valuation"/>
+        </nodes>
+      </lhs>
+      <rhs xmi:id="_RKy738EfEeu0aZ47Fg5h1g">
+        <nodes xmi:id="_RKy74MEfEeu0aZ47Fg5h1g">
+          <type href="http://nrp.model/nrp#//Valuation"/>
+        </nodes>
+      </rhs>
+      <mappings xmi:id="_RKy74cEfEeu0aZ47Fg5h1g" origin="_RKy73sEfEeu0aZ47Fg5h1g" image="_RKy74MEfEeu0aZ47Fg5h1g"/>
+      <multiMappings xmi:id="_RKy74sEfEeu0aZ47Fg5h1g" origin="_RKyUxMEfEeu0aZ47Fg5h1g" image="_RKy73sEfEeu0aZ47Fg5h1g"/>
+      <multiMappings xmi:id="_RKy748EfEeu0aZ47Fg5h1g" origin="_RKy71cEfEeu0aZ47Fg5h1g" image="_RKy74MEfEeu0aZ47Fg5h1g"/>
+    </multiRules>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_RKy75MEfEeu0aZ47Fg5h1g" name="rule" description="null, addNAC, CreateMultiRuleWithMappedPreserveNode">
+    <lhs xmi:id="_RKy75cEfEeu0aZ47Fg5h1g" name="Lhs">
+      <nodes xmi:id="_RKy75sEfEeu0aZ47Fg5h1g">
+        <type href="http://nrp.model/nrp#//NRP"/>
+      </nodes>
+      <formula xsi:type="henshin:Not" xmi:id="_RKy758EfEeu0aZ47Fg5h1g">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_RKy76MEfEeu0aZ47Fg5h1g">
+          <conclusion xmi:id="_RKy76cEfEeu0aZ47Fg5h1g">
+            <nodes xmi:id="_RKy76sEfEeu0aZ47Fg5h1g" incoming="_RKy77MEfEeu0aZ47Fg5h1g">
+              <type href="http://nrp.model/nrp#//Customer"/>
+            </nodes>
+            <nodes xmi:id="_RKy768EfEeu0aZ47Fg5h1g" outgoing="_RKy77MEfEeu0aZ47Fg5h1g">
+              <type href="http://nrp.model/nrp#//NRP"/>
+            </nodes>
+            <edges xmi:id="_RKy77MEfEeu0aZ47Fg5h1g" source="_RKy768EfEeu0aZ47Fg5h1g" target="_RKy76sEfEeu0aZ47Fg5h1g">
+              <type href="http://nrp.model/nrp#//NRP/customers"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_RKy77cEfEeu0aZ47Fg5h1g" origin="_RKy75sEfEeu0aZ47Fg5h1g" image="_RKy768EfEeu0aZ47Fg5h1g"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_RKy77sEfEeu0aZ47Fg5h1g" name="Rhs">
+      <nodes xmi:id="_RKy778EfEeu0aZ47Fg5h1g">
+        <type href="http://nrp.model/nrp#//NRP"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_RKy78MEfEeu0aZ47Fg5h1g" origin="_RKy75sEfEeu0aZ47Fg5h1g" image="_RKy778EfEeu0aZ47Fg5h1g"/>
+    <multiRules xmi:id="_RKy78cEfEeu0aZ47Fg5h1g">
+      <lhs xmi:id="_RKy78sEfEeu0aZ47Fg5h1g">
+        <nodes xmi:id="_RKy788EfEeu0aZ47Fg5h1g">
+          <type href="http://nrp.model/nrp#//NRP"/>
+        </nodes>
+      </lhs>
+      <rhs xmi:id="_RKy79MEfEeu0aZ47Fg5h1g">
+        <nodes xmi:id="_RKy79cEfEeu0aZ47Fg5h1g">
+          <type href="http://nrp.model/nrp#//NRP"/>
+        </nodes>
+      </rhs>
+      <mappings xmi:id="_RKy79sEfEeu0aZ47Fg5h1g" origin="_RKy788EfEeu0aZ47Fg5h1g" image="_RKy79cEfEeu0aZ47Fg5h1g"/>
+      <multiMappings xmi:id="_RKy798EfEeu0aZ47Fg5h1g" origin="_RKy75sEfEeu0aZ47Fg5h1g" image="_RKy788EfEeu0aZ47Fg5h1g"/>
+      <multiMappings xmi:id="_RKy7-MEfEeu0aZ47Fg5h1g" origin="_RKy778EfEeu0aZ47Fg5h1g" image="_RKy79cEfEeu0aZ47Fg5h1g"/>
+    </multiRules>
+  </units>
+</henshin:Module>

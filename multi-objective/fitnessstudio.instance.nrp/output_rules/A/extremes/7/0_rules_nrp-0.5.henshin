@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_hYjeML2NEeuyFoTFzmWweQ">
+  <units xsi:type="henshin:Rule" xmi:id="_hYjeMb2NEeuyFoTFzmWweQ" name="rule">
+    <lhs xmi:id="_hYjeMr2NEeuyFoTFzmWweQ" name="Lhs">
+      <nodes xmi:id="_hYjeM72NEeuyFoTFzmWweQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_hYjeNL2NEeuyFoTFzmWweQ" name="Rhs">
+      <nodes xmi:id="_hYjeNb2NEeuyFoTFzmWweQ">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_hYjeNr2NEeuyFoTFzmWweQ" origin="_hYjeM72NEeuyFoTFzmWweQ" image="_hYjeNb2NEeuyFoTFzmWweQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_hYjeN72NEeuyFoTFzmWweQ" name="rule">
+    <lhs xmi:id="_hYjeOL2NEeuyFoTFzmWweQ" name="Lhs">
+      <nodes xmi:id="_hYjeOb2NEeuyFoTFzmWweQ">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_hYjeOr2NEeuyFoTFzmWweQ" name="Rhs">
+      <nodes xmi:id="_hYjeO72NEeuyFoTFzmWweQ">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_hYjePL2NEeuyFoTFzmWweQ" origin="_hYjeOb2NEeuyFoTFzmWweQ" image="_hYjeO72NEeuyFoTFzmWweQ"/>
+  </units>
+</henshin:Module>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_bNFJAL7CEeu9IcL9I8q7vw">
+  <units xsi:type="henshin:Rule" xmi:id="_U-ff0b7CEeu9IcL9I8q7vw" name="rule">
+    <lhs xmi:id="_U-ff0r7CEeu9IcL9I8q7vw" name="Lhs">
+      <nodes xmi:id="_U-ff077CEeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_U-ff1L7CEeu9IcL9I8q7vw" name="Rhs">
+      <nodes xmi:id="_U-ff1b7CEeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_U-ff1r7CEeu9IcL9I8q7vw" origin="_U-ff077CEeu9IcL9I8q7vw" image="_U-ff1b7CEeu9IcL9I8q7vw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_U-ff177CEeu9IcL9I8q7vw" name="rule" description="null, createPreserveNodeWithIncomingEdge">
+    <lhs xmi:id="_U-ff2L7CEeu9IcL9I8q7vw" name="Lhs">
+      <nodes xmi:id="_U-ff2b7CEeu9IcL9I8q7vw" outgoing="_U-ff277CEeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//Requirement"/>
+      </nodes>
+      <nodes xmi:id="_U-ff2r7CEeu9IcL9I8q7vw" incoming="_U-ff277CEeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//RequirementRealisation"/>
+      </nodes>
+      <edges xmi:id="_U-ff277CEeu9IcL9I8q7vw" source="_U-ff2b7CEeu9IcL9I8q7vw" target="_U-ff2r7CEeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//Requirement/realisations"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_U-ff3L7CEeu9IcL9I8q7vw" name="Rhs">
+      <nodes xmi:id="_U-ff3b7CEeu9IcL9I8q7vw" outgoing="_U-ff377CEeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//Requirement"/>
+      </nodes>
+      <nodes xmi:id="_U-ff3r7CEeu9IcL9I8q7vw" incoming="_U-ff377CEeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//RequirementRealisation"/>
+      </nodes>
+      <edges xmi:id="_U-ff377CEeu9IcL9I8q7vw" source="_U-ff3b7CEeu9IcL9I8q7vw" target="_U-ff3r7CEeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//Requirement/realisations"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_U-ff4L7CEeu9IcL9I8q7vw" origin="_U-ff2b7CEeu9IcL9I8q7vw" image="_U-ff3b7CEeu9IcL9I8q7vw"/>
+    <mappings xmi:id="_U-ff4b7CEeu9IcL9I8q7vw" origin="_U-ff2r7CEeu9IcL9I8q7vw" image="_U-ff3r7CEeu9IcL9I8q7vw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_U-ff4r7CEeu9IcL9I8q7vw" name="rule" description="null, createPreserveEdgesWithNode, createCrOrDelEdge">
+    <lhs xmi:id="_U-ff477CEeu9IcL9I8q7vw" name="Lhs">
+      <nodes xmi:id="_U-ff5L7CEeu9IcL9I8q7vw" incoming="_U-ff577CEeu9IcL9I8q7vw" outgoing="_U-ff5r7CEeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_U-ff5b7CEeu9IcL9I8q7vw" incoming="_U-ff5r7CEeu9IcL9I8q7vw" outgoing="_U-ff577CEeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <edges xmi:id="_U-ff5r7CEeu9IcL9I8q7vw" source="_U-ff5L7CEeu9IcL9I8q7vw" target="_U-ff5b7CEeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+      <edges xmi:id="_U-ff577CEeu9IcL9I8q7vw" source="_U-ff5b7CEeu9IcL9I8q7vw" target="_U-ff5L7CEeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/solutions"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_U-ff6L7CEeu9IcL9I8q7vw" name="Rhs">
+      <nodes xmi:id="_U-ff6b7CEeu9IcL9I8q7vw" outgoing="_U-ff677CEeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_U-ff6r7CEeu9IcL9I8q7vw" incoming="_U-ff677CEeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <edges xmi:id="_U-ff677CEeu9IcL9I8q7vw" source="_U-ff6b7CEeu9IcL9I8q7vw" target="_U-ff6r7CEeu9IcL9I8q7vw">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_U-ff7L7CEeu9IcL9I8q7vw" origin="_U-ff5L7CEeu9IcL9I8q7vw" image="_U-ff6b7CEeu9IcL9I8q7vw"/>
+    <mappings xmi:id="_U-ff7b7CEeu9IcL9I8q7vw" origin="_U-ff5b7CEeu9IcL9I8q7vw" image="_U-ff6r7CEeu9IcL9I8q7vw"/>
+  </units>
+</henshin:Module>

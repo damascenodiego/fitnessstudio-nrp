@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_ImjX8MEhEeu0aZ47Fg5h1g">
+  <units xsi:type="henshin:Rule" xmi:id="_ImjX8cEhEeu0aZ47Fg5h1g" name="rule">
+    <lhs xmi:id="_ImjX8sEhEeu0aZ47Fg5h1g" name="Lhs">
+      <nodes xmi:id="_ImjX88EhEeu0aZ47Fg5h1g">
+        <type href="http://nrp.model/nrp#//Cost"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_ImjX9MEhEeu0aZ47Fg5h1g" name="Rhs">
+      <nodes xmi:id="_ImjX9cEhEeu0aZ47Fg5h1g">
+        <type href="http://nrp.model/nrp#//Cost"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_ImjX9sEhEeu0aZ47Fg5h1g" origin="_ImjX88EhEeu0aZ47Fg5h1g" image="_ImjX9cEhEeu0aZ47Fg5h1g"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_ImjX98EhEeu0aZ47Fg5h1g" name="rule" description="null, CreateMultiRuleWithMappedPreserveNode">
+    <lhs xmi:id="_ImjX-MEhEeu0aZ47Fg5h1g" name="Lhs">
+      <nodes xmi:id="_ImjX-cEhEeu0aZ47Fg5h1g">
+        <type href="http://nrp.model/nrp#//Customer"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_ImjX-sEhEeu0aZ47Fg5h1g" name="Rhs">
+      <nodes xmi:id="_ImjX-8EhEeu0aZ47Fg5h1g">
+        <type href="http://nrp.model/nrp#//Customer"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_ImjX_MEhEeu0aZ47Fg5h1g" origin="_ImjX-cEhEeu0aZ47Fg5h1g" image="_ImjX-8EhEeu0aZ47Fg5h1g"/>
+    <multiRules xmi:id="_ImjX_cEhEeu0aZ47Fg5h1g">
+      <lhs xmi:id="_ImjX_sEhEeu0aZ47Fg5h1g">
+        <nodes xmi:id="_ImjX_8EhEeu0aZ47Fg5h1g">
+          <type href="http://nrp.model/nrp#//Customer"/>
+        </nodes>
+      </lhs>
+      <rhs xmi:id="_ImjYAMEhEeu0aZ47Fg5h1g">
+        <nodes xmi:id="_ImjYAcEhEeu0aZ47Fg5h1g">
+          <type href="http://nrp.model/nrp#//Customer"/>
+        </nodes>
+      </rhs>
+      <mappings xmi:id="_ImjYAsEhEeu0aZ47Fg5h1g" origin="_ImjX_8EhEeu0aZ47Fg5h1g" image="_ImjYAcEhEeu0aZ47Fg5h1g"/>
+      <multiMappings xmi:id="_ImjYA8EhEeu0aZ47Fg5h1g" origin="_ImjX-cEhEeu0aZ47Fg5h1g" image="_ImjX_8EhEeu0aZ47Fg5h1g"/>
+      <multiMappings xmi:id="_ImjYBMEhEeu0aZ47Fg5h1g" origin="_ImjX-8EhEeu0aZ47Fg5h1g" image="_ImjYAcEhEeu0aZ47Fg5h1g"/>
+    </multiRules>
+  </units>
+</henshin:Module>
