@@ -9,5 +9,5 @@ The repository contains three projects:
 
 ## Usage
 ### Prerequisites
-
+- We recommend using [Eclipse Neon, Modeling Tools distribution](https://www.eclipse.org/downloads/packages/release/neon/r/eclipse-modeling-tools), with an installed nightly build of [Henshin](https://www.eclipse.org/henshin/install.php).
 ###
