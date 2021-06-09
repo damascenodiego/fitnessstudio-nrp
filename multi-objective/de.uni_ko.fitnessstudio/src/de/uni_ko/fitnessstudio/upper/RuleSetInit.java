@@ -2,6 +2,7 @@ package de.uni_ko.fitnessstudio.upper;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.eclipse.emf.common.util.URI;
@@ -36,7 +37,7 @@ public class RuleSetInit {
 	private static boolean initialized = false;
 	private static Engine engine = EngineFactory.createEngine();
 
-	public static GAPopulation<RuleSet> create(int populationSize, EPackage metaModel, ConstraintChecker checker) {
+	public static GAPopulation<RuleSet> create(int populationSize, EPackage metaModel, ConstraintChecker checker, Map<String, Double> rulesWeight) {
 		resetEngine();
 		initInitializationRules();
 
@@ -51,7 +52,7 @@ public class RuleSetInit {
 				applyFirstRule(initialRule, metaModel);
 				rules.add(initialRule);
 			}
-			result.addChromosome(RuleSetMutator.mutate(new RuleSet(rules, fixedRules, metaModel, checker), metaModel));
+			result.addChromosome(RuleSetMutator.mutate(new RuleSet(rules, fixedRules, metaModel, checker, rulesWeight), metaModel));
 		}
 		System.out.println("INITIALIZED POPULATION");
 		return result;

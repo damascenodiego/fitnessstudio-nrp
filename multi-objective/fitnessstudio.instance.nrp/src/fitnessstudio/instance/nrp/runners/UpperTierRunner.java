@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -36,6 +37,18 @@ public class UpperTierRunner {
 	private static int RUNS = 5;
 	private static int TIMEOUT = 180;
 	
+	private static final Map<String, Double> RULES_WEIGHT = Map.of(
+			"createPreserveEdgesWithNode", 0.2,
+			"createPreserveEdge", 0.2,
+			"createCrOrDelNodeWithContainmentEdge", 0.0,
+			"createCrOrDelEdge", 0.9,
+			"createPreserveNodeWithIncomingEdge", 0.2,
+			"createPreserveNodeWithOutgoingEdge", 0.2,
+			"addNAC", 0.2,
+			"addNAC2", 0.2,
+			"CreateMultiRuleWithMappedPreserveNode", 0.2
+		);
+	
 	private static GAConfiguration configurationUpper = new GAConfiguration(UPPER_TIER_ITERATIONS, UPPER_TIER_POPULATION_SIZE, true);
 	private static GAConfiguration configurationLower = new GAConfiguration(LOWER_TIER_MAX_EVALUATIONS, LOWER_TIER_POPULATION_SIZE, false);
 
@@ -59,7 +72,7 @@ public class UpperTierRunner {
 			EObject inputModel = ModelIO.loadModel(INPUT_MODEL);
 			
 			UpperGAManager manager = new UpperGAManager(mutationConstraintChecker, metaModel, domainModelProblem, init, domainModelCrossover,
-					configurationUpper, configurationLower, inputModel, TIMEOUT);
+					configurationUpper, configurationLower, inputModel, TIMEOUT, RULES_WEIGHT);
 			manager.setPrefix(OUTPUT_PREFIX + "\\"+i);
 			double result = manager.runGA();
 

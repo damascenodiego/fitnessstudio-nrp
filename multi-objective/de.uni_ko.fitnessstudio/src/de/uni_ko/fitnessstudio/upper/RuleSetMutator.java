@@ -29,17 +29,6 @@ public class RuleSetMutator {
 
 	private static List<Rule> mutationRules;
 	private static boolean initialized = false;
-	private static Map<String, Double> rulesWeight = Map.of(
-			"createPreserveEdgesWithNode", 0.2,
-			"createPreserveEdge", 0.2,
-			"createCrOrDelNodeWithContainmentEdge", 0.0,
-			"createCrOrDelEdge", 0.9,
-			"createPreserveNodeWithIncomingEdge", 0.2,
-			"createPreserveNodeWithOutgoingEdge", 0.2,
-			"addNAC", 0.2,
-			"addNAC2", 0.2,
-			"CreateMultiRuleWithMappedPreserveNode", 0.2
-		);
 	
 //	private static 
 	public static RuleSet mutate(RuleSet myRuleSet, EPackage metaModel) {
@@ -56,7 +45,7 @@ public class RuleSetMutator {
 				domainRules.getGenRules().add(EcoreUtil.copy(domainRule));
 			}
 		}
-
+		
 		// for (Rule r : mutated.getContent())
 		// if (Math.random() > 0.5)
 		// graph.addTree(r);
@@ -66,7 +55,7 @@ public class RuleSetMutator {
 				graph.addTree(metaModel);
 				graph.addTree(domainRule);
 				for (Rule mutationRule : mutationRules) {
-					Double ruleWeight = rulesWeight.get(mutationRule.getName());
+					Double ruleWeight = domainRules.getRulesWeight().get(mutationRule.getName());
 		
 					if (ruleWeight != null && Math.random() < ruleWeight) {
 						// int apps = (int) (2*Math.random());
@@ -113,7 +102,7 @@ public class RuleSetMutator {
 	private static RuleSet copyRuleSet(RuleSet myRuleSet) {
 		Set<Rule> rules = new HashSet<Rule>();
 		myRuleSet.getGenRules().stream().forEach(r -> rules.add(EcoreUtil.copy(r)));
-		return new RuleSet(rules, myRuleSet.getFixedRules(), myRuleSet.getMetaModel(), myRuleSet.getConstraintChecker());
+		return new RuleSet(rules, myRuleSet.getFixedRules(), myRuleSet.getMetaModel(), myRuleSet.getConstraintChecker(), myRuleSet.getRulesWeight());
 	}
 
 	public static void initMutationRules() {

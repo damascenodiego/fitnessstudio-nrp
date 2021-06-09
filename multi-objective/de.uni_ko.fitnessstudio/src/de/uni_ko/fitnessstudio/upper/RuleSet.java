@@ -29,20 +29,24 @@ public class RuleSet implements Chromosome<RuleSet> {
 	Set<Rule> genRules;
 	ConstraintChecker checker;
 	EPackage metaModel;
+	
+	private Map<String, Double> rulesWeight;
 
-	public RuleSet(Set<Rule> genRules, Set<Unit> fixedRules, EPackage metaModel, ConstraintChecker checker) {
+	public RuleSet(Set<Rule> genRules, Set<Unit> fixedRules, EPackage metaModel, ConstraintChecker checker, Map<String, Double> rulesWeight) {
 		super();
 		this.genRules = genRules;
 		this.fixedRules = fixedRules;
 		this.metaModel = metaModel;
 		this.checker = checker;
+		this.rulesWeight = rulesWeight;
 	}
 
-	public RuleSet(Rule rule, EPackage metaModel, ConstraintChecker checker) {
+	public RuleSet(Rule rule, EPackage metaModel, ConstraintChecker checker, Map<String, Double> rulesWeight) {
 		super();
 		this.metaModel = metaModel;
 		this.genRules = new HashSet<Rule>();
 		this.checker = checker;
+		this.rulesWeight = rulesWeight;
 		genRules.add(rule);
 	}
 
@@ -114,5 +118,9 @@ public class RuleSet implements Chromosome<RuleSet> {
 
 	public EPackage getMetaModel() {
 		return metaModel;
+	}
+	
+	public Map<String, Double> getRulesWeight() {
+		return rulesWeight;
 	}
 }
