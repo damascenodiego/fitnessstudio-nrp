@@ -21,8 +21,8 @@ public class NRPInit extends Init<NRPSolution> {
 		
 		List<NRPSolution> population = new ArrayList<>(size);
 	    
-		//createRandomPopulation(population, size);
-		createEmptyPopulation(population, size);
+		createRandomPopulation(population, size);
+		//createEmptyPopulation(population, size);
 		//createCompletePopulation(population, size);
 		//createExtremesPopulation(population, size);
 		//createRandomWithExtremesPopulation(population, size);

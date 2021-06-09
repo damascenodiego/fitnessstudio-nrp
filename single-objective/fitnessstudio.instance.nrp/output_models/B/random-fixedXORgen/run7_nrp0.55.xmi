@@ -37,10 +37,10 @@
   <availableArtifacts name="Software artifact Zaam-Dox version 1.3" contributesTo="//@requirements.1/@realisations.1">
     <costs amount="54.0"/>
   </availableArtifacts>
-  <availableArtifacts name="Software artifact Voltsillam version 0.8.3" contributesTo="//@requirements.2/@realisations.0" solutions="//@solutions.0">
+  <availableArtifacts name="Software artifact Voltsillam version 0.8.3" contributesTo="//@requirements.2/@realisations.0">
     <costs amount="75.0"/>
   </availableArtifacts>
-  <availableArtifacts name="Software artifact Y-Solowarm version 0.6.1" contributesTo="//@requirements.2/@realisations.1">
+  <availableArtifacts name="Software artifact Y-Solowarm version 0.6.1" contributesTo="//@requirements.2/@realisations.1" solutions="//@solutions.0">
     <costs amount="85.0"/>
   </availableArtifacts>
   <availableArtifacts name="Software artifact Otcom version 0.52" contributesTo="//@requirements.2/@realisations.2">
@@ -172,7 +172,7 @@
   <availableArtifacts name="Software artifact Trippledex version 2.2" contributesTo="//@requirements.23/@realisations.0">
     <costs amount="68.0"/>
   </availableArtifacts>
-  <availableArtifacts name="Software artifact Temp version 1.1.3" contributesTo="//@requirements.23/@realisations.1" solutions="//@solutions.0">
+  <availableArtifacts name="Software artifact Temp version 1.1.3" contributesTo="//@requirements.23/@realisations.1">
     <costs amount="99.0"/>
   </availableArtifacts>
   <availableArtifacts name="Software artifact Hatity version 0.1.0" contributesTo="//@requirements.23/@realisations.2">
@@ -196,16 +196,16 @@
   <availableArtifacts name="Software artifact Daltfresh version 1.75" contributesTo="//@requirements.27/@realisations.1">
     <costs amount="80.0"/>
   </availableArtifacts>
-  <availableArtifacts name="Software artifact Transcof version 0.0.1" contributesTo="//@requirements.28/@realisations.0">
+  <availableArtifacts name="Software artifact Transcof version 0.0.1" contributesTo="//@requirements.28/@realisations.0" solutions="//@solutions.0">
     <costs amount="56.0"/>
   </availableArtifacts>
-  <availableArtifacts name="Software artifact Y-find version 6.9" contributesTo="//@requirements.28/@realisations.1" solutions="//@solutions.0">
+  <availableArtifacts name="Software artifact Y-find version 6.9" contributesTo="//@requirements.28/@realisations.1">
     <costs amount="50.0"/>
   </availableArtifacts>
   <availableArtifacts name="Software artifact Voltsillam version 0.1.3" contributesTo="//@requirements.29/@realisations.0" solutions="//@solutions.0">
     <costs amount="96.0"/>
   </availableArtifacts>
-  <availableArtifacts name="Software artifact Zontrax version 9.60" contributesTo="//@requirements.30/@realisations.0">
+  <availableArtifacts name="Software artifact Zontrax version 9.60" contributesTo="//@requirements.30/@realisations.0" solutions="//@solutions.0">
     <costs amount="70.0"/>
   </availableArtifacts>
   <availableArtifacts name="Software artifact Job version 0.45" contributesTo="//@requirements.31/@realisations.0">
@@ -235,16 +235,16 @@
   <availableArtifacts name="Software artifact Alpha version 0.7.9" contributesTo="//@requirements.34/@realisations.1" solutions="//@solutions.0">
     <costs amount="97.0"/>
   </availableArtifacts>
-  <availableArtifacts name="Software artifact Veribet version 0.89" contributesTo="//@requirements.35/@realisations.0" solutions="//@solutions.0">
+  <availableArtifacts name="Software artifact Veribet version 0.89" contributesTo="//@requirements.35/@realisations.0">
     <costs amount="70.0"/>
   </availableArtifacts>
-  <availableArtifacts name="Software artifact Ventosanzap version 6.6" contributesTo="//@requirements.35/@realisations.1">
+  <availableArtifacts name="Software artifact Ventosanzap version 6.6" contributesTo="//@requirements.35/@realisations.1" solutions="//@solutions.0">
     <costs amount="84.0"/>
   </availableArtifacts>
   <availableArtifacts name="Software artifact Zathin version 2.0" contributesTo="//@requirements.35/@realisations.2">
     <costs amount="80.0"/>
   </availableArtifacts>
-  <availableArtifacts name="Software artifact Flexidy version 3.8.6" contributesTo="//@requirements.36/@realisations.0" solutions="//@solutions.0">
+  <availableArtifacts name="Software artifact Flexidy version 3.8.6" contributesTo="//@requirements.36/@realisations.0">
     <costs amount="70.0"/>
   </availableArtifacts>
   <availableArtifacts name="Software artifact Aerified version 0.71" contributesTo="//@requirements.36/@realisations.1">
@@ -259,7 +259,7 @@
   <availableArtifacts name="Software artifact Holdlamis version 4.2.1" contributesTo="//@requirements.37/@realisations.2" solutions="//@solutions.0">
     <costs amount="84.0"/>
   </availableArtifacts>
-  <availableArtifacts name="Software artifact Zoolab version 0.19" contributesTo="//@requirements.38/@realisations.0" solutions="//@solutions.0">
+  <availableArtifacts name="Software artifact Zoolab version 0.19" contributesTo="//@requirements.38/@realisations.0">
     <costs amount="61.0"/>
   </availableArtifacts>
   <availableArtifacts name="Software artifact Stringtough version 0.3.5" contributesTo="//@requirements.38/@realisations.1">
@@ -316,7 +316,7 @@
   <availableArtifacts name="Software artifact Cookley version 1.01" contributesTo="//@requirements.49/@realisations.0" solutions="//@solutions.0">
     <costs amount="69.0"/>
   </availableArtifacts>
-  <availableArtifacts name="Software artifact Voyatouch version 5.55" contributesTo="//@requirements.34/@realisations.0 //@requirements.2/@realisations.0" solutions="//@solutions.0">
+  <availableArtifacts name="Software artifact Voyatouch version 5.55" contributesTo="//@requirements.34/@realisations.0 //@requirements.2/@realisations.0">
     <costs amount="58.0"/>
   </availableArtifacts>
   <availableArtifacts name="Software artifact Ronstring version 7.2" requires="//@availableArtifacts.97" contributesTo="//@requirements.34/@realisations.0">
@@ -328,7 +328,7 @@
   <availableArtifacts name="Software artifact Bitchip version 4.8.6" contributesTo="//@requirements.33/@realisations.0">
     <costs amount="58.0"/>
   </availableArtifacts>
-  <availableArtifacts name="Software artifact Y-find version 0.2.3" contributesTo="//@requirements.35/@realisations.1">
+  <availableArtifacts name="Software artifact Y-find version 0.2.3" contributesTo="//@requirements.35/@realisations.1" solutions="//@solutions.0">
     <costs amount="64.0"/>
   </availableArtifacts>
   <availableArtifacts name="Software artifact Bitchip version 3.7.7" contributesTo="//@requirements.23/@realisations.0">
@@ -337,7 +337,7 @@
   <availableArtifacts name="Software artifact Cookley version 3.73" contributesTo="//@requirements.2/@realisations.2">
     <costs amount="56.0"/>
   </availableArtifacts>
-  <availableArtifacts name="Software artifact Zaam-Dox version 0.81" contributesTo="//@requirements.37/@realisations.0 //@requirements.30/@realisations.0">
+  <availableArtifacts name="Software artifact Zaam-Dox version 0.81" contributesTo="//@requirements.37/@realisations.0 //@requirements.30/@realisations.0" solutions="//@solutions.0">
     <costs amount="98.0"/>
   </availableArtifacts>
   <availableArtifacts name="Software artifact Cardify version 0.44" contributesTo="//@requirements.37/@realisations.0 //@requirements.36/@realisations.1">
@@ -352,7 +352,7 @@
   <availableArtifacts name="Software artifact Stronghold version 9.2.1" requires="//@availableArtifacts.104 //@availableArtifacts.105 //@availableArtifacts.106 //@availableArtifacts.107" contributesTo="//@requirements.37/@realisations.0">
     <costs amount="68.0"/>
   </availableArtifacts>
-  <availableArtifacts name="Software artifact Keylex version 4.5.9" contributesTo="//@requirements.35/@realisations.1">
+  <availableArtifacts name="Software artifact Keylex version 4.5.9" contributesTo="//@requirements.35/@realisations.1" solutions="//@solutions.0">
     <costs amount="98.0"/>
   </availableArtifacts>
   <availableArtifacts name="Software artifact Zaam-Dox version 9.17" contributesTo="//@requirements.9/@realisations.0 //@requirements.11/@realisations.0">
@@ -442,13 +442,13 @@
   <availableArtifacts name="Software artifact Bytecard version 8.4.6" requires="//@availableArtifacts.136 //@availableArtifacts.137" contributesTo="//@requirements.42/@realisations.0">
     <costs amount="52.0"/>
   </availableArtifacts>
-  <availableArtifacts name="Software artifact Bitchip version 2.9" contributesTo="//@requirements.36/@realisations.0 //@requirements.32/@realisations.1" solutions="//@solutions.0">
+  <availableArtifacts name="Software artifact Bitchip version 2.9" contributesTo="//@requirements.36/@realisations.0 //@requirements.32/@realisations.1">
     <costs amount="87.0"/>
   </availableArtifacts>
-  <availableArtifacts name="Software artifact Vagram version 7.0" contributesTo="//@requirements.36/@realisations.0" solutions="//@solutions.0">
+  <availableArtifacts name="Software artifact Vagram version 7.0" contributesTo="//@requirements.36/@realisations.0">
     <costs amount="76.0"/>
   </availableArtifacts>
-  <availableArtifacts name="Software artifact Pannier version 8.03" requires="//@availableArtifacts.139 //@availableArtifacts.140" contributesTo="//@requirements.36/@realisations.0" solutions="//@solutions.0">
+  <availableArtifacts name="Software artifact Pannier version 8.03" requires="//@availableArtifacts.139 //@availableArtifacts.140" contributesTo="//@requirements.36/@realisations.0">
     <costs amount="74.0"/>
   </availableArtifacts>
   <availableArtifacts name="Software artifact Stringtough version 3.3" contributesTo="//@requirements.42/@realisations.0">
@@ -457,10 +457,10 @@
   <availableArtifacts name="Software artifact Gembucket version 0.2.7" contributesTo="//@requirements.18/@realisations.0">
     <costs amount="81.0"/>
   </availableArtifacts>
-  <availableArtifacts name="Software artifact Fix San version 0.1.3" contributesTo="//@requirements.28/@realisations.0">
+  <availableArtifacts name="Software artifact Fix San version 0.1.3" contributesTo="//@requirements.28/@realisations.0" solutions="//@solutions.0">
     <costs amount="55.0"/>
   </availableArtifacts>
-  <availableArtifacts name="Software artifact Overhold version 7.7.6" contributesTo="//@requirements.35/@realisations.0" solutions="//@solutions.0">
+  <availableArtifacts name="Software artifact Overhold version 7.7.6" contributesTo="//@requirements.35/@realisations.0">
     <costs amount="62.0"/>
   </availableArtifacts>
   <availableArtifacts name="Software artifact Domainer version 8.4" contributesTo="//@requirements.44/@realisations.1" solutions="//@solutions.0">
@@ -472,7 +472,7 @@
   <availableArtifacts name="Software artifact Sonsing version 0.56" contributesTo="//@requirements.47/@realisations.2">
     <costs amount="52.0"/>
   </availableArtifacts>
-  <availableArtifacts name="Software artifact Hatity version 4.1.1" contributesTo="//@requirements.28/@realisations.1" solutions="//@solutions.0">
+  <availableArtifacts name="Software artifact Hatity version 4.1.1" contributesTo="//@requirements.28/@realisations.1">
     <costs amount="56.0"/>
   </availableArtifacts>
   <availableArtifacts name="Software artifact Zoolab version 0.0.7" contributesTo="//@requirements.32/@realisations.2" solutions="//@solutions.0">
@@ -484,7 +484,7 @@
   <availableArtifacts name="Software artifact Lotstring version 0.4.1" contributesTo="//@requirements.22/@realisations.0">
     <costs amount="80.0"/>
   </availableArtifacts>
-  <availableArtifacts name="Software artifact Bigtax version 0.98" contributesTo="//@requirements.23/@realisations.1" solutions="//@solutions.0">
+  <availableArtifacts name="Software artifact Bigtax version 0.98" contributesTo="//@requirements.23/@realisations.1">
     <costs amount="89.0"/>
   </availableArtifacts>
   <availableArtifacts name="Software artifact Regrant version 4.0" contributesTo="//@requirements.18/@realisations.0 //@requirements.1/@realisations.1">
@@ -559,7 +559,7 @@
   <availableArtifacts name="Software artifact Span version 0.5.9" contributesTo="//@requirements.37/@realisations.0 //@requirements.31/@realisations.0">
     <costs amount="55.0"/>
   </availableArtifacts>
-  <availableArtifacts name="Software artifact Bytecard version 2.06" contributesTo="//@requirements.37/@realisations.0 //@requirements.23/@realisations.1" solutions="//@solutions.0">
+  <availableArtifacts name="Software artifact Bytecard version 2.06" contributesTo="//@requirements.37/@realisations.0 //@requirements.23/@realisations.1">
     <costs amount="66.0"/>
   </availableArtifacts>
   <availableArtifacts name="Software artifact Aerified version 7.8" contributesTo="//@requirements.37/@realisations.0 //@requirements.7/@realisations.1">
@@ -954,5 +954,5 @@
     <valuations value="1.0" assignedBy="//@customers.24 //@customers.8 //@customers.0 //@customers.19 //@customers.1"/>
     <realisations percentage="0.86" dependsOn="//@availableArtifacts.96"/>
   </requirements>
-  <solutions selectedArtifacts="//@availableArtifacts.0 //@availableArtifacts.2 //@availableArtifacts.4 //@availableArtifacts.13 //@availableArtifacts.14 //@availableArtifacts.18 //@availableArtifacts.19 //@availableArtifacts.25 //@availableArtifacts.28 //@availableArtifacts.30 //@availableArtifacts.32 //@availableArtifacts.38 //@availableArtifacts.42 //@availableArtifacts.44 //@availableArtifacts.49 //@availableArtifacts.52 //@availableArtifacts.55 //@availableArtifacts.58 //@availableArtifacts.59 //@availableArtifacts.66 //@availableArtifacts.69 //@availableArtifacts.70 //@availableArtifacts.73 //@availableArtifacts.77 //@availableArtifacts.78 //@availableArtifacts.82 //@availableArtifacts.84 //@availableArtifacts.86 //@availableArtifacts.88 //@availableArtifacts.91 //@availableArtifacts.93 //@availableArtifacts.95 //@availableArtifacts.96 //@availableArtifacts.97 //@availableArtifacts.107 //@availableArtifacts.116 //@availableArtifacts.126 //@availableArtifacts.128 //@availableArtifacts.133 //@availableArtifacts.139 //@availableArtifacts.140 //@availableArtifacts.141 //@availableArtifacts.145 //@availableArtifacts.146 //@availableArtifacts.147 //@availableArtifacts.149 //@availableArtifacts.150 //@availableArtifacts.151 //@availableArtifacts.153 //@availableArtifacts.161 //@availableArtifacts.162 //@availableArtifacts.165 //@availableArtifacts.168 //@availableArtifacts.172 //@availableArtifacts.178 //@availableArtifacts.184 //@availableArtifacts.189 //@availableArtifacts.192 //@availableArtifacts.195 //@availableArtifacts.200"/>
+  <solutions selectedArtifacts="//@availableArtifacts.0 //@availableArtifacts.2 //@availableArtifacts.5 //@availableArtifacts.13 //@availableArtifacts.14 //@availableArtifacts.18 //@availableArtifacts.19 //@availableArtifacts.25 //@availableArtifacts.28 //@availableArtifacts.30 //@availableArtifacts.32 //@availableArtifacts.38 //@availableArtifacts.42 //@availableArtifacts.44 //@availableArtifacts.52 //@availableArtifacts.55 //@availableArtifacts.57 //@availableArtifacts.59 //@availableArtifacts.60 //@availableArtifacts.66 //@availableArtifacts.69 //@availableArtifacts.71 //@availableArtifacts.77 //@availableArtifacts.82 //@availableArtifacts.84 //@availableArtifacts.86 //@availableArtifacts.88 //@availableArtifacts.91 //@availableArtifacts.93 //@availableArtifacts.95 //@availableArtifacts.96 //@availableArtifacts.101 //@availableArtifacts.104 //@availableArtifacts.107 //@availableArtifacts.109 //@availableArtifacts.116 //@availableArtifacts.126 //@availableArtifacts.128 //@availableArtifacts.133 //@availableArtifacts.144 //@availableArtifacts.146 //@availableArtifacts.147 //@availableArtifacts.150 //@availableArtifacts.151 //@availableArtifacts.161 //@availableArtifacts.162 //@availableArtifacts.165 //@availableArtifacts.168 //@availableArtifacts.172 //@availableArtifacts.184 //@availableArtifacts.189 //@availableArtifacts.192 //@availableArtifacts.195 //@availableArtifacts.200"/>
 </nrp:NRP>

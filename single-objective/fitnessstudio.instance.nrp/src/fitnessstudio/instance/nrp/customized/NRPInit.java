@@ -44,8 +44,8 @@ public class NRPInit implements DomainModelInit {
 		GAPopulation<DomainModel> result = new GAPopulation<DomainModel>();
 
 		for (int i = 0; i < populationSize; i++) {
-			result.addChromosome(createEmptySolution());
-			//result.addChromosome(createCompleteSolution());
+			//result.addChromosome(createEmptySolution());
+			result.addChromosome(createCompleteSolution());
 			//result.addChromosome(createExtremeSolution());
 			//result.addChromosome(createRandomSolution());
 		} 
