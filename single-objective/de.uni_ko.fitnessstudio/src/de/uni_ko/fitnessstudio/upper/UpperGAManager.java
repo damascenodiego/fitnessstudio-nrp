@@ -2,6 +2,7 @@ package de.uni_ko.fitnessstudio.upper;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -31,13 +32,15 @@ public class UpperGAManager {
 	private GAConfiguration configurationLower;
 	private int timeoutSeconds;
 	
+	private Map<String, Double> rulesWeight;
+	
 	long time = 0;
 
 	private GA<RuleSet, Double> ga;
 
 	public UpperGAManager(DomainModelFitness domainModelFitness, DomainModelInit init, ConstraintChecker ruleSetChecker,
 			EPackage metaModel, GAConfiguration configurationUpper, GAConfiguration configurationLower,
-			EObject inputModel, int timeoutSeconds) {
+			EObject inputModel, int timeoutSeconds, Map<String, Double> rulesWeight) {
 		this.domainModelFitness = domainModelFitness;
 		this.init = init;
 		this.constraintChecker = ruleSetChecker;
@@ -46,12 +49,13 @@ public class UpperGAManager {
 		this.configurationLower = configurationLower;
 		this.inputModel = inputModel;
 		this.timeoutSeconds = timeoutSeconds;
+		this.rulesWeight = rulesWeight;
 	}
 
 	public double runGA() {
 		time = System.currentTimeMillis();
 		GAPopulation<RuleSet> population = RuleSetInit.create(configurationUpper.getPopulationSize(), metaModel,
-				constraintChecker);
+				constraintChecker, rulesWeight);
 		Fitness<RuleSet, Double> fitness = new RuleSetFitness(domainModelFitness, init, inputModel, configurationLower,
 				constraintChecker);
 		ga = new GAwithTimeout<RuleSet, Double>(population, fitness, timeoutSeconds);

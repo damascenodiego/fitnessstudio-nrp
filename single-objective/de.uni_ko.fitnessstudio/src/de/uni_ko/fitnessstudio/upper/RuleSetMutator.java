@@ -29,20 +29,9 @@ public class RuleSetMutator {
 
 	private static List<Rule> mutationRules;
 	private static boolean initialized = false;
-	private static Map<String, Double> rulesWeight = Map.of(
-			"createPreserveEdgesWithNode", 0.2,
-			"createPreserveEdge", 0.2,
-			"createCrOrDelNodeWithContainmentEdge", 0.0,
-			"createCrOrDelEdge", 0.9,
-			"createPreserveNodeWithIncomingEdge", 0.2,
-			"createPreserveNodeWithOutgoingEdge", 0.2,
-			"addNAC", 0.2,
-			"addNAC2", 0.2,
-			"CreateMultiRuleWithMappedPreserveNode", 0.2
-		);
 	
 //	private static 
-	public static RuleSet mutate(RuleSet myRuleSet, EPackage metaModel) {
+	public static RuleSet mutate(RuleSet myRuleSet, EPackage metaModel, Map<String, Double> rulesWeight) {
 		Engine engine = EngineFactory.createEngine();
 
 		initMutationRules();
@@ -113,7 +102,7 @@ public class RuleSetMutator {
 	private static RuleSet copyRuleSet(RuleSet myRuleSet) {
 		Set<Rule> rules = new HashSet<Rule>();
 		myRuleSet.getGenRules().stream().forEach(r -> rules.add(EcoreUtil.copy(r)));
-		return new RuleSet(rules, myRuleSet.getFixedRules(), myRuleSet.getMetaModel(), myRuleSet.getConstraintChecker());
+		return new RuleSet(rules, myRuleSet.getFixedRules(), myRuleSet.getMetaModel(), myRuleSet.getConstraintChecker(), myRuleSet.getRulesWeight());
 	}
 
 	public static void initMutationRules() {

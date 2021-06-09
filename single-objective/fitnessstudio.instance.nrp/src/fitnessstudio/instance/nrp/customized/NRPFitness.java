@@ -17,8 +17,8 @@ import nrp.model.nrp.NRP;
  *
  */
 	public class NRPFitness implements DomainModelFitness {
-		private final double MAX_COST;// = 18235.0;//4506.0; // 45655.0;// 15311.0;//
-		private final double MAX_SATISFACTION;// = 189.02348728630915;//26.293290563920287; //591.5534983624794;// 202.67799216253337;//
+		private final double MAX_COST;
+		private final double MAX_SATISFACTION;
 		
 		private static Map<String, Double> maxCost = Map.of(
 				"A", 4506.0,

@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -28,10 +29,22 @@ public class UpperTierRunner {
 
 	private static int UPPER_TIER_ITERATIONS = 15;
 	private static int UPPER_TIER_POPULATION_SIZE = 60;
-	private static int LOWER_TIER_ITERATIONS = 20; // 20
-	private static int LOWER_TIER_POPULATION_SIZE = 6; // 6
+	private static int LOWER_TIER_ITERATIONS = 10; // 20
+	private static int LOWER_TIER_POPULATION_SIZE = 10; // 2
 	private static int RUNS = 10;
 	private static int TIMEOUT = 90;
+	
+	private static final Map<String, Double> RULES_WEIGHT = Map.of(
+			"createPreserveEdgesWithNode", 0.2,
+			"createPreserveEdge", 0.2,
+			"createCrOrDelNodeWithContainmentEdge", 0.0,
+			"createCrOrDelEdge", 0.9,
+			"createPreserveNodeWithIncomingEdge", 0.2,
+			"createPreserveNodeWithOutgoingEdge", 0.2,
+			"addNAC", 0.2,
+			"addNAC2", 0.2,
+			"CreateMultiRuleWithMappedPreserveNode", 0.2
+		);
 	
 	private static GAConfiguration configurationUpper = new GAConfiguration(UPPER_TIER_ITERATIONS, UPPER_TIER_POPULATION_SIZE, true);
 	private static GAConfiguration configurationLower = new GAConfiguration(LOWER_TIER_ITERATIONS, LOWER_TIER_POPULATION_SIZE, false);
@@ -56,7 +69,7 @@ public class UpperTierRunner {
 			NRPInit init = new NRPInit(inputModel, null, domainModelCrossover, domainModelFitness);
 			
 			UpperGAManager manager = new UpperGAManager(domainModelFitness, init, mutationConstraintChecker, metaModel,
-					configurationUpper, configurationLower, inputModel, TIMEOUT);
+					configurationUpper, configurationLower, inputModel, TIMEOUT, RULES_WEIGHT);
 			manager.setPrefix(OUTPUT_PREFIX + "\\"+i);
 			double result = manager.runGA();
 
