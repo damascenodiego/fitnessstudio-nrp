@@ -31,7 +31,7 @@ public class RuleSetMutator {
 	private static boolean initialized = false;
 	
 //	private static 
-	public static RuleSet mutate(RuleSet myRuleSet, EPackage metaModel, Map<String, Double> rulesWeight) {
+	public static RuleSet mutate(RuleSet myRuleSet, EPackage metaModel) {
 		Engine engine = EngineFactory.createEngine();
 
 		initMutationRules();
@@ -55,7 +55,7 @@ public class RuleSetMutator {
 				graph.addTree(metaModel);
 				graph.addTree(domainRule);
 				for (Rule mutationRule : mutationRules) {
-					Double ruleWeight = rulesWeight.get(mutationRule.getName());
+					Double ruleWeight = domainRules.getRulesWeight().get(mutationRule.getName());
 		
 					if (ruleWeight != null && Math.random() < ruleWeight) {
 						// int apps = (int) (2*Math.random());

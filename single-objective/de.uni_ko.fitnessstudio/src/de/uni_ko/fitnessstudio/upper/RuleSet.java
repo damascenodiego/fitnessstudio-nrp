@@ -52,7 +52,7 @@ public class RuleSet implements Chromosome<RuleSet> {
 
 	@Override
 	public RuleSet mutate() {
-		return RuleSetMutator.mutate(this, metaModel, rulesWeight);
+		return RuleSetMutator.mutate(this, metaModel);
 	}
 	
 	public static EObject loadModel(String model) {

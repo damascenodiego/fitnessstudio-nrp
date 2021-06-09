@@ -52,7 +52,7 @@ public class RuleSetInit {
 				applyFirstRule(initialRule, metaModel);
 				rules.add(initialRule);
 			}
-			result.addChromosome(RuleSetMutator.mutate(new RuleSet(rules, fixedRules, metaModel, checker, rulesWeight), metaModel, rulesWeight));
+			result.addChromosome(RuleSetMutator.mutate(new RuleSet(rules, fixedRules, metaModel, checker, rulesWeight), metaModel));
 		}
 		System.out.println("INITIALIZED POPULATION");
 		return result;
