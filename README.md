@@ -14,6 +14,5 @@ Both implementations make use of the project ***nrp-model***, an EMF meta-model 
 
 ## Usage
 ### Prerequisites
-- We recommend using [Eclipse Neon, Modeling Tools distribution](https://www.eclipse.org/downloads/packages/release/neon/r/eclipse-modeling-tools) 
-- [Henshin](https://www.eclipse.org/henshin/install.php) and its prerequisites [GMF-tooling](https://www.eclipse.org/gmf-tooling/download.php) and [Maven integration](https://projects.eclipse.org/projects/technology.m2e/downloads)
+- We recommend using [Eclipse, Modeling Tools distribution](https://www.eclipse.org/downloads/packages/) together with [Henshin](https://www.eclipse.org/henshin/install.php)
 ###
