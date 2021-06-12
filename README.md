@@ -25,6 +25,6 @@ Both implementations make use of the project ***nrp-model***, an EMF meta-model 
 - Execute the provided runner class de.uni_ko.fitnessstudio.instance.nrp.runners.LowerTierRunnerWithFixed to generate solutions based on the provided mutation operator. Again, a couple of configuration options are available.
 - After starting the runner class, you should see console output informing you about the generation process.
 - The results of the generation process will be stored to the directory output_models within the project -- in doubt, please refresh the package explorer using F5.
-- Remark: As fixed muatation ruleset, de.uni_ko.fitnessstudio.transformation.genetic.mutation.henshin is used. This mutation operator is provided as [part of the MDEOptimiser project](https://mde-optimiser.github.io/case-studies/nrp/).
+- Remark: As fixed muatation ruleset, de.uni_ko.fitnessstudio/transformation/genetic/mutation.henshin is used. This mutation operator is provided as [part of the MDEOptimiser project](https://mde-optimiser.github.io/case-studies/nrp/).
 
 
