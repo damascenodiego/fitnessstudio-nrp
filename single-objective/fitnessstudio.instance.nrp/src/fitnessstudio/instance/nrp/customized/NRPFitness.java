@@ -7,7 +7,6 @@ import org.apache.commons.math3.util.Pair;
 import de.uni_ko.fitnessstudio.lower.DomainModel;
 import de.uni_ko.fitnessstudio.lower.DomainModelFitness;
 import fitnessstudio.instance.nrp.fitness.MaximiseSatisfaction;
-import fitnessstudio.instance.nrp.fitness.MaximiseSatisfactionReimplemented;
 import fitnessstudio.instance.nrp.fitness.MinimiseCost;
 import nrp.model.nrp.NRP;
 
@@ -25,7 +24,7 @@ import nrp.model.nrp.NRP;
 				"B", 15311.0,
 				"C", 24137.0,
 				"D", 32177.0,
-				"E", 45655.0
+				"E", 44929.0
 			);
 		
 		private static Map<String, Double> maxSatisfaction = Map.of(
@@ -33,7 +32,7 @@ import nrp.model.nrp.NRP;
 				"B", 202.67799216253337,
 				"C", 244.25945253000054,
 				"D", 603.1506135568646,
-				"E", 591.5534983624794
+				"E", 666.1042171109459
 			);
 		
 		
@@ -57,6 +56,6 @@ import nrp.model.nrp.NRP;
 		}
 		
 		private Double calculateSatisfaction(NRP nextRelease) {
-			return new MaximiseSatisfactionReimplemented().computeFitness(nextRelease);
+			return new MaximiseSatisfaction().computeFitness(nextRelease);
 		}
 	}
