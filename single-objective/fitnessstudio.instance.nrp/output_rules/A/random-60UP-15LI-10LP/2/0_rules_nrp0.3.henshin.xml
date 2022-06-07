@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="ASCII"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_PSfz0JhWEeuLROdPHS5eqw">
+  <units xsi:type="henshin:Rule" xmi:id="_PSfz0ZhWEeuLROdPHS5eqw" name="rule" description="null, createPreserveNodeWithIncomingEdge, createCrOrDelEdge">
+    <lhs xmi:id="_PSfz0phWEeuLROdPHS5eqw" name="Lhs">
+      <nodes xmi:id="_PSfz05hWEeuLROdPHS5eqw" incoming="_PSfz1phWEeuLROdPHS5eqw" outgoing="_PSfz1ZhWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_PSfz1JhWEeuLROdPHS5eqw" incoming="_PSfz1ZhWEeuLROdPHS5eqw" outgoing="_PSfz1phWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <edges xmi:id="_PSfz1ZhWEeuLROdPHS5eqw" source="_PSfz05hWEeuLROdPHS5eqw" target="_PSfz1JhWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+      <edges xmi:id="_PSfz1phWEeuLROdPHS5eqw" source="_PSfz1JhWEeuLROdPHS5eqw" target="_PSfz05hWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/solutions"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_PSfz15hWEeuLROdPHS5eqw" name="Rhs">
+      <nodes xmi:id="_PSfz2JhWEeuLROdPHS5eqw" outgoing="_PSfz2phWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_PSfz2ZhWEeuLROdPHS5eqw" incoming="_PSfz2phWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <edges xmi:id="_PSfz2phWEeuLROdPHS5eqw" source="_PSfz2JhWEeuLROdPHS5eqw" target="_PSfz2ZhWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//Solution/selectedArtifacts"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_PSfz25hWEeuLROdPHS5eqw" origin="_PSfz05hWEeuLROdPHS5eqw" image="_PSfz2JhWEeuLROdPHS5eqw"/>
+    <mappings xmi:id="_PSfz3JhWEeuLROdPHS5eqw" origin="_PSfz1JhWEeuLROdPHS5eqw" image="_PSfz2ZhWEeuLROdPHS5eqw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_PSfz3ZhWEeuLROdPHS5eqw" name="rule" description="null, createPreserveNodeWithIncomingEdge">
+    <lhs xmi:id="_PSfz3phWEeuLROdPHS5eqw" name="Lhs">
+      <nodes xmi:id="_PSfz35hWEeuLROdPHS5eqw" outgoing="_PSfz4ZhWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_PSfz4JhWEeuLROdPHS5eqw" incoming="_PSfz4ZhWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//RequirementRealisation"/>
+      </nodes>
+      <edges xmi:id="_PSfz4ZhWEeuLROdPHS5eqw" source="_PSfz35hWEeuLROdPHS5eqw" target="_PSfz4JhWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/contributesTo"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_PSfz4phWEeuLROdPHS5eqw" name="Rhs">
+      <nodes xmi:id="_PSfz45hWEeuLROdPHS5eqw" outgoing="_PSfz5ZhWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_PSfz5JhWEeuLROdPHS5eqw" incoming="_PSfz5ZhWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//RequirementRealisation"/>
+      </nodes>
+      <edges xmi:id="_PSfz5ZhWEeuLROdPHS5eqw" source="_PSfz45hWEeuLROdPHS5eqw" target="_PSfz5JhWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/contributesTo"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_PSfz5phWEeuLROdPHS5eqw" origin="_PSfz35hWEeuLROdPHS5eqw" image="_PSfz45hWEeuLROdPHS5eqw"/>
+    <mappings xmi:id="_PSfz55hWEeuLROdPHS5eqw" origin="_PSfz4JhWEeuLROdPHS5eqw" image="_PSfz5JhWEeuLROdPHS5eqw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_PSfz6JhWEeuLROdPHS5eqw" name="rule" description="null, createPreserveEdgesWithNode, createPreserveNodeWithIncomingEdge">
+    <lhs xmi:id="_PSfz6ZhWEeuLROdPHS5eqw" name="Lhs">
+      <nodes xmi:id="_PSfz6phWEeuLROdPHS5eqw" outgoing="_PSfz7ZhWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//RequirementRealisation"/>
+      </nodes>
+      <nodes xmi:id="_PSfz65hWEeuLROdPHS5eqw" incoming="_PSfz7ZhWEeuLROdPHS5eqw" outgoing="_PSfz7phWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_PSfz7JhWEeuLROdPHS5eqw" incoming="_PSfz7phWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//Cost"/>
+      </nodes>
+      <edges xmi:id="_PSfz7ZhWEeuLROdPHS5eqw" source="_PSfz6phWEeuLROdPHS5eqw" target="_PSfz65hWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//RequirementRealisation/dependsOn"/>
+      </edges>
+      <edges xmi:id="_PSfz7phWEeuLROdPHS5eqw" source="_PSfz65hWEeuLROdPHS5eqw" target="_PSfz7JhWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/costs"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_PSfz75hWEeuLROdPHS5eqw" name="Rhs">
+      <nodes xmi:id="_PSfz8JhWEeuLROdPHS5eqw" outgoing="_PSfz85hWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//RequirementRealisation"/>
+      </nodes>
+      <nodes xmi:id="_PSfz8ZhWEeuLROdPHS5eqw" incoming="_PSfz85hWEeuLROdPHS5eqw" outgoing="_PSfz9JhWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_PSfz8phWEeuLROdPHS5eqw" incoming="_PSfz9JhWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//Cost"/>
+      </nodes>
+      <edges xmi:id="_PSfz85hWEeuLROdPHS5eqw" source="_PSfz8JhWEeuLROdPHS5eqw" target="_PSfz8ZhWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//RequirementRealisation/dependsOn"/>
+      </edges>
+      <edges xmi:id="_PSfz9JhWEeuLROdPHS5eqw" source="_PSfz8ZhWEeuLROdPHS5eqw" target="_PSfz8phWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//SoftwareArtifact/costs"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_PSfz9ZhWEeuLROdPHS5eqw" origin="_PSfz6phWEeuLROdPHS5eqw" image="_PSfz8JhWEeuLROdPHS5eqw"/>
+    <mappings xmi:id="_PSfz9phWEeuLROdPHS5eqw" origin="_PSfz65hWEeuLROdPHS5eqw" image="_PSfz8ZhWEeuLROdPHS5eqw"/>
+    <mappings xmi:id="_PSfz95hWEeuLROdPHS5eqw" origin="_PSfz7JhWEeuLROdPHS5eqw" image="_PSfz8phWEeuLROdPHS5eqw"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_PSfz-JhWEeuLROdPHS5eqw" name="rule" description="null, createPreserveEdgesWithNode">
+    <lhs xmi:id="_PSfz-ZhWEeuLROdPHS5eqw" name="Lhs">
+      <nodes xmi:id="_PSfz-phWEeuLROdPHS5eqw" outgoing="_PSfz_JhWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//Customer"/>
+      </nodes>
+      <nodes xmi:id="_PSfz-5hWEeuLROdPHS5eqw" incoming="_PSfz_JhWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//Valuation"/>
+      </nodes>
+      <edges xmi:id="_PSfz_JhWEeuLROdPHS5eqw" source="_PSfz-phWEeuLROdPHS5eqw" target="_PSfz-5hWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//Customer/assigns"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_PSfz_ZhWEeuLROdPHS5eqw" name="Rhs">
+      <nodes xmi:id="_PSfz_phWEeuLROdPHS5eqw" outgoing="_PSf0AJhWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//Customer"/>
+      </nodes>
+      <nodes xmi:id="_PSfz_5hWEeuLROdPHS5eqw" incoming="_PSf0AJhWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//Valuation"/>
+      </nodes>
+      <edges xmi:id="_PSf0AJhWEeuLROdPHS5eqw" source="_PSfz_phWEeuLROdPHS5eqw" target="_PSfz_5hWEeuLROdPHS5eqw">
+        <type href="http://nrp.model/nrp#//Customer/assigns"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_PSf0AZhWEeuLROdPHS5eqw" origin="_PSfz-phWEeuLROdPHS5eqw" image="_PSfz_phWEeuLROdPHS5eqw"/>
+    <mappings xmi:id="_PSf0AphWEeuLROdPHS5eqw" origin="_PSfz-5hWEeuLROdPHS5eqw" image="_PSfz_5hWEeuLROdPHS5eqw"/>
+  </units>
+</henshin:Module>
